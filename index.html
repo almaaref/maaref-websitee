@@ -6,17 +6,22 @@
     <title>School Homepage</title>
     <script src="https://unpkg.com/htmx.org@1.9.6"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      video::-webkit-media-controls {
+        display: none !important;
+      }
+    </style>
   </head>
   <body class="bg-white text-gray-900 font-sans">
     <!-- Top Header (not sticky) -->
     <div class="bg-white text-sm text-gray-700 border-b border-gray-200 relative z-20">
       <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <div class="flex items-center space-x-3">
-          <img src="https://www.rgsgd.com/_nuxt/img/rgs-logo.6c271bb.svg" alt="School Logo" class="h-10" />
-          <h1 class="text-xl font-bold tracking-wide text-black">Al Maaref Private School <span class="text-red-500">Dubai</span></h1>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Placeholder_view_vector.svg/200px-Placeholder_view_vector.svg.png" alt="School Logo" class="h-10" />
+          <h1 class="text-xl font-bold tracking-wide text-black"><span class="text-xl font-bold tracking-wide text-black">Al Maaref Private School</span></h1>
         </div>
         <div class="text-right">
-          <p class="text-xs md:text-sm mb-1">Admissions: +971 4 446 4333</p>
+          <p class="text-xs md:text-sm mb-1">Admissions: +971 4 123 4567</p>
           <div class="space-x-2">
             <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Enquire</a>
             <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Visit</a>
@@ -42,15 +47,39 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative h-[80vh] text-white">
-      <video autoplay muted loop class="absolute w-full h-full object-cover">
-        <source src="https://www.rgsgd.com/videos/hero.mp4" type="video/mp4" />
-      </video>
-      <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
-        <div class="text-center px-4">
-          <h2 class="text-5xl md:text-6xl font-bold tracking-tight">
-            The world of <em class="italic font-serif">difference</em>.
-          </h2>
+    <section class="relative h-[80vh]">
+      <div class="absolute w-full h-full overflow-hidden">
+        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+          <source src="https://cdn.pixabay.com/video/2023/10/26/190569-875285427_large.mp4" type="video/mp4" />
+        </video>
+        <div class="absolute inset-0 bg-black/60"></div>
+      </div>
+      <div class="relative z-10 flex items-center justify-center h-full text-white">
+        <h2 class="text-5xl md:text-6xl font-bold tracking-tight text-center">
+          The world of <em class="italic font-serif">difference</em>.
+        </h2>
+      </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="bg-[#174c37] text-white py-20">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="mb-4 w-16 h-1 bg-white"></div>
+          <h2 class="text-4xl font-bold leading-tight mb-6">Welcome to Al Maaref Private School</h2>
+          <p class="mb-4">
+            We’re on a mission to equip every leader, dreamer and inbetweener with the inner confidence, self belief and personal resilience to thrive in the classroom and beyond. With small class sizes, an unparalleled breadth of activities for pupils, global alumni and a rich heritage of over 500 years – Al Maaref is a uniquely different and exceptional environment for each and every pupil.
+          </p>
+          <p class="mb-4">
+            RGSGD is designed for boys and girls aged from 3 to 18. Our school currently welcomes students from FS1 to Year 9, and we are accepting applications for Year 10 for a September 2025 start. The school will grow year by year in line with KHDA regulations.
+          </p>
+          <p class="mb-6">
+            Our school embodies the ethos and values that have underpinned the Al Maaref Private School for over 500 years. These, combined with a spirit of innovation and development, will prepare pupils for the challenges of the 21st and 22nd centuries. We lead by example, stay true to our values, innovate, collaborate and strive to be the very best we can be.
+          </p>
+          <a href="#" class="inline-block border border-white text-white font-semibold px-6 py-3 rounded-md hover:bg-white hover:text-[#174c37] transition">Book a School Tour</a>
+        </div>
+        <div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Example.png/640px-Example.png" alt="Students" class="rounded-xl w-full object-cover" />
         </div>
       </div>
     </section>
