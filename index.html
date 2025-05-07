@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Homepage</title>
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-gray-900 font-sans">
+    <!-- Top Header (not sticky) -->
+    <div class="bg-white text-sm text-gray-700 border-b border-gray-200 relative z-20">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+          <img src="https://www.rgsgd.com/_nuxt/img/rgs-logo.6c271bb.svg" alt="School Logo" class="h-10" />
+          <h1 class="text-xl font-bold tracking-wide text-black">Al Maaref Private School <span class="text-red-500">Dubai</span></h1>
+        </div>
+        <div class="text-right">
+          <p class="text-xs md:text-sm mb-1">Admissions: +971 4 446 4333</p>
+          <div class="space-x-2">
+            <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Enquire</a>
+            <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Visit</a>
+            <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Apply</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <header class="bg-[#174c37] text-white sticky top-0 z-10 shadow">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <nav class="space-x-6 text-sm font-semibold w-full text-center">
+          <a href="#" class="hover:underline underline-offset-4">Home</a>
+          <a href="#" class="hover:underline underline-offset-4">Why Choose Us?</a>
+          <a href="#" class="hover:underline underline-offset-4">Academic Excellence</a>
+          <a href="#" class="hover:underline underline-offset-4">Curriculum</a>
+          <a href="#" class="hover:underline underline-offset-4">Admissions & Fees</a>
+          <a href="#" class="hover:underline underline-offset-4">Parent Essentials</a>
+          <a href="#" class="hover:underline underline-offset-4">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[80vh] text-white">
+      <video autoplay muted loop class="absolute w-full h-full object-cover">
+        <source src="https://www.rgsgd.com/videos/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+        <div class="text-center px-4">
+          <h2 class="text-5xl md:text-6xl font-bold tracking-tight">
+            The world of <em class="italic font-serif">difference</em>.
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Sections -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200 text-center">
+          <h3 class="text-2xl font-semibold mb-3 text-blue-700">Academic Excellence</h3>
+          <p class="text-gray-600">Programs designed to challenge and inspire learners.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200 text-center">
+          <h3 class="text-2xl font-semibold mb-3 text-blue-700">Extracurricular Activities</h3>
+          <p class="text-gray-600">Opportunities to explore sports, arts, and clubs.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200 text-center">
+          <h3 class="text-2xl font-semibold mb-3 text-blue-700">Supportive Community</h3>
+          <p class="text-gray-600">Caring faculty and inclusive environment.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-6 border-t border-gray-200">
+      <div class="max-w-6xl mx-auto px-6 text-center text-sm text-gray-600">
+        &copy; 2025 My School. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
