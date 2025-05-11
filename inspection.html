@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inspection Reports | Al Maaref Private School</title>
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-900 font-sans">
+ <!-- Top Header (not sticky) -->
+ <div class="bg-transparent text-white relative z-20">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+  <div class="flex items-center space-x-3">
+    <a href="index.html">
+      <img src="assets/images/logo/amps_logo-removebg-preview.png" alt="School Logo" class="h-10">
+    </a>
+    <h1 class="text-xl font-bold tracking-wide text-white">Al Maaref Private School</h1>
+  </div>
+  <div class="text-right">
+    <p class="text-xs md:text-sm mb-1 text-white">Admissions: +971 4 123 4567</p>
+    <div class="space-x-2">
+      <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Enquire</a>
+      <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Visit</a>
+      <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Apply</a>
+    </div>
+  </div>
+    </div>
+  </div>
+  
+  <!-- Sticky Navbar with Mega Menu -->
+  <header class="bg-[#174c37] text-white sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center">
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center justify-center space-x-8 text-sm font-semibold relative">
+        
+        <!-- Why Choose Us -->
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4">Why Choose Us?</button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+            <a href="principles_welcome.html" class="block px-4 py-2 hover:bg-gray-100">Principal's Welcome</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Core Values</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Our History</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Al Maaref Family</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Guiding Statement</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Facilities</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Newsletters</a>
+          </div>
+        </div>
+        
+        <!-- Academic Excellence -->
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4">Academic Excellence</button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+            <a href="learning_habits.html" class="block px-4 py-2 hover:bg-gray-100">Learning Habits</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Testimonials</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Affiliations</a>
+          </div>
+        </div>
+        
+        <!-- Curriculum -->
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4">Curriculum</button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+            <a href="curriculum.html" class="block px-4 py-2 hover:bg-gray-100">Overview</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Assessment and Equalization</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Early Years</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Elementary</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Middle School</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">High School</a>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4">Admissions & Fees</button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Admission Process</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">School Tour</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Enquiry Form</a>
+            <a href="school_fees.html" class="block px-4 py-2 hover:bg-gray-100">Fee Structure</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Request Form</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">KHDA Fact Sheet</a>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4"> Parent Essentials </button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+              <a href="#" class="block ps-4 py-2 hover:bg-gray-100">Term Dates</a>
+              <a href="#" class="block ps-4 py-2 hover:bg-gray-100">School Dates</a>
+          </div>
+        </div>
+          <a href="contact.html" class="hover:underline underline-offset-4">Contact Us</a>
+      </nav>
+  
+      <!-- Mobile Button -->
+      <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-sm font-semibold bg-[#174c37]">
+      <a href="#" class="block hover:underline underline-offset-4">Why Choose Us?</a>
+      <a href="#" class="block hover:underline underline-offset-4">Academic Excellence</a>
+      <a href="#" class="block hover:underline underline-offset-4">Curriculum</a>
+      <a href="school_fees.html" class="block hover:underline underline-offset-4">Admissions & Fees</a>
+      <a href="#" class="block hover:underline underline-offset-4">Parent Essentials</a>
+      <a href="#" class="block hover:underline underline-offset-4">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative h-[60vh] bg-cover bg-center" style="background-image: url('assets/images/hero.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 flex items-center justify-center h-full text-white">
+      <h1 class="text-4xl md:text-5xl font-bold">Inspection Reports</h1>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <div class="bg-gray-100 py-2 px-6 text-sm text-gray-600">
+    <div class="max-w-7xl mx-auto">
+      <a href="#" class="hover:underline">Home</a> / <span class="font-semibold">Inspection Reports</span>
+    </div>
+  </div>
+
+  <!-- Section 1: Excellence in Education -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-2xl font-bold text-[#174c37] mb-4">Excellence in Education</h2>
+        <p class="mb-4">As a British curriculum international school in Dubai, we participate in inspections from the Dubai School Inspection Bureau (DSIB) to ensure the highest educational standards.</p>
+        <p class="mb-4 font-semibold">We are proud to celebrate a ‘Very Good’ rating in the 2023–2024 KHDA inspection, making us the first school in Dubai to achieve this in our first inspection.</p>
+        <a href="#" class="inline-block bg-[#174c37] text-white px-6 py-2 rounded shadow hover:bg-green-900 transition">Read DSIB Inspection Report</a>
+      </div>
+      <div>
+        <img src="assets/images/fees-banner.jpg" alt="Student" class="rounded-xl w-full object-cover shadow-md" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: About DSIB -->
+  <section class="py-12 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h3 class="text-sm uppercase font-semibold text-gray-700 mb-2">Dubai School Inspection Bureau</h3>
+        <p class="text-gray-700">The Dubai School Inspection Bureau (DSIB) of KHDA was established by Decision 38 of The Executive Council of the Government of Dubai in 2007. DSIB provides comprehensive information on the standard of private school education in Dubai, helping to inform improvement planning at both school and policy levels. This is achieved through various approaches, including annual school inspections, parents' meetings and focus groups, and surveys of teachers, parents, and students.</p>
+        <p class="text-gray-700 mt-4">Through inspections and the participation of schools in international assessments, DSIB provides KHDA, the Government of Dubai, and the wider public with an accurate and detailed view of the quality of school education in Dubai, compared to the best-performing countries in the world.</p>
+      </div>
+      <div>
+        <img src="assets/images/khda-students.jpg" alt="DSIB Students" class="rounded-xl w-full object-cover shadow-md" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (PARTIAL) -->
+  <div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+</body>
+</html>

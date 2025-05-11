@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>School Fees | Al Maaref Private School</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <script src="assets/script.js"></script>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+  <!-- Header (not partial) -->
+  <div class="bg-transparent text-white relative z-20">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+  <div class="flex items-center space-x-3">
+    <a href="index.html">
+      <img src="assets/images/logo/amps_logo-removebg-preview.png" alt="School Logo" class="h-10">
+    </a>
+    <h1 class="text-xl font-bold tracking-wide text-white">Al Maaref Private School</h1>
+  </div>
+  <div class="text-right">
+    <p class="text-xs md:text-sm mb-1 text-white">Admissions: +971 4 123 4567</p>
+    <div class="space-x-2">
+      <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Enquire</a>
+      <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Visit</a>
+      <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Apply</a>
+    </div>
+  </div>
+    </div>
+  </div>
+  
+  <!-- Sticky Navbar with Mega Menu -->
+  <header class="bg-[#174c37] text-white sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center">
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center justify-center space-x-8 text-sm font-semibold relative">
+        
+        <!-- Why Choose Us -->
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4">Why Choose Us?</button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+            <a href="principles_welcome.html" class="block px-4 py-2 hover:bg-gray-100">Principal's Welcome</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Core Values</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Our History</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Al Maaref Family</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Guiding Statement</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Facilities</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Newsletters</a>
+          </div>
+        </div>
+        
+        <!-- Academic Excellence -->
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4">Academic Excellence</button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+            <a href="learning_habits.html" class="block px-4 py-2 hover:bg-gray-100">Learning Habits</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Testimonials</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Affiliations</a>
+          </div>
+        </div>
+        
+        <!-- Curriculum -->
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4">Curriculum</button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+            <a href="curriculum.html" class="block px-4 py-2 hover:bg-gray-100">Overview</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Assessment and Equalization</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Early Years</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Elementary</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Middle School</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">High School</a>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4">Admissions & Fees</button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Admission Process</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">School Tour</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Enquiry Form</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Fee Structure</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Request Form</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">KHDA Fact Sheet</a>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4"> Parent Essentials </button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+              <a href="#" class="block ps-4 py-2 hover:bg-gray-100">Term Dates</a>
+              <a href="#" class="block ps-4 py-2 hover:bg-gray-100">School Dates</a>
+          </div>
+        </div>
+          <a href="contact.html" class="hover:underline underline-offset-4">Contact Us</a>
+      </nav>
+  
+      <!-- Mobile Button -->
+      <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-sm font-semibold bg-[#174c37]">
+      <a href="#" class="block hover:underline underline-offset-4">Why Choose Us?</a>
+      <a href="#" class="block hover:underline underline-offset-4">Academic Excellence</a>
+      <a href="#" class="block hover:underline underline-offset-4">Curriculum</a>
+      <a href="school_fees.html" class="block hover:underline underline-offset-4">Admissions & Fees</a>
+      <a href="#" class="block hover:underline underline-offset-4">Parent Essentials</a>
+      <a href="#" class="block hover:underline underline-offset-4">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative h-[60vh] bg-cover bg-center" style="background-image: url('assets/images/fees-hero.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 flex items-center justify-center h-full text-white">
+      <h1 class="text-4xl md:text-5xl font-bold">School Fees</h1>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl font-bold text-[#174c37] mb-4">School Fees for Academic Year 2025–26</h2>
+        <p class="mb-4">At Royal Grammar School Guildford Dubai, we are committed to delivering an exceptional education that empowers our students to reach their fullest potential.</p>
+        <p class="mb-4">Our fee structure reflects the world-class facilities, rigorous curriculum, and dedicated teaching staff that form the foundation of our students’ holistic growth and academic success.</p>
+      </div>
+      <div>
+        <img src="assets/images/fees-banner.jpg" alt="Student" class="rounded-xl w-full object-cover shadow-md" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Fee Tables Section -->
+  <section class="bg-gray-100 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-10">
+        <h2 class="text-2xl font-bold mb-6 text-center">Early Years</h2>
+        <table class="min-w-full border-collapse border text-center text-sm">
+          <thead class="bg-[#174c37] text-white">
+            <tr><th class="p-3">Year</th><th class="p-3">Term 1</th><th class="p-3">Term 2</th><th class="p-3">Term 3</th><th class="p-3">Total</th></tr>
+          </thead>
+          <tbody class="bg-white">
+            <tr><td class="border p-3">FS1</td><td class="border p-3">AED 30,780</td><td class="border p-3">AED 23,085</td><td class="border p-3">AED 23,085</td><td class="border p-3 font-bold">AED 76,950</td></tr>
+            <tr><td class="border p-3">FS2</td><td class="border p-3">AED 32,832</td><td class="border p-3">AED 24,624</td><td class="border p-3">AED 24,624</td><td class="border p-3 font-bold">AED 82,080</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mb-10">
+        <h2 class="text-2xl font-bold mb-6 text-center">Junior School</h2>
+        <table class="min-w-full border-collapse border text-center text-sm">
+          <thead class="bg-[#174c37] text-white">
+            <tr><th class="p-3">Year</th><th class="p-3">Term 1</th><th class="p-3">Term 2</th><th class="p-3">Term 3</th><th class="p-3">Total</th></tr>
+          </thead>
+          <tbody class="bg-white">
+            <tr><td class="border p-3">Year 1</td><td class="border p-3">AED 37,346</td><td class="border p-3">AED 28,010</td><td class="border p-3">AED 28,010</td><td class="border p-3 font-bold">AED 93,366</td></tr>
+            <tr><td class="border p-3">Year 2</td><td class="border p-3">AED 37,346</td><td class="border p-3">AED 28,010</td><td class="border p-3">AED 28,010</td><td class="border p-3 font-bold">AED 93,366</td></tr>
+            <!-- Repeat for Year 3 - Year 6 as needed -->
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold mb-6 text-center">Senior School</h2>
+        <table class="min-w-full border-collapse border text-center text-sm">
+          <thead class="bg-[#174c37] text-white">
+            <tr><th class="p-3">Year</th><th class="p-3">Term 1</th><th class="p-3">Term 2</th><th class="p-3">Term 3</th><th class="p-3">Total</th></tr>
+          </thead>
+          <tbody class="bg-white">
+            <!-- Example rows for Year 7 to Year 13 -->
+            <tr><td class="border p-3">Year 7</td><td class="border p-3">AED 40,000</td><td class="border p-3">AED 30,000</td><td class="border p-3">AED 30,000</td><td class="border p-3 font-bold">AED 100,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Understanding Fees Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+      <div>
+        <h2 class="text-2xl font-bold mb-4">Understanding Our Fees and Payment Policies</h2>
+        <p class="mb-4 font-semibold">Tuition Fees and Payment Schedule</p>
+        <p class="mb-4">Fees are payable annually or term-wise (40%-30%-30%). Excludes optional activities or services.</p>
+        <p class="mb-4 font-semibold">Deposit</p>
+        <p class="mb-4">New students must pay a non-refundable 10% deposit of annual tuition.</p>
+      </div>
+      <div>
+        <p class="mb-4 font-semibold">Application Fee</p>
+        <p class="mb-4">AED 500 non-refundable fee per student.</p>
+        <p class="mb-4 font-semibold">Refund Policy</p>
+        <p class="mb-4">Refunds follow KHDA rules. Some conditions apply.</p>
+        <p class="mb-4 font-semibold">Fee Policy Notice</p>
+        <p class="mb-4">All information is subject to change and official confirmation by the school.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KHDA Fact Sheets -->
+  <section class="bg-gray-100 py-20">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+      <div>
+        <h2 class="text-2xl font-bold mb-4">KHDA School Fees Fact Sheets</h2>
+        <p>The KHDA Fee Fact Sheet details all annual and optional fees, updated annually to help parents make informed decisions.</p>
+      </div>
+      <div class="grid grid-cols-1 gap-6">
+        <div>
+          <h3 class="bg-[#174c37] text-white px-4 py-2 font-semibold rounded-t">Primary School Fact Sheets</h3>
+          <div class="bg-white shadow p-4 rounded-b">
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">FS1 Fact Sheet</a></li>
+              <li><a href="#" class="hover:underline">FS2 Fact Sheet</a></li>
+              <li><a href="#" class="hover:underline">Year 1 Fact Sheet</a></li>
+              <li><a href="#" class="hover:underline">Year 6 Fact Sheet</a></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h3 class="bg-[#174c37] text-white px-4 py-2 font-semibold rounded-t">Senior School Fact Sheets</h3>
+          <div class="bg-white shadow p-4 rounded-b">
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">Year 7 Fact Sheet</a></li>
+              <li><a href="#" class="hover:underline">Year 13 Fact Sheet</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (partial) -->
+  <div hx-get="partials/footer.html" hx-trigger="load"></div>
+
+</body>
+</html>

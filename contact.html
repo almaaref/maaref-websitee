@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Al Maaref Private School</title>
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/script.js"></script>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+  <!-- Top Header (not sticky) -->
+  <div class="bg-transparent text-white relative z-20">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+  <div class="flex items-center space-x-3">
+    <a href="index.html">
+      <img src="assets/images/logo/amps_logo-removebg-preview.png" alt="School Logo" class="h-10">
+    </a>
+    <h1 class="text-xl font-bold tracking-wide text-white">Al Maaref Private School</h1>
+  </div>
+  <div class="text-right">
+    <p class="text-xs md:text-sm mb-1 text-white">Admissions: +971 4 123 4567</p>
+    <div class="space-x-2">
+      <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Enquire</a>
+      <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Visit</a>
+      <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Apply</a>
+    </div>
+  </div>
+    </div>
+  </div>
+  
+  <!-- Sticky Navbar with Mega Menu -->
+  <header class="bg-[#174c37] text-white sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center">
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center justify-center space-x-8 text-sm font-semibold relative">
+        
+        <!-- Why Choose Us -->
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4">Why Choose Us?</button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+            <a href="principles_welcome.html" class="block px-4 py-2 hover:bg-gray-100">Principal's Welcome</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Core Values</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Our History</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Al Maaref Family</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Guiding Statement</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Facilities</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Newsletters</a>
+          </div>
+        </div>
+        
+        <!-- Academic Excellence -->
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4">Academic Excellence</button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+            <a href="learning_habits.html" class="block px-4 py-2 hover:bg-gray-100">Learning Habits</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Testimonials</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Affiliations</a>
+          </div>
+        </div>
+        
+        <!-- Curriculum -->
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4">Curriculum</button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+            <a href="curriculum.html" class="block px-4 py-2 hover:bg-gray-100">Overview</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Assessment and Equalization</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Early Years</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Elementary</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Middle School</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">High School</a>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4">Admissions & Fees</button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Admission Process</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">School Tour</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Enquiry Form</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Fee Structure</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Request Form</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">KHDA Fact Sheet</a>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4"> Parent Essentials </button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+              <a href="#" class="block ps-4 py-2 hover:bg-gray-100">Term Dates</a>
+              <a href="#" class="block ps-4 py-2 hover:bg-gray-100">School Dates</a>
+          </div>
+        </div>
+          <a href="contact.html" class="hover:underline underline-offset-4">Contact Us</a>
+      </nav>
+  
+      <!-- Mobile Button -->
+      <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-sm font-semibold bg-[#174c37]">
+      <a href="#" class="block hover:underline underline-offset-4">Why Choose Us?</a>
+      <a href="#" class="block hover:underline underline-offset-4">Academic Excellence</a>
+      <a href="#" class="block hover:underline underline-offset-4">Curriculum</a>
+      <a href="#" class="block hover:underline underline-offset-4">Admissions & Fees</a>
+      <a href="#" class="block hover:underline underline-offset-4">Parent Essentials</a>
+      <a href="#" class="block hover:underline underline-offset-4">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative h-[60vh] bg-cover bg-center" style="background-image: url('assets/images/hero.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 flex items-center justify-center h-full text-white">
+      <h1 class="text-4xl md:text-5xl font-bold">Contact Us</h1>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <div class="bg-gray-100 py-2 px-6 text-sm text-gray-600">
+    <div class="max-w-7xl mx-auto">
+      <a href="index.html" class="hover:underline">Home</a> / <span class="font-semibold">Contact Us</span>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
+      <div>
+        <h2 class="text-3xl font-bold mb-6">We'd love to hear from you</h2>
+        <p class="mb-4 text-gray-700">
+          Thank you for your interest in Al Maaref Private School Dubai. Whether you are enquiring about joining our school, exploring our admissions process, or booking a school tour, our dedicated team is here to assist you.
+        </p>
+        <h3 class="text-xl font-semibold mt-6 mb-2">Admissions</h3>
+        <p><strong>Phone:</strong> <a href="tel:+97144146433" class="text-blue-600 hover:underline"> +971-4-298-8881</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@almaaref.ae" class="text-blue-600 hover:underline">info@almaaref.ae</a></p>
+        <h3 class="text-xl font-semibold mt-6 mb-2">Address</h3>
+        <p> Baghdad Street - Al Qusais - Al Qusais 1 - Dubai, United Arab Emirates</p>
+        <a href="https://www.google.com/maps" target="_blank" class="inline-block mt-4 bg-[#174c37] text-white px-4 py-2 rounded hover:bg-[#0e3d2d]">Get Directions</a>
+      </div>
+      <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28860.0847083245!2d55.366602!3d25.287044!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5c6658bf812b%3A0x7371bd90087544df!2sAl%20Maaref%20Private%20School!5e0!3m2!1sen!2sae!4v1746959327892!5m2!1sen!2sae" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded shadow"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (PARTIAL) -->
+  <div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+</body>
+</html>

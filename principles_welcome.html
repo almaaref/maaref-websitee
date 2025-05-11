@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Principal's Welcome | Al Maaref Private School</title>
+        <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="assets/script.js"></script>
+    </head>
+    
+    <body class="bg-white text-gray-900 font-sans">
+
+    <!-- Header -->
+    <!-- Top Header (not sticky) -->
+    <div class="bg-transparent text-white relative z-20">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+      <a href="index.html">
+        <img src="assets/images/logo/amps_logo-removebg-preview.png" alt="School Logo" class="h-10">
+      </a>
+      <h1 class="text-xl font-bold tracking-wide text-white">Al Maaref Private School</h1>
+    </div>
+    <div class="text-right">
+      <p class="text-xs md:text-sm mb-1 text-white">Admissions: +971 4 123 4567</p>
+      <div class="space-x-2">
+        <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Enquire</a>
+        <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Visit</a>
+        <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Apply</a>
+      </div>
+    </div>
+      </div>
+    </div>
+    
+    <!-- Sticky Navbar with Mega Menu -->
+    <header class="bg-[#174c37] text-white sticky top-0 z-30">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex items-center">
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center justify-center space-x-8 text-sm font-semibold relative">
+          
+          <!-- Why Choose Us -->
+          <div class="relative">
+            <button class="dropdown-toggle hover:underline underline-offset-4">Why Choose Us?</button>
+            <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+              <a href="principles_welcome.html" class="block px-4 py-2 hover:bg-gray-100">Principal's Welcome</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Core Values</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Our History</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Al Maaref Family</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Guiding Statement</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Facilities</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Newsletters</a>
+            </div>
+          </div>
+          
+          <!-- Academic Excellence -->
+          <div class="relative">
+            <button class="dropdown-toggle hover:underline underline-offset-4">Why Choose Us ?</button>
+            <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+              <a href="learning_habits.html" class="block px-4 py-2 hover:bg-gray-100">Learning Habits</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Testimonials</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Affiliations</a>
+            </div>
+          </div>
+          
+          <!-- Curriculum -->
+          <div class="relative">
+            <button class="dropdown-toggle hover:underline underline-offset-4">Curriculum</button>
+            <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+              <a href="curriculum.html" class="block px-4 py-2 hover:bg-gray-100">Overview</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Assessment and Equalization</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Early Years</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Elementary</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Middle School</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">High School</a>
+            </div>
+          </div>
+          
+          <div class="relative">
+            <button class="dropdown-toggle hover:underline underline-offset-4">Admissions & Fees</button>
+            <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Admission Process</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">School Tour</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Enquiry Form</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Fee Structure</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Request Form</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">KHDA Fact Sheet</a>
+            </div>
+          </div>
+          
+          <div class="relative">
+            <button class="dropdown-toggle hover:underline underline-offset-4"> Parent Essentials </button>
+            <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+                <a href="#" class="block ps-4 py-2 hover:bg-gray-100">Term Dates</a>
+                <a href="#" class="block ps-4 py-2 hover:bg-gray-100">School Dates</a>
+            </div>
+          </div>
+            <a href="contact.html" class="hover:underline underline-offset-4">Contact Us</a>
+        </nav>
+    
+        <!-- Mobile Button -->
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-sm font-semibold bg-[#174c37]">
+        <a href="#" class="block hover:underline underline-offset-4">Why Choose Us?</a>
+        <a href="#" class="block hover:underline underline-offset-4">Academic Excellence</a>
+        <a href="#" class="block hover:underline underline-offset-4">Curriculum</a>
+        <a href="#" class="block hover:underline underline-offset-4">Admissions & Fees</a>
+        <a href="#" class="block hover:underline underline-offset-4">Parent Essentials</a>
+        <a href="#" class="block hover:underline underline-offset-4">Contact Us</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+        class="relative h-[60vh] bg-cover bg-center"
+        style="background-image: url('assets/images/hero.jpg');"
+    >
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 flex items-center justify-center h-full text-white">
+        <h1 class="text-4xl md:text-5xl font-bold">Principal’s Message</h1>
+    </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-2 px-6 text-sm text-gray-600">
+        <div class="max-w-7xl mx-auto">
+            <a href="index.html" class="hover:underline">Home</a>
+            / <span class="font-semibold">Principal’s Welcome</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+        <!-- Image -->
+            <div>
+            <img
+            src="assets/images/principal.jpg"
+            alt="Principal"
+            class="rounded-xl w-full object-cover shadow-md"
+            />
+        </div>
+
+        <!-- Text -->
+        <div class="text-justify" >
+        <h2 class="text-2xl md:text-3xl font-semibold mb-4">
+            A Warm Welcome from Our Principal, D. Pinkerton
+            </h2>
+          <p class="mb-4 text-gray-700">
+            As-salamu alaikum. It is with great pleasure and enthusiasm that I join Al Maareef Private School community 
+            which is so rich in tradition, Islamic values, and desire bring out the best of its students. 
+            As your dedicated principal, I bring a wealth of experience from my many years of leadership in the USA, Italy, Bahrain, and the UAE. 
+            Having worked in both the US and the GCC region for several years, I have a solid foundation
+            in blending the American curriculum, teaching methods, and philosophies alongside the unique culture of the UAE.
+          </p>
+          <p class="mb-4 text-gray-700">
+            One of my core passions is promoting student agency—empowering our young learners to take ownership of their education
+            and become active contributors to their community. I believe in cultivating not only academic excellence but also the 
+            values of compassion, respect, and responsibility.
+          </p>
+          <p class="text-gray-700">
+            I believe that education extends beyond the classroom walls so 
+            I will work to ensure that students are provided with a range of activities to broaden their learning experiences. 
+            I will continue to recognize the importance of a school community that values open communication, collaboration, and the well-being of every child.
+          </p>
+          <p class="text-gray-700">
+            I am excited about the journey ahead and look forward to partnering with you to shape a 
+            bright and promising future for our students. Together, let us create a nurturing space 
+            where our children can flourish academically, spiritually, and socially.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+        <div>
+          <img src="assets/images/director.jpg" alt="Director Mohamed Motawea" class="rounded-xl w-full object-cover shadow-md" />
+        </div>
+        <div class="text-justify">
+          <p class="text-gray-800 mb-4">
+            Dear Parents, Students, and Members of the Al Maaref Private School Community,
+          </p>
+          <p class="text-gray-700 mb-4">
+            I extend my greetings to each of you as we reflect on the mission and values that underpin our esteemed institution. Established in 1995 as a pivotal component of the First Education Holding group, Al Maaref Private School has remained steadfast in its dedication to serving the diverse needs of our community and fostering the educational growth of our children.
+          </p>
+          <p class="text-gray-700 mb-4">
+            Our overarching vision is to cultivate intellectually adept, thoughtful, and responsible contributors to society. To achieve this, we adhere to a philosophy rooted in Islamic values, championing the acceptance of diversity, respect for the individual, and collaborative efforts—all within the framework of the rigorous standards set by the American education system. This approach has allowed us to welcome families from across the globe, aligning with the requirements of esteemed universities.
+          </p>
+          <p class="text-gray-700 mb-4">
+            Beyond imparting strong academic skills, we are committed to guiding our students into becoming young individuals of sound character. As educators, our commitment to this objective is evident in our academic programs, which not only adhere to high standards but also emphasize the cultivation of life skills such as perseverance and cooperation.
+          </p>
+          <p class="text-gray-700 mb-4">
+            I extend a warm invitation to explore Al Maaref Private School, where our focus extends beyond academic excellence to the holistic development of qualified individuals poised to navigate the challenges of the future successfully.
+          </p>
+          <p class="text-gray-700 mb-4">
+            Our administrators and teaching staff take pride in being professional, compassionate, and highly qualified individuals, always ready to provide assistance whenever needed. We look forward to continuing our collective journey toward educational excellence and character development.
+          </p>
+          <p class="text-gray-800 font-semibold">Thank you for being an integral part of the Al Maaref Private School community.</p>
+          <p class="mt-4 font-bold text-gray-900">Mohamed Motawea</p>
+          <p class="text-sm text-gray-700">CEO FEH (UAE)<br />School’s Director</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div hx-get="partials/footer.html" hx-trigger="load"></div>
+    </body>
+</html>

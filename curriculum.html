@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curriculum | Al Maaref Private School</title>
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/script.js"></script>
+</head>
+
+<body class="bg-white text-gray-900 font-sans">
+  <!-- Header (NOT partial) -->
+   <!-- Top Header (not sticky) -->
+   <div class="bg-transparent text-white relative z-20">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+  <div class="flex items-center space-x-3">
+    <a href="index.html">
+      <img src="assets/images/logo/amps_logo-removebg-preview.png" alt="School Logo" class="h-10">
+    </a>
+    <h1 class="text-xl font-bold tracking-wide text-white">Al Maaref Private School</h1>
+  </div>
+  <div class="text-right">
+    <p class="text-xs md:text-sm mb-1 text-white">Admissions: +971 4 123 4567</p>
+    <div class="space-x-2">
+      <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Enquire</a>
+      <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Visit</a>
+      <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Apply</a>
+    </div>
+  </div>
+    </div>
+  </div>
+  
+  <!-- Sticky Navbar with Mega Menu -->
+  <header class="bg-[#174c37] text-white sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center">
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center justify-center space-x-8 text-sm font-semibold relative">
+        
+        <!-- Why Choose Us -->
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4">Why Choose Us?</button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+            <a href="principles_welcome.html" class="block px-4 py-2 hover:bg-gray-100">Principal's Welcome</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Core Values</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Our History</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Al Maaref Family</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Guiding Statement</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Facilities</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Newsletters</a>
+          </div>
+        </div>
+        
+        <!-- Academic Excellence -->
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4">Why Choose Us ?</button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+            <a href="learning_habits.html" class="block px-4 py-2 hover:bg-gray-100">Learning Habits</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Testimonials</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Affiliations</a>
+          </div>
+        </div>
+        
+        <!-- Curriculum -->
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4">Curriculum</button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+            <a href="curriculum.html" class="block px-4 py-2 hover:bg-gray-100">Overview</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Assessment and Equalization</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Early Years</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Elementary</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Middle School</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">High School</a>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4">Admissions & Fees</button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Admission Process</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">School Tour</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Enquiry Form</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Fee Structure</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Request Form</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">KHDA Fact Sheet</a>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <button class="dropdown-toggle hover:underline underline-offset-4"> Parent Essentials </button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+              <a href="#" class="block ps-4 py-2 hover:bg-gray-100">Term Dates</a>
+              <a href="#" class="block ps-4 py-2 hover:bg-gray-100">School Dates</a>
+          </div>
+        </div>
+          <a href="#" class="hover:underline underline-offset-4">Contact Us</a>
+      </nav>
+  
+      <!-- Mobile Button -->
+      <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-sm font-semibold bg-[#174c37]">
+      <a href="#" class="block hover:underline underline-offset-4">Why Choose Us?</a>
+      <a href="#" class="block hover:underline underline-offset-4">Academic Excellence</a>
+      <a href="#" class="block hover:underline underline-offset-4">Curriculum</a>
+      <a href="#" class="block hover:underline underline-offset-4">Admissions & Fees</a>
+      <a href="#" class="block hover:underline underline-offset-4">Parent Essentials</a>
+      <a href="#" class="block hover:underline underline-offset-4">Contact Us</a>
+    </div>
+  </header>
+
+<!-- Hero Section -->
+    <section class="relative h-[60vh] bg-cover bg-center" style="background-image: url('assets/images/hero.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="relative z-10 flex items-center justify-center h-full text-white">
+                <h1 class="text-4xl md:text-5xl font-bold">Curriculum</h1>
+            </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-2 px-6 text-sm text-gray-600">
+        <div class="max-w-7xl mx-auto">
+            <a href="#" class="hover:underline">Home</a> / <span class="font-semibold">Curriculum</span>
+        </div>
+    </div>
+
+<!-- Content Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+    <!-- Left Content -->
+    <div class="md:col-span-2">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-800">American Curriculum, UAE Ready Education</h2>
+        <p class="text-gray-700 mb-4">
+            At Al Maaref Private School, we deliver a rigorous American curriculum aligned to U.S. academic standards, tailored to meet the needs of our diverse student body in the UAE. Our educational philosophy fosters independent thinking, creativity, and real-world problem solving.
+        </p>
+        <p class="text-gray-700 mb-4">
+            With a strong emphasis on both core academics and holistic development, our curriculum integrates innovation, technology, and personal growth across all grade levels—from Early Years to High School.
+        </p>
+        <p class="text-gray-700">
+            Our programs are designed to equip students with the knowledge, skills, and values they need to succeed at top global universities and thrive in an ever-changing world.
+        </p>
+    </div>
+
+    <!-- Right Sidebar Nav -->
+    <div>
+        <div class="shadow-md rounded overflow-hidden">
+            <div class="bg-[#174c37] text-white font-semibold px-4 py-3">Jump down to:</div>
+                <div class="bg-white divide-y divide-gray-200">
+                    <a href="#early-years" class="block px-4 py-3 hover:bg-gray-100 font-medium">Early Years &rsaquo;</a>
+                    <a href="#elementary" class="block px-4 py-3 hover:bg-gray-100 font-medium">Elementary &rsaquo;</a>
+                    <a href="#middle-school" class="block px-4 py-3 hover:bg-gray-100 font-medium">Middle School &rsaquo;</a>
+                    <a href="#high-school" class="block px-4 py-3 hover:bg-gray-100 font-medium">High School &rsaquo;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Early Years Section -->
+<section id="early-years" class="py-16 bg-[#174c37] text-white">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-start">
+        <div>
+            <h3 class="text-2xl font-bold mb-4">Early Years (Age 3 – 5)</h3>
+            <p class="mb-4">Excited minds love learning in the early years. Children in the Early Years love coming to school, looking forward to having fun, learning and making friends. We provide a safe and welcoming environment where every child develops confidence and independence.</p>
+            <p class="mb-4">Our beautifully designed early years classrooms and outdoor learning spaces provide a stimulating environment where young children can explore, enquire and create. Our highly trained Early Years team use the English National Curriculum as the basis for planning and assessment.</p>
+            <p class="mb-4">There are seven areas of learning:
+                <ul class="list-disc pl-5">
+                <li>Personal, social and emotional development</li>
+                <li>Communication and language</li>
+                <li>Physical development</li>
+                <li>Literacy</li>
+                <li>Mathematics</li>
+                <li>Expressive arts and design</li>
+                <li>Understanding the world</li>
+            </ul>
+        </p>
+        <p>Our approach shapes resilient, engaged learners who play, create and persist with confidence.</p>
+    </div>
+    <div class="space-y-4">
+        <img src="assets/images/early-1.jpg" alt="Reading Student" class="rounded-lg shadow-md">
+        <img src="assets/images/early-2.jpg" alt="Group of Students" class="rounded-lg shadow-md">
+    </div>
+    </div>
+</section>
+
+    <!-- Placeholder Sections -->
+    <section id="elementary" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h3 class="text-2xl font-bold text-[#174c37] mb-4">Elementary</h3>
+            <p class="text-gray-700">Content coming soon...</p>
+        </div>
+    </section>
+
+    <section id="middle-school" class="py-16 bg-[#174c37] ">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h3 class="text-2xl font-bold text-white mb-4">Middle School</h3>
+            <p class="text-white">Content coming soon...</p>
+        </div>
+    </section>
+
+    <section id="high-school" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h3 class="text-2xl font-bold text-[#174c37] mb-4">High School</h3>
+            <p class="text-gray-700">Content coming soon...</p>
+        </div>
+    </section>
+
+
+<!-- Footer (PARTIAL) -->
+<div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+</body>
+</html>

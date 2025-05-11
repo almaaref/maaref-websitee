@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Habits | Al Maaref Private School</title>
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/script.js"></script>
+</head>
+
+<body class="bg-white text-gray-900 font-sans">
+    <div class="bg-transparent text-white relative z-20">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <a href="index.html">
+          <img src="assets/images/logo/amps_logo-removebg-preview.png" alt="School Logo" class="h-10">
+        </a>
+        <h1 class="text-xl font-bold tracking-wide text-white">Al Maaref Private School</h1>
+      </div>
+      <div class="text-right">
+        <p class="text-xs md:text-sm mb-1 text-white">Admissions: +971 4 123 4567</p>
+        <div class="space-x-2">
+          <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Enquire</a>
+          <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Visit</a>
+          <a href="#" class="bg-red-600 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-700 transition">Apply</a>
+        </div>
+      </div>
+        </div>
+      </div>
+      
+      <!-- Sticky Navbar with Mega Menu -->
+      <header class="bg-[#174c37] text-white sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center">
+          <!-- Desktop Nav -->
+          <nav class="hidden md:flex items-center justify-center space-x-8 text-sm font-semibold relative">
+            
+            <!-- Why Choose Us -->
+            <div class="relative">
+              <button class="dropdown-toggle hover:underline underline-offset-4">Why Choose Us?</button>
+              <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+                <a href="principles_welcome.html" class="block px-4 py-2 hover:bg-gray-100">Principal's Welcome</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Core Values</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Our History</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Al Maaref Family</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Guiding Statement</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Facilities</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Newsletters</a>
+              </div>
+            </div>
+            
+            <!-- Academic Excellence -->
+            <div class="relative">
+              <button class="dropdown-toggle hover:underline underline-offset-4">Academic Excellence</button>
+              <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+                <a href="learning_habits.html" class="block px-4 py-2 hover:bg-gray-100">Learning Habits</a>
+                <a href="inspection.html" class="block px-4 py-2 hover:bg-gray-100">Inspection Reports</a>
+                <a href="affiliations.html" class="block px-4 py-2 hover:bg-gray-100">Affiliations</a>
+              </div>
+            </div>
+            
+            <!-- Curriculum -->
+            <div class="relative">
+              <button class="dropdown-toggle hover:underline underline-offset-4">Curriculum</button>
+              <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+                <a href="curriculum.html" class="block px-4 py-2 hover:bg-gray-100">Overview</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Assessment and Equalization</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Early Years</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Elementary</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Middle School</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">High School</a>
+              </div>
+            </div>
+            
+            <div class="relative">
+              <button class="dropdown-toggle hover:underline underline-offset-4">Admissions & Fees</button>
+              <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Admission Process</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">School Tour</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Enquiry Form</a>
+                <a href="school_fees.html" class="block px-4 py-2 hover:bg-gray-100">Fee Structure</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Request Form</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">KHDA Fact Sheet</a>
+              </div>
+            </div>
+            
+            <div class="relative">
+              <button class="dropdown-toggle hover:underline underline-offset-4"> Parent Essentials </button>
+              <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg hidden z-50">
+                  <a href="term_dates.html" class="block ps-4 py-2 hover:bg-gray-100">Term Dates</a>
+                  <a href="#" class="block ps-4 py-2 hover:bg-gray-100">School Dates</a>
+              </div>
+            </div>
+              <a href="contact.html" class="hover:underline underline-offset-4">Contact Us</a>
+          </nav>
+      
+          <!-- Mobile Button -->
+          <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-sm font-semibold bg-[#174c37]">
+          <a href="#" class="block hover:underline underline-offset-4">Why Choose Us?</a>
+          <a href="#" class="block hover:underline underline-offset-4">Academic Excellence</a>
+          <a href="#" class="block hover:underline underline-offset-4">Curriculum</a>
+          <a href="school_fees.html" class="block hover:underline underline-offset-4">Admissions & Fees</a>
+          <a href="#" class="block hover:underline underline-offset-4">Parent Essentials</a>
+          <a href="#" class="block hover:underline underline-offset-4">Contact Us</a>
+        </div>
+      </header>
+
+<!-- Hero Section -->
+<section class="relative h-[60vh] bg-cover bg-center" style="background-image: url('assets/images/hero.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 flex items-center justify-center h-full text-white">
+        <h1 class="text-4xl md:text-5xl font-bold">Learning Habits</h1>
+    </div>
+</section>
+
+<!-- Breadcrumb -->
+<div class="bg-gray-100 py-2 px-6 text-sm text-gray-600">
+    <div class="max-w-7xl mx-auto">
+        <a href="#" class="hover:underline">Home</a> / <span class="font-semibold">Learning Habits</span>
+    </div>
+</div>
+
+<!-- Main Content -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 items-start">
+    <!-- Text Left -->
+    <div class="md:col-span-2">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">Nurturing Lifelong Learners</h2>
+        <p class="text-gray-700 mb-4">
+            Central to a life-long love of learning, and interwoven throughout each pupil’s curricular and co-curricular experiences, the RGSGD Learning Habits are the characteristic behaviours and attributes which students develop in order to thrive as they progress through school, university and beyond.
+        </p>
+        <p class="text-gray-700 mb-6">
+            Discover the six RGSGD Learning Habits below:
+        </p>
+    </div>
+    <!-- Image Right -->
+    <div>
+        <img src="assets/images/learning-habits.jpg" alt="Students" class="rounded-lg shadow-md w-full" />
+    </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 mt-10">
+        <div class="overflow-x-auto">
+            <table class="min-w-full table-auto border-collapse border border-gray-300">
+                <thead>
+                    <tr class="bg-[#3f5065] text-white">
+                        <th class="text-left px-4 py-2 border border-gray-300">Learning Habit</th>
+                        <th class="text-left px-4 py-2 border border-gray-300">Description</th>
+                    </tr>
+                </thead>
+                <tbody class="text-sm text-gray-800">
+                    <tr><td class="border px-4 py-2">Organisation</td><td class="border px-4 py-2">I am punctual and well prepared so that I can make the most out of every opportunity. I manage time effectively and meet deadlines. My work is clearly and systematically ordered.</td></tr>
+                    <tr><td class="border px-4 py-2">Engagement</td><td class="border px-4 py-2">I work in partnership with others, listen to their ideas, demonstrate empathy and look towards their wellbeing. I am an active listener who is well engaged in learning; I notice and learn from what others do well. I fulfil my role within a team or group to the best of my ability.</td></tr>
+                    <tr><td class="border px-4 py-2">Imagination</td><td class="border px-4 py-2">I combine my existing knowledge and skills with intellectual curiosity and creativity to successfully plan and achieve things in unfamiliar situations, of which I am proud.</td></tr>
+                    <tr><td class="border px-4 py-2">Perseverance</td><td class="border px-4 py-2">I am tenacious when facing adversity or suffering setbacks. I will understand and learn from both my mistakes and those of others, and resolve to try again.</td></tr>
+                    <tr><td class="border px-4 py-2">Aspiration</td><td class="border px-4 py-2">I aim to go beyond my current successes. I enjoy making the most of the opportunities presented to me, both inside and outside of the classroom, irrespective of the outcome.</td></tr>
+                    <tr><td class="border px-4 py-2">Reflection</td><td class="border px-4 py-2">I recognise and celebrate my achievements and those of others. I look back at the progress I have made and seek feedback so that I can refine and improve targets for my future development. I have a sense of perspective, rationally test claims of truth and take responsibility for my own wellbeing.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Footer (PARTIAL) -->
+<div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+</body>
+</html>
