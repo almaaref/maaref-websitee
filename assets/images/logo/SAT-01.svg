@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <text x="90" y="130" font-size="60" font-family="Georgia" fill="black">SAT</text>
+  <circle cx="150" cy="60" r="30" fill="#00AEEF"/>
+  <text x="130" y="65" font-size="14" font-family="Arial" fill="white">achieve</text>
+  <text x="130" y="80" font-size="14" font-family="Arial" fill="white">more</text>
+</svg>

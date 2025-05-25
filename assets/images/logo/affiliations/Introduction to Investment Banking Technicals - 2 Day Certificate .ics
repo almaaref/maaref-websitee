@@ -1,0 +1,101 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+METHOD:PUBLISH
+PRODID:-//LogMeIn//GoToWebinar//EN
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VTIMEZONE
+TZID:Europe/London
+LAST-MODIFIED:20250410T142247Z
+TZURL:https://www.tzurl.org/zoneinfo-outlook/Europe/London
+X-LIC-LOCATION:Europe/London
+BEGIN:DAYLIGHT
+TZNAME:BST
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+DTSTART:19700329T010000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZNAME:GMT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0000
+DTSTART:19701025T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20250525T092244Z
+DTSTART;TZID=Europe/London:20250531T133000
+DTEND;TZID=Europe/London:20250531T180000
+SUMMARY:GoToWebinar - Introduction to Investment Banking Technicals - 2 D
+ ay Certificate 
+LOCATION:GoToWebinar - See conference call information below
+UID:8b0b7854-4def-449f-9885-74953305fe72@goto.com
+ORGANIZER:info@cityinvestmenttraining.com
+RRULE:FREQ=DAILY;COUNT=2
+DESCRIPTION:1. Click and join at the specified time and date:\nhttps://gl
+ obal.gotowebinar.com/join/6866266943954664798/687596837\nNote: This link
+  should not be shared with others\; it is unique to you.\n\n2. Choose on
+ e of the following audio options:\n\nTO USE YOUR COMPUTER'S AUDIO:\nWhen
+  the Webinar begins\, you will be connected to audio using your computer
+ 's microphone and speakers (VoIP). A headset is recommended.\n\n-- OR --
+ \n\nTO USE YOUR TELEPHONE:\nIf you prefer to use your phone\, you must s
+ elect "Use Telephone" after joining the webinar and call in using the nu
+ mbers below.\n\nUnited Kingdom: +44 20 3713 5022\n	Access Code: 966-473-
+ 456\n	Audio PIN: Shown after joining the webinar\n\nWelcome to City Inve
+ stment Training's Financial modelling and introduction to investment ban
+ king careers webinar.\n\nThe course is Free for students who are looking
+  to attend the webinar and looking for a participation certificate after
+ . \n\nStudents can chose if they would like a graded certificate after t
+ he course finishes. \n \nNo feedback will be provided on models submitte
+ d.  \n\nAgenda:\n1. Introduction to Investment Banking Career with Samee
+ r Merchant\, CFA and Dr Ken Lee (Ex-Head of Barclays European Equity Res
+ earch)\n2. Cracking Investment Banking Interviews\n3. Introduction to Ac
+ counting for Investment Banking\n4. Introduction to Financial Modelling\
+ n5. Introduction to Valuations\n\nPlease note: \nYou will need a Windows
+  Laptop to build a financial model - Given that Macs shortcuts and funct
+ ions are different we cannot guarantee the same level of modelling educa
+ tion. Bring Macs at your own risk!!\n\nPlease download MS Office\, espec
+ ially MS Excel for the training session \n\nAlso make sure to join our T
+ elegram group for this course in which we will be sharing key documents 
+ such as the financial model... \n👉 https://t.me/+J6LoUmd_8DlhYmZk\n
+X-ALT-DESC;FMTTYPE=text/html:<HTML><HEAD><TITLE></TITLE><BODY><FONT SIZE=
+ 2><b>1. Click and join at the specified time and date:</b></FONT><BR><FO
+ NT SIZE=2>https://global.gotowebinar.com/join/6866266943954664798/687596
+ 837</FONT><BR><FONT SIZE=2>Note: This link should not be shared with oth
+ ers\; it is unique to you.</FONT><BR><BR><FONT SIZE=2><FONT SIZE=2><b>2.
+  Choose one of the following audio options:</b></FONT><BR><BR><FONT SIZE
+ =2>TO USE YOUR COMPUTER'S AUDIO:</FONT><BR><FONT SIZE=2>When the Webinar
+  begins\, you will be connected to audio using your computer's microphon
+ e and speakers (VoIP). A headset is recommended.</FONT><BR><BR><FONT SIZ
+ E=2>-- OR --</FONT><BR><BR><FONT SIZE=2>TO USE YOUR TELEPHONE:</FONT><BR
+ ><FONT SIZE=2>If you prefer to use your phone\, you must select "Use Tel
+ ephone" after joining the webinar and call in using the numbers below.</
+ FONT><BR><BR><FONT SIZE=2>United Kingdom: +44 20 3713 5022</FONT><BR><FO
+ NT SIZE=2>&nbsp\;&nbsp\;&nbsp\;&nbsp\;</FONT><FONT SIZE=2>Access Code: 9
+ 66-473-456</FONT><BR><FONT SIZE=2>&nbsp\;&nbsp\;&nbsp\;&nbsp\;</FONT><FO
+ NT SIZE=2>Audio PIN: Shown after joining the webinar</FONT><BR></BODY></
+ HTML></FONT><BR><FONT SIZE=2>Welcome to City Investment Training's Finan
+ cial modelling and introduction to investment banking careers webinar.\n
+ \nThe course is Free for students who are looking to attend the webinar 
+ and looking for a participation certificate after. \n\nStudents can chos
+ e if they would like a graded certificate after the course finishes. \n 
+ \nNo feedback will be provided on models submitted.  \n\nAgenda:\n1. Int
+ roduction to Investment Banking Career with Sameer Merchant\, CFA and Dr
+  Ken Lee (Ex-Head of Barclays European Equity Research)\n2. Cracking Inv
+ estment Banking Interviews\n3. Introduction to Accounting for Investment
+  Banking\n4. Introduction to Financial Modelling\n5. Introduction to Val
+ uations\n\nPlease note: \nYou will need a Windows Laptop to build a fina
+ ncial model - Given that Macs shortcuts and functions are different we c
+ annot guarantee the same level of modelling education. Bring Macs at you
+ r own risk!!\n\nPlease download MS Office\, especially MS Excel for the 
+ training session \n\nAlso make sure to join our Telegram group for this 
+ course in which we will be sharing key documents such as the financial m
+ odel... \n👉 https://t.me/+J6LoUmd_8DlhYmZk</FONT><BR></BODY></HTML>
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR
