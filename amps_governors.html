@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMPS Governors Board | Al Maaref Private School</title>
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/script.js"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+<!-- Header Partials -->
+<div hx-get="partials/header-top.html" hx-trigger="load" hx-swap="outerHTML"></div>
+<div hx-get="partials/navbar.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+<!-- Hero Section -->
+<section class="relative h-[50vh] bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/hero.jpg');">
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  <h1 class="relative z-10 text-white text-4xl md:text-5xl font-bold">AMPS Governors Board</h1>
+</section>
+
+<!-- Governors Board Content -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-2xl font-semibold text-[#6089FB]">Meet Our Governors</h2>
+      <p class="text-gray-700 mt-4">Our Governors Board ensures the strategic direction and educational excellence of AMPS. This diverse group of leaders guides school policy and supports community values.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Governor Card -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 text-center">
+        <img src="assets/images/governors/gov1.jpg" alt="Governor" class="w-24 h-24 rounded-full mx-auto mb-4">
+        <h3 class="text-lg font-semibold text-[#6089FB]">Member 1</h3>
+        <p class="text-sm text-gray-600">Chair of the Board</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 text-center">
+        <img src="assets/images/governors/gov2.jpg" alt="Governor" class="w-24 h-24 rounded-full mx-auto mb-4">
+        <h3 class="text-lg font-semibold text-[#6089FB]">Member 2</h3>
+        <p class="text-sm text-gray-600">Community Representative</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 text-center">
+        <img src="assets/images/governors/gov3.jpg" alt="Governor" class="w-24 h-24 rounded-full mx-auto mb-4">
+        <h3 class="text-lg font-semibold text-[#6089FB]">Member 3</h3>
+        <p class="text-sm text-gray-600">Education Specialist</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+</body>
+</html>
