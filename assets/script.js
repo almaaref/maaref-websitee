@@ -32,3 +32,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
   
+
+    window.addEventListener('DOMContentLoaded', () => {
+    const backdrop = document.getElementById('popup-backdrop');
+    const modal = document.getElementById('popup-modal');
+    backdrop.classList.remove('opacity-0', 'pointer-events-none');
+    modal.classList.remove('-translate-y-full');
+  });
+
+  function closePopup() {
+    const backdrop = document.getElementById('popup-backdrop');
+    const modal = document.getElementById('popup-modal');
+
+    // Slide up animation
+    modal.classList.add('-translate-y-full');
+    backdrop.classList.add('opacity-0');
+
+    // Hide after transition ends
+    setTimeout(() => {
+      backdrop.classList.add('pointer-events-none');
+    }, 300); // match `duration-300`
+  }

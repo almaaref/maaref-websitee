@@ -2,7 +2,7 @@
   <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
     <!-- Desktop Nav -->
     <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold relative" id="desktop-nav">
-      <!-- Example Dropdown -->
+
       <div class="relative">
         <button onclick="toggleDropdown('menu-why')" class="hover:underline underline-offset-4">Why Choose Us?</button>
         <div id="menu-why" class="dropdown hidden absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg z-50">
@@ -37,13 +37,20 @@
       </div>
 
       <div class="relative">
+        <button onclick="toggleDropdown('menu-students')" class="hover:underline underline-offset-4"> Students Life</button>
+        <div id="menu-students" class="dropdown hidden absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg z-50">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Student's Care & Support</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Student's Council</a>
+        </div>
+      </div>
+
+      <div class="relative">
         <button onclick="toggleDropdown('menu-admissions')" class="hover:underline underline-offset-4">Admissions & Fees</button>
         <div id="menu-admissions" class="dropdown hidden absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg z-50">
           <a href="#" class="block px-4 py-2 hover:bg-gray-100">Admission Process</a>
           <a href="#" class="block px-4 py-2 hover:bg-gray-100">School Tour</a>
           <a href="#" class="block px-4 py-2 hover:bg-gray-100">Enquiry Form</a>
           <a href="school_fees.html" class="block px-4 py-2 hover:bg-gray-100">Fee Structure</a>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Request Form</a>
           <a href="#" class="block px-4 py-2 hover:bg-gray-100">KHDA Fact Sheet</a>
         </div>
       </div>
@@ -69,7 +76,7 @@
 
   <!-- Mobile Menu (Same as before) -->
   <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-sm font-semibold bg-[#6089FB]">
-    <a href="#" class="block hover:underline underline-offset-4">Why Choose Us?</a>
+    <a href="" class="block hover:underline underline-offset-4">Why Choose Us?</a>
     <a href="#" class="block hover:underline underline-offset-4">Academic Excellence</a>
     <a href="#" class="block hover:underline underline-offset-4">Curriculum</a>
     <a href="school_fees.html" class="block hover:underline underline-offset-4">Admissions & Fees</a>
