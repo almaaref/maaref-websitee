@@ -1,8 +1,17 @@
 @keyframes scrollHorizontal {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .animate-scroll-horizontal {
-  animation: scrollHorizontal 60s linear infinite;
+    animation: scrollHorizontal 60s linear infinite;
+}
+
+/* Hide scrollbars for all browsers */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari */
 }

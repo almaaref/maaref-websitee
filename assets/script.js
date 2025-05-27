@@ -53,3 +53,43 @@ document.addEventListener("DOMContentLoaded", function () {
       backdrop.classList.add('pointer-events-none');
     }, 300); // match `duration-300`
   }
+
+  // Script for testimonials
+
+  const container = document.getElementById('testimonial-scroll');
+  let isHovering = false;
+  let isDragging = false;
+  let startX;
+  let scrollLeft;
+
+  // Auto scroll
+  setInterval(() => {
+    if (!isHovering && !isDragging) {
+      container.scrollLeft += 1;
+      if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+        container.scrollLeft = 0;
+      }
+    }
+  }, 30);
+
+  // Pause on hover
+  container.addEventListener('mouseenter', () => isHovering = true);
+  container.addEventListener('mouseleave', () => isHovering = false);
+
+  // Drag to scroll
+  container.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
+  });
+
+  container.addEventListener('mouseup', () => isDragging = false);
+  container.addEventListener('mouseleave', () => isDragging = false);
+
+  container.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - container.offsetLeft;
+    const walk = (x - startX) * 2;
+    container.scrollLeft = scrollLeft - walk;
+  });
