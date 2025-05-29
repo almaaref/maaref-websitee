@@ -125,9 +125,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.body.addEventListener("htmx:afterSwap", function (event) {
-    if (event.detail.target.id === "navbar-container") {
-      attachMenuListeners();
+  document.body.addEventListener("htmx:afterSwap", function (event) {
+    if (event.detail.target.id === "navbar-container" || event.detail.target.id === "mobile-menu") {
+      setTimeout(() => {
+        attachMenuListeners();
+      }, 100); // delay ensures DOM is ready
     }
   });
 
@@ -145,5 +147,7 @@ document.body.addEventListener("htmx:afterSwap", function (event) {
           mobileMenu.classList.add("hidden");
         });
       });
+    } else {
+      console.warn("Mobile nav toggle elements not found");
     }
   }
