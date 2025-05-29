@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curriculum | Al Maaref Private School</title>
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/script.js"></script>
+</head>
+
+<body class="bg-white text-gray-900 font-sans">
+
+    <div hx-get="partials/top_header.html" hx-trigger="load" hx-swap="outerHTML"></div>
+    <div hx-get="partials/navbar.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+    <!-- Hero Section -->
+    <section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/titles_images/curriculum_title_image.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="relative z-10 flex items-center justify-center h-full text-white">
+                <h1 class="text-4xl md:text-5xl font-bold">Assessment & Equalization</h1>
+            </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-2 px-6 text-sm text-gray-600">
+        <div class="max-w-7xl mx-auto">
+            <a href="#" class="hover:underline">Home</a> / <span class="font-semibold">Assessment & Equalization</span>
+        </div>
+    </div>
+
+    <section class="bg-white py-20">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold text-[#1e266d] mb-4">Benchmarking and International Assessment</h2>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+      Students at Al Maaref Private School sit for several international and benchmark exams to measure academic progress and cognitive abilities.
+    </p>
+  </div>
+</section>
+
+<!-- MAP Test -->
+<section class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h3 class="text-2xl font-bold text-[#6089FB] mb-4">Measurement of Academic Progress Test (MAP)</h3>
+      <p class="mb-2"><strong>MAP Test:</strong> Assesses students’ attainment and progress three times a year (Fall, Winter, Spring) from Grades 3 to 9.</p>
+      <ul class="list-disc pl-5 text-gray-700 space-y-2">
+        <li><strong>To Be Good in Attainment:</strong> 75% should reach ≥41st percentile; 50% ≥61st.</li>
+        <li><strong>To Be Good in Progress:</strong> 75% should meet or exceed progress; 50% should exceed.</li>
+      </ul>
+    </div>
+    <img src="assets/images/map-assessment.jpg" class="rounded-lg shadow-lg h-72 w-full object-cover" alt="MAP Assessment">
+  </div>
+</section>
+
+<!-- CAT4 & Other Assessments -->
+<section class="bg-[#E8F0FE] py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-2xl font-bold text-[#1e266d] mb-8 text-center">The Cognitive Abilities Test (CAT4) & More</h3>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="space-y-4 text-gray-800">
+        <p><strong>CAT4:</strong> For Grades 4, 6, 8, and 10 – helps understand how students think.</p>
+        <p><strong>PSAT:</strong> Pre-SAT for American high school standards (Grade 10).</p>
+        <p><strong>PISA:</strong> International assessment (Math, Science, English).</p>
+        <p><strong>TIMSS:</strong> Conducted every 4 years – Grades 4 & 8, Math & Science.</p>
+        <p><strong>PIRLS:</strong> Reading literacy for Grade 4 students.</p>
+      </div>
+      <div class="space-y-4 text-gray-800">
+        <p><strong>Advanced Placement (AP):</strong> Optional AP track with minimum 5 APs.</p>
+        <p><strong>EmSAT:</strong> Grade 12 requirement linked to UAE graduation/universities.</p>
+        <p><strong>Data Use:</strong> Internal + benchmark data analyzed → Action plans developed.</p>
+        <p><strong>Differentiation:</strong> Class placement is based on MAP data triangulated with other results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA or Infographic -->
+<section class="py-16 bg-white">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h3 class="text-xl font-bold text-[#6089FB] mb-4">Our assessments empower every student’s path forward</h3>
+    <p class="text-gray-600">Through a careful combination of international benchmarking, personalized learning targets, and cognitive assessment, AMPS ensures students are positioned for success across all learning milestones.</p>
+  </div>
+</section>
+
+
+
+
+<!-- Footer (PARTIAL) -->
+<div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+</body>
+</html>

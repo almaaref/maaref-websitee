@@ -93,3 +93,34 @@ document.addEventListener("DOMContentLoaded", function () {
     const walk = (x - startX) * 2;
     container.scrollLeft = scrollLeft - walk;
   });
+
+
+  // Success Message javascript
+
+
+  document.getElementById("tourForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  // Netlify expects a "form-name" field explicitly
+  formData.append("form-name", "school-tour");
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then((response) => {
+      if (response.ok) {
+        document.getElementById("successMessage").classList.remove("hidden");
+        form.reset();
+      } else {
+        alert("Form submission failed. Please try again.");
+      }
+    })
+    .catch((error) => {
+      alert("There was a problem submitting the form.");
+    });
+});
