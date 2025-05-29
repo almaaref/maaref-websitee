@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Script for testimonials
 
-  const container = document.getElementById('testimonial-scroll');
+  const testcontainer = document.getElementById('testimonial-scroll');
   let isHovering = false;
   let isDragging = false;
   let startX;
@@ -65,33 +65,33 @@ document.addEventListener("DOMContentLoaded", function () {
   // Auto scroll
   setInterval(() => {
     if (!isHovering && !isDragging) {
-      container.scrollLeft += 1;
-      if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
-        container.scrollLeft = 0;
+      testcontainer.scrollLeft += 1;
+      if (testcontainer.scrollLeft >= testcontainer.scrollWidth - testcontainer.clientWidth) {
+        testcontainer.scrollLeft = 0;
       }
     }
   }, 30);
 
   // Pause on hover
-  container.addEventListener('mouseenter', () => isHovering = true);
-  container.addEventListener('mouseleave', () => isHovering = false);
+  testcontainer.addEventListener('mouseenter', () => isHovering = true);
+  testcontainer.addEventListener('mouseleave', () => isHovering = false);
 
   // Drag to scroll
-  container.addEventListener('mousedown', (e) => {
+  testcontainer.addEventListener('mousedown', (e) => {
     isDragging = true;
-    startX = e.pageX - container.offsetLeft;
-    scrollLeft = container.scrollLeft;
+    startX = e.pageX - testcontainer.offsetLeft;
+    scrollLeft = testcontainer.scrollLeft;
   });
 
-  container.addEventListener('mouseup', () => isDragging = false);
-  container.addEventListener('mouseleave', () => isDragging = false);
+  testcontainer.addEventListener('mouseup', () => isDragging = false);
+  testcontainer.addEventListener('mouseleave', () => isDragging = false);
 
-  container.addEventListener('mousemove', (e) => {
+  testcontainer.addEventListener('mousemove', (e) => {
     if (!isDragging) return;
     e.preventDefault();
-    const x = e.pageX - container.offsetLeft;
+    const x = e.pageX - testcontainer.offsetLeft;
     const walk = (x - startX) * 2;
-    container.scrollLeft = scrollLeft - walk;
+    testcontainer.scrollLeft = scrollLeft - walk;
   });
 
 

@@ -123,12 +123,12 @@
     <!-- Testimonial Section -->
 
     <section class="py-24 bg-[#6089FB] text-white">
-  <div class="max-w-7xl mx-auto px-6 text-center">
-    <h2 class="text-sm font-semibold tracking-widest uppercase mb-2">What Our Community Says</h2>
-    <h2 class="text-4xl font-bold font-serif mb-6">Testimonials</h2>
-    <div class="w-12 h-0.5 bg-white mx-auto mb-10"></div>
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-sm font-semibold tracking-widest uppercase mb-2">What Our Community Says</h2>
+        <h2 class="text-4xl font-bold font-serif mb-6">Testimonials</h2>
+        <div class="w-12 h-0.5 bg-white mx-auto mb-10"></div>
 
-    <div id="testimonial-scroll" class="overflow-x-auto whitespace-nowrap scroll-smooth group relative cursor-grab active:cursor-grabbing scrollbar-hide">
+        <div id="testimonial-scroll" class="overflow-x-auto whitespace-nowrap scroll-smooth group relative cursor-grab active:cursor-grabbing scrollbar-hide">
       <div class="flex gap-8 w-max px-4">
         <div class="bg-white text-[#1e266d] rounded-xl p-8 shadow-lg w-[500px] break-words inline-block align-top">
           <p class="text-base italic mb-4 whitespace-normal">“As we were a part of Almaaref Private School since my son Raian was in AMPS up till now (Gr.6)… I would like to recommend it hardly to those who are searching for a good school …. I love how it’s a small community and almost everyone feels like a family, from the parents to the teachers, supervisors and principles …. teachers create an amazing relationships with all kids and educate them in a creative and professional ways,  add to that the good relationships which they create with parents.”</p>
@@ -147,44 +147,25 @@
           <p class="font-semibold">– Teacher</p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
+        </div>
+      </div>
+    </section>
 
     <!-- News Section -->
     <section class="bg-gray-100 py-20">
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-sm font-semibold uppercase tracking-wider mb-2">Latest News</h2>
-        <div class="w-10 h-0.5 bg-gray-700 mb-8"></div>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="bg-white shadow rounded p-4">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Example.png/640px-Example.png" alt="News 1" class="rounded mb-4">
-            <p class="text-sm text-gray-500 mb-1">10/02/2025</p>
-            <h3 class="font-bold text-lg mb-2">Al Maaref Welcomes New Principal</h3>
-            <p class="text-sm text-gray-700 mb-4">We are delighted to announce the appointment of our new Principal to lead our academic and cultural vision into the future...</p>
-            <a href="#" class="inline-block border border-black text-black font-semibold text-sm px-4 py-2 rounded hover:bg-black hover:text-white">Read more</a>
-          </div>
-          <div class="bg-white shadow rounded p-4">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Example.png/640px-Example.png" alt="News 2" class="rounded mb-4">
-            <p class="text-sm text-gray-500 mb-1">01/07/2024</p>
-            <h3 class="font-bold text-lg mb-2">‘Very Good’ in First KHDA Inspection</h3>
-            <p class="text-sm text-gray-700 mb-4">Al Maaref earns a 'Very Good' rating from KHDA in our very first inspection—highlighting our commitment to quality education...</p>
-            <a href="#" class="inline-block border border-black text-black font-semibold text-sm px-4 py-2 rounded hover:bg-black hover:text-white">Read more</a>
-          </div>
-          <div class="bg-white shadow rounded p-4">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Example.png/640px-Example.png" alt="News 3" class="rounded mb-4">
-            <p class="text-sm text-gray-500 mb-1">21/05/2024</p>
-            <h3 class="font-bold text-lg mb-2">Exclusive Masterclass by Mezzo-Soprano</h3>
-            <p class="text-sm text-gray-700 mb-4">Al Maaref hosted a renowned mezzo-soprano for an exclusive vocal training session with our music students...</p>
-            <a href="#" class="inline-block border border-black text-black font-semibold text-sm px-4 py-2 rounded hover:bg-black hover:text-white">Read more</a>
-          </div>
-        </div>
+        <h2 class="text-sm font-semibold uppercase tracking-wider mb-2">Latest Newsletters</h2>
+          <section class="py-12">
+            <div class="max-w-7xl mx-auto px-6">
+              <div id="newsletters" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- JS will populate the cards here -->
+              </div>
+            </div>
+          </section>
         <div class="text-center mt-10">
-          <a href="#" class="inline-block bg-white border border-black text-black font-semibold px-6 py-2 rounded hover:bg-black hover:text-white">View All School News</a>
+          <a href="newsletters.html" class="inline-block bg-white border border-black text-black font-semibold px-6 py-2 rounded hover:bg-black hover:text-white">View All School Newsletters</a>
         </div>
-          </div>
+      </div>
     </section>
 
     <div hx-get="partials/footer.html" hx-trigger="load"></div>
@@ -208,4 +189,7 @@
 <a href="/admin/index.html" class="text-sm text-gray-500 hover:underline">Editor Login</a>
 
 <script src="assets/script.js"></script>
-
+<script src="assets/news.js"></script>
+<script>
+  renderNewsletters("newsletters", 3);
+</script>
