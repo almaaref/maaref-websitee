@@ -124,3 +124,26 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("There was a problem submitting the form.");
     });
 });
+
+document.body.addEventListener("htmx:afterSwap", function (event) {
+    if (event.detail.target.id === "navbar-container") {
+      attachMenuListeners();
+    }
+  });
+
+  function attachMenuListeners() {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      document.querySelectorAll("#mobile-menu a").forEach(link => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+    }
+  }

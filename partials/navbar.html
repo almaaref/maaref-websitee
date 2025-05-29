@@ -76,7 +76,7 @@
 
   <!-- Mobile Menu (Same as before) -->
   <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-sm font-semibold bg-[#6089FB]">
-    <a href="" class="block hover:underline underline-offset-4">Why Choose Us?</a>
+    <a href="#" class="block hover:underline underline-offset-4">Why Choose Us?</a>
     <a href="#" class="block hover:underline underline-offset-4">Academic Excellence</a>
     <a href="#" class="block hover:underline underline-offset-4">Curriculum</a>
     <a href="school_fees.html" class="block hover:underline underline-offset-4">Admissions & Fees</a>
@@ -101,4 +101,30 @@
       document.querySelectorAll('.dropdown').forEach(el => el.classList.add('hidden'));
     }
   });
+</script>
+
+<script>
+
+  document.body.addEventListener("htmx:afterSwap", function (event) {
+    if (event.detail.target.id === "navbar-container") {
+      attachMenuListeners();
+    }
+  });
+
+  function attachMenuListeners() {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      document.querySelectorAll("#mobile-menu a").forEach(link => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+    }
+  }
 </script>
