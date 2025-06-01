@@ -125,29 +125,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-  document.body.addEventListener("htmx:afterSwap", function (event) {
-    if (event.detail.target.id === "navbar-container" || event.detail.target.id === "mobile-menu") {
-      setTimeout(() => {
-        attachMenuListeners();
-      }, 100); // delay ensures DOM is ready
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  }
+
+  function toggleDropdown(id) {
+    document.querySelectorAll('.dropdown').forEach(el => {
+      if (el.id !== id) el.classList.add('hidden');
+    });
+    const target = document.getElementById(id);
+    if (target) target.classList.toggle('hidden');
+  }
+
+  // Close dropdowns on outside click
+  document.addEventListener('click', (e) => {
+    const nav = document.getElementById('desktop-nav');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (!nav?.contains(e.target) && !mobileMenu?.contains(e.target)) {
+      document.querySelectorAll('.dropdown').forEach(el => el.classList.add('hidden'));
     }
   });
 
-  function attachMenuListeners() {
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    if (menuToggle && mobileMenu) {
-      menuToggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-
-      document.querySelectorAll("#mobile-menu a").forEach(link => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.add("hidden");
-        });
-      });
-    } else {
-      console.warn("Mobile nav toggle elements not found");
-    }
-  }

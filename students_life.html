@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student's Life | Al Maaref Private School</title>
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/script.js"></script>
+</head>
+
+<body class="bg-white text-gray-900 font-sans">
+<!-- Header (reused) -->
+
+
+<div hx-get="partials/navbar.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+<!-- Hero Section -->
+<section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/hero.jpg');">
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  <h1 class="relative z-10 text-white text-4xl md:text-5xl font-bold">Student's Life</h1>
+</section>
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-[#6089FB] text-center mb-16">Student Life at AMPS</h2>
+
+    <!-- Block: Student Care -->
+    <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
+      <div class="order-2 md:order-1">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Student Care & Well-being</h3>
+        <p class="text-gray-700 mb-2">We are dedicated to ensuring the well-being and safety of all our students and staff members.</p>
+        <p class="text-gray-700">Our internal policies are regularly reviewed to align with best practices in student safeguarding, creating a nurturing space where every child is valued and respected.</p>
+      </div>
+      <div class="order-1 md:order-2">
+        <img src="/images/student-care.svg" alt="Student Well-being" class="w-full h-auto rounded shadow-md">
+      </div>
+    </div>
+
+    <!-- Block: Health & Safety -->
+    <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
+      <div>
+        <img src="/images/health-safety.svg" alt="Health and Safety" class="w-full h-auto rounded shadow-md">
+      </div>
+      <div>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Health & Safety</h3>
+        <p class="text-gray-700 mb-2">Health and safety are a top priority. We ensure a secure environment where students grow and learn confidently.</p>
+        <p class="text-gray-700">Protocols are regularly reviewed and implemented with care for the well-being of our entire school community.</p>
+      </div>
+    </div>
+
+    <!-- Block: School Counseling -->
+    <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
+      <div class="order-2 md:order-1">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">School Counseling Services</h3>
+        <p class="text-gray-700 mb-2">Our counseling services are based on ASCA and Michigan standards, offering comprehensive emotional and academic support across all grade levels.</p>
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+          <li>1:1 and group counseling</li>
+          <li>Behavioral and emotional support</li>
+          <li>Staff training and awareness sessions</li>
+          <li>Observation and proactive intervention</li>
+        </ul>
+      </div>
+      <div class="order-1 md:order-2">
+        <img src="/images/counseling.svg" alt="Counseling Services" class="w-full h-auto rounded shadow-md">
+      </div>
+    </div>
+
+    <!-- Block: Safeguarding -->
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <img src="/images/safeguarding.svg" alt="Safeguarding Policy" class="w-full h-auto rounded shadow-md">
+      </div>
+      <div>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Safeguarding Policy</h3>
+        <p class="text-gray-700 mb-2">AMPS is committed to upholding every child's safety and rights. We enforce a transparent, structured safeguarding policy in line with UAE law.</p>
+        <p class="text-gray-700">Staff receive regular training and all concerns are documented and addressed swiftly to protect every learner’s well-being.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+<div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+</body>
+</html>

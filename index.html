@@ -20,14 +20,25 @@
   </head>
   
   <body class="bg-white text-gray-900 font-sans">
-    <!-- Top Header (not sticky) -->
-    <div hx-get="partials/top_header.html" hx-trigger="load" hx-swap="outerHTML"></div>
-    
+
     <!-- Sticky Navbar with Mega Menu -->
     <div id="navbar-container" hx-get="partials/navbar.html" hx-trigger="load" hx-swap="outerHTML"></div>
 
+    <script>
+      // Delegated click handler that always works, even for HTMX-loaded content
+      document.addEventListener('click', (event) => {
+        const toggleButton = event.target.closest('#menu-toggle');
+        if (toggleButton) {
+          const mobileMenu = document.getElementById('mobile-menu');
+          if (mobileMenu) {
+            mobileMenu.classList.toggle('hidden');
+          }
+        }
+      });
+    </script>
+
     <!-- Hero Section -->
-    <section class="relative h-[calc(100vh+104px)] -mt-[150px]">
+    <section class="relative h-screen">
       <div class="absolute w-full h-full overflow-hidden">
         <video autoplay muted loop playsinline class="w-full h-full object-cover">
           <source src="assets/videos/promo_video_1.webm" type="video/webm" />
@@ -36,7 +47,7 @@
       </div>
       <div class="relative z-10 flex items-center justify-center h-full text-white">
         <h2 class="text-5xl md:text-6xl font-bold tracking-tight text-center">
-          The world of <em class="italic font-serif">difference</em>.
+          Excellence in <em class="italic font-serif">Education</em>.
         </h2>
       </div>
     </section>
@@ -121,7 +132,6 @@
     </section>
 
     <!-- Testimonial Section -->
-
     <section class="py-24 bg-[#6089FB] text-white">
       <div class="max-w-7xl mx-auto px-6 text-center">
         <h2 class="text-sm font-semibold tracking-widest uppercase mb-2">What Our Community Says</h2>
@@ -151,8 +161,29 @@
       </div>
     </section>
 
-    <!-- News Section -->
+    <!-- Accreditations -->
     <section class="bg-gray-100 py-20">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-sm font-semibold tracking-widest uppercase mb-2">Accreditations</h2>
+        <h2 class="text-4xl font-bold font-serif mb-6">Proudly Recognized By</h2>
+        <div class="w-12 h-0.5 bg-[#1e266d] mx-auto mb-10"></div>
+
+        <!-- Logo Scroll Carousel -->
+        <div id="accreditation-scroll" class="overflow-x-auto whitespace-nowrap scroll-smooth group relative cursor-grab active:cursor-grabbing scrollbar-hide">
+          <div class="flex gap-8 w-max px-4 items-center justify-center mx-auto">
+            <img src="assets/images/logo/accreditations/AP.jpeg" alt="KHDA" class="h-36 inline-block rounded shadow-md bg-white p-2" />
+            <img src="assets/images/logo/accreditations/Cognia.jpeg" alt="Cambridge" class="h-36 inline-block rounded shadow-md bg-white p-2" />
+            <img src="assets/images/logo/accreditations/College-Board-logo-01.png" alt="Cognia" class="h-36 inline-block rounded shadow-md bg-white p-2" />
+            <img src="assets/images/logo/accreditations/SAT.jpeg" alt="BSM" class="h-36 inline-block rounded shadow-md bg-white p-2" />
+            <img src="assets/images/logo/accreditations/WELL.png" alt="UNESCO" class="h-36 inline-block rounded shadow-md bg-white p-2" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- News Section -->
+    <section class="py-24 bg-[#6089FB] text-white">
       <div class="max-w-7xl mx-auto px-6">
         <h2 class="text-sm font-semibold uppercase tracking-wider mb-2">Latest Newsletters</h2>
           <section class="py-12">
@@ -182,44 +213,27 @@
       </div>
     </div>
 
-    <!-- Main HTML file -->
-...
-<div id="navbar-container" hx-get="partials/navbar.html" hx-trigger="load" hx-swap="outerHTML"></div>
-
-<!-- Place this right before closing </body> -->
-<script>
-  document.body.addEventListener("htmx:afterSwap", function (event) {
-    if (event.detail.target.id === "navbar-container") {
-      attachMenuListeners();
-    }
-  });
-
-  function attachMenuListeners() {
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    if (menuToggle && mobileMenu) {
-      menuToggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-
-      document.querySelectorAll("#mobile-menu a").forEach(link => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.add("hidden");
-        });
-      });
-    }
-  }
-</script>
   </body>
 </html>
-
-    
-
 <a href="/admin/index.html" class="text-sm text-gray-500 hover:underline">Editor Login</a>
+
+<script>
+  document.addEventListener('click', (e) => {
+    const toggleBtn = e.target.closest('[data-toggle]');
+    if (toggleBtn) {
+      const key = toggleBtn.getAttribute('data-toggle');
+      const submenu = document.querySelector(`[data-submenu="${key}"]`);
+      if (submenu) {
+        submenu.classList.toggle('hidden');
+      }
+    }
+  });
+</script>
 
 <script src="assets/script.js"></script>
 <script src="assets/news.js"></script>
+
+
 <script>
   renderNewsletters("newsletters", 3);
 </script>

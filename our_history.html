@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our History | Al Maaref Private School</title>
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/script.js"></script>
+</head>
+
+<body class="bg-white text-gray-900 font-sans">
+    
+    <div hx-get="partials/navbar.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+<!-- Hero Section -->
+<section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/titles_images/learning_habits.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 flex items-center justify-center h-full text-white">
+        <h1 class="text-4xl md:text-5xl font-bold">Our History</h1>
+    </div>
+</section>
+
+<!-- Breadcrumb -->
+<div class="bg-gray-100 py-2 px-6 text-sm text-gray-600">
+    <div class="max-w-7xl mx-auto">
+        <a href="#" class="hover:underline">Home</a> / <span class="font-semibold">Our History</span>
+    </div>
+</div>
+
+<!-- Main Content -->
+<section class="py-16 bg-white text-justify">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-start">
+    <!-- Text Left -->
+    <div>
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">About Al Maaref Private School (AMPS)</h2>
+        <p class="text-gray-700 mb-4">
+            Maaref Private School (AMPS) is a member of the First Education Holding group. First Education Holding is an education holding company established in 2006 and located in Bahrain.
+        </p>
+        <p class="text-gray-700 mb-4">
+            FEH’s vision is to become a leading high-quality education company catering to the educational needs of families across the MENA region. Its mission is to grow by acquiring private K–12 schools and education-related businesses throughout the Middle East and North Africa.
+        </p>
+        <p class="text-gray-700 mb-4">
+            FEH provides strategic management support to its schools to optimize their growth and educational quality. At AMPS, we aim to provide a student-centered environment that encourages inquiry, exploration, critical thinking, and real-world skill transfer.
+        </p>
+        <p class="text-gray-700 mb-4">
+            Our curriculum is designed to help students become well-rounded individuals capable of succeeding beyond the classroom.
+        </p>
+        <p class="text-gray-700 mb-4">
+            AMPS is home to a diverse student body of around 1450 students from over 80 nationalities. We are a co-ed school following the American Curriculum.
+        </p>
+        <p class="text-gray-700">
+            The school is approved by the Knowledge and Human Development Authority (KHDA), accredited by <strong>COGNIA</strong> (formerly AdvancED) and <strong>NEASC</strong>, and holds membership in the <strong>College Board</strong>. AMPS is also an official testing center for <strong>AP, SAT, and PSAT</strong>.
+        </p>
+    </div>
+
+    <!-- Image Right -->
+    <div>
+        <img src="assets/images/learnings_habits_students.JPG" alt="AMPS Campus" class="rounded-lg shadow-md w-full" />
+    </div>
+    </div>
+</section>
+
+
+<!-- Footer (PARTIAL) -->
+<div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student's Council | Al Maaref Private School</title>
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/script.js"></script>
+</head>
+
+<body class="bg-white text-gray-900 font-sans">
+<!-- Header (reused) -->
+
+
+<div hx-get="partials/navbar.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+<!-- Hero Section -->
+<section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/hero.jpg');">
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  <h1 class="relative z-10 text-white text-4xl md:text-5xl font-bold">Student's Council</h1>
+</section>
+
+<!-- Student Council Section -->
+<section class="py-20 bg-gray-50 text-justify">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+    <!-- Text Content -->
+    <div>
+      <h2 class="text-3xl font-bold text-[#6089FB] mb-6">Student Council at AMPS</h2>
+      <p class="text-gray-700 mb-4">
+        At Al Maaref Private School (AMPS), the Student Council serves as the official voice of the student body, representing ideas, opinions, and concerns to school leadership.
+      </p>
+      <p class="text-gray-700 mb-4">
+        Its purpose is to foster leadership, responsibility, and active participation. The council meets regularly to plan and implement school-wide initiatives that promote student engagement and positive change.
+      </p>
+      <p class="text-gray-700 mb-4">
+        Led by an elected President, Vice President, Treasurer, and Secretary—with Class Representatives across all grade levels—the council ensures every student has a voice.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li>Promote leadership and communication skills</li>
+        <li>Plan school events, service projects, and awareness campaigns</li>
+        <li>Encourage student input in decision-making</li>
+        <li>Support initiatives that strengthen school values</li>
+      </ul>
+      <p class="text-gray-700 mt-4">
+        At AMPS, we believe in empowering students to take ownership of their educational journey—and the Student Council plays a vital role in that mission.
+      </p>
+    </div>
+
+    <!-- Image / Visual -->
+    <div>
+      <img src="/images/student-council.svg" alt="Student Council at AMPS" class="w-full h-auto rounded shadow-md" />
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+</body>
+</html>
