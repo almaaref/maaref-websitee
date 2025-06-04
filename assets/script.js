@@ -63,14 +63,14 @@ document.addEventListener("DOMContentLoaded", function () {
   let scrollLeft;
 
   // Auto scroll
-  setInterval(() => {
-    if (!isHovering && !isDragging) {
-      testcontainer.scrollLeft += 1;
-      if (testcontainer.scrollLeft >= testcontainer.scrollWidth - testcontainer.clientWidth) {
-        testcontainer.scrollLeft = 0;
-      }
-    }
-  }, 30);
+  // setInterval(() => {
+  //   if (!isHovering && !isDragging) {
+  //     testcontainer.scrollLeft += 1;
+  //     if (testcontainer.scrollLeft >= testcontainer.scrollWidth - testcontainer.clientWidth) {
+  //       testcontainer.scrollLeft = 0;
+  //     }
+  //   }
+  // }, 30);
 
   // Pause on hover
   testcontainer.addEventListener('mouseenter', () => isHovering = true);

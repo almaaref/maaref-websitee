@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <title>Al Maaref International School - AMIS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
     <script src="https://unpkg.com/htmx.org@1.9.6"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    
+
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon_io/favicon.ico">
     <!-- Apple devices -->
@@ -19,7 +22,7 @@
 
   </head>
   
-  <body class="bg-white text-gray-900 font-sans">
+  <body class="bg-white text-gray-900 font-[Playfair_Display]">
 
     <!-- Sticky Navbar with Mega Menu -->
     <div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
@@ -53,13 +56,13 @@
     </section>
 
     <!-- Welcome Section -->
-    <section class="bg-[#6089FB] text-white">
+    <section class=" mt-24 text-black ">
       <div class="grid md:grid-cols-2 gap-12 items-stretch min-h-[54vh]">
     
       <!-- Left Column -->
       <div class="px-6 py-6 flex flex-col justify-center text-justify">
       <div class="mb-4 w-16 h-1 bg-white"></div>
-      <h2 class="text-4xl font-bold leading-tight mb-6">Welcome to Al Maaref Private School</h2>
+      <h2 class="text-4xl font-bold leading-tight mb-6">Welcome to Maaref American School</h2>
       <p class="mb-4">
         We’re on a mission to equip every leader, dreamer and inbetweener with the inner confidence, self belief and personal resilience to thrive in the classroom and beyond. With small class sizes, an unparalleled breadth of activities for pupils, global alumni and a rich heritage of over 500 years – Al Maaref is a uniquely different and exceptional environment for each and every pupil.
       </p>
@@ -69,7 +72,7 @@
       <p class="mb-6">
         Our school embodies the ethos and values that have underpinned the Al Maaref Private School for over 500 years. These, combined with a spirit of innovation and development, will prepare pupils for the challenges of the 21st and 22nd centuries. We lead by example, stay true to our values, innovate, collaborate and strive to be the very best we can be.
       </p>
-      <a href="school_tour.html" class="inline-block border border-white text-white font-semibold px-6 py-3 rounded-md hover:bg-white hover:text-[#6089FB] transition">Book a School Tour</a>
+      <a href="school_tour.html" class="inline-block border border-black text-black font-semibold px-6 py-3 rounded-md hover:bg-white hover:text-[#000000] transition">Book a School Tour</a>
       </div>
     
       <!-- Right Column: Full Image Coverage -->
@@ -138,7 +141,7 @@
     </section>
 
     <!-- Testimonial Section -->
-    <section class="py-24 bg-[#6089FB] text-white">
+    <section class="pt-24 py-24 bg-[#6089FB] text-white">
       <div class="max-w-7xl mx-auto px-6 text-center">
         <h2 class="text-sm font-semibold tracking-widest uppercase mb-2">What Our Community Says</h2>
         <h2 class="text-4xl font-bold font-serif mb-6">Testimonials</h2>
@@ -168,12 +171,12 @@
     </section>
 
     <!-- Accreditations -->
-    <section class="relative py-20 bg-cover bg-center" style="background-image: url('./assets/images/logo/accreditations/bg.JPG');">
+    <section class="relative py-20 bg-cover bg-center" style="background-image: url('./assets/images/logo/accreditations/bg.webp');">
       <!-- Overlay -->
       <div class="absolute inset-0 bg-black bg-opacity-60"></div>
 
       <!-- Content -->
-      <div class="relative max-w-7xl mx-auto px-6 text-center text-white">
+      <div class="relative max-w-7xl h-96  mx-auto px-6 text-center text-white">
         <h2 class="text-sm font-semibold tracking-widest uppercase mb-2">Accreditations</h2>
         <h2 class="text-4xl font-bold font-serif mb-6">Proudly Recognized By</h2>
         <div class="w-12 h-0.5 bg-white mx-auto mb-10"></div>
