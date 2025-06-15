@@ -4,19 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student's Life | Al Maaref Private School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/htmx.org@1.9.6"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="assets/script.js"></script>
 </head>
 
-<body class="bg-white text-gray-900 font-sans">
+<body class="bg-white text-gray-900 font-[Playfair_Display]">
 <!-- Header (reused) -->
 
 
 <div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
 
 <!-- Hero Section -->
-<section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/hero.jpg');">
+<section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/titles_images/student_life_cover_page.webp');">
   <div class="absolute inset-0 bg-black bg-opacity-50"></div>
   <h1 class="relative z-10 text-white text-4xl md:text-5xl font-bold">Student's Life</h1>
 </section>
@@ -33,14 +36,14 @@
         <p class="text-gray-700">Our internal policies are regularly reviewed to align with best practices in student safeguarding, creating a nurturing space where every child is valued and respected.</p>
       </div>
       <div class="order-1 md:order-2">
-        <img src="/images/student-care.svg" alt="Student Well-being" class="w-full h-auto rounded shadow-md">
+        <img src="/assets/images/student_care.webp" alt="Student Well-being" class="w-full h-auto rounded shadow-md">
       </div>
     </div>
 
     <!-- Block: Health & Safety -->
     <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
       <div>
-        <img src="/images/health-safety.svg" alt="Health and Safety" class="w-full h-auto rounded shadow-md">
+        <img src="/assets/images/health.webp" alt="Health and Safety" class="w-full h-auto rounded shadow-md">
       </div>
       <div>
         <h3 class="text-2xl font-semibold text-gray-800 mb-4">Health & Safety</h3>
@@ -62,14 +65,14 @@
         </ul>
       </div>
       <div class="order-1 md:order-2">
-        <img src="/images/counseling.svg" alt="Counseling Services" class="w-full h-auto rounded shadow-md">
+        <img src="/assets/images/counseling.webp" alt="Counseling Services" class="w-full h-auto rounded shadow-md">
       </div>
     </div>
 
     <!-- Block: Safeguarding -->
     <div class="grid md:grid-cols-2 gap-10 items-center">
       <div>
-        <img src="/images/safeguarding.svg" alt="Safeguarding Policy" class="w-full h-auto rounded shadow-md">
+        <img src="/assets/images/safeguarding.webp" alt="Safeguarding Policy" class="w-full h-auto rounded shadow-md">
       </div>
       <div>
         <h3 class="text-2xl font-semibold text-gray-800 mb-4">Safeguarding Policy</h3>
@@ -107,7 +110,7 @@
 
     <!-- Image / Visual -->
     <div>
-      <img src="/images/student-council.svg" alt="Student Council at AMPS" class="w-full h-auto rounded shadow-md" />
+      <img src="/assets/images/student_council.webp" alt="Student Council at AMPS" class="w-full h-auto rounded shadow-md" />
     </div>
   </div>
 </section>
