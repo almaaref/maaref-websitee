@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us | Maaref American School</title>
+    <title>Why Us | Maaref American School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
     <script src="https://unpkg.com/htmx.org@1.9.6"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/script.js"></script>
+
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon_io/favicon.ico">
+    <!-- Apple devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/favicon_io/apple-touch-icon.png">
+    <!-- Modern browsers -->
+    <link rel="icon" sizes="32x32" href="assets/images/logo/favicon_io/favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="192x192" href="assets/images/logo/favicon_io/android-chrome-192x192.png" type="image/png">
 </head>
 
-<body class="bg-white text-gray-900 font-sans">
+<body class="bg-white text-gray-900 font-[Playfair_Display]">
     
     <div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
 
@@ -23,7 +35,7 @@
 
     <!-- Breadcrumb -->
     <div class="bg-gray-100 py-2 px-6 text-sm text-gray-600">
-    <div class="max-w-7xl mx-auto">
+    <div class="mx-auto">
         <a href="#" class="hover:underline">Home</a> / <span class="font-semibold">Our History</span>
     </div>
     </div>
@@ -59,7 +71,7 @@
 
         <!-- Image Column -->
         <div class="w-full h-full">
-            <img src="assets/images/logo/accreditations/bg.webp" alt="Students in meeting" class="w-full h-full object-cover rounded-lg shadow-md" />
+            <img src="assets/images/logo/accreditations/bg.webp" alt="Students in meeting" class="w-full h-full object-cover shadow-md" />
         </div>
 
         </div>
@@ -132,7 +144,7 @@
 
 <!-- Principal Welcome -->
 <section class="py-16 bg-gray-100">
-    <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-6">
         <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden grid grid-cols-1 md:grid-cols-2 min-h-[320px]">
 
         <!-- Image (Left) -->
@@ -160,7 +172,7 @@
 
 <!-- CEO Welcome -->
 <section class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-6">
         <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden grid grid-cols-1 md:grid-cols-2 min-h-[320px]">
             <!-- Message (Left) -->
             <div class="p-8 flex flex-col justify-center text-justify">
@@ -188,11 +200,101 @@
     </div>
 </section>
 
+<!-- Hero Section -->
+
+
+<!-- Academic Leadership -->
+<section class="py-20 bg-white">
+    <div class="transition duration-500 delay-100">
+    <h2 class="text-3xl font-bold text-[#6089FB] mb-2 text-center">Our Team</h2>
+    </div>
+    <div class="mx-auto px-6">
+    <h2 class="text-xl font-bold text-[#000000] mb-12 text-center">Academic Leadership</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Card 1 -->
+        <div class="bg-white rounded shadow-md p-6 text-center">
+            <img src="assets/images/team/dima.jpg" alt="Academic 1" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-lg font-semibold text-gray-800">Dima Alzuhair</h3>
+            <p class="text-sm text-gray-600">Secondary Principal</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-white rounded shadow-md p-6 text-center">
+            <img src="assets/images/team/heba.jpeg" alt="Academic 2" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-lg font-semibold text-gray-800">Heba Taja</h3>
+            <p class="text-sm text-gray-600">Elementary Principal</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-white rounded shadow-md p-6 text-center">
+            <img src="assets/images/team/maydy.jpeg" alt="Academic 3" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-lg font-semibold text-gray-800">Maydy Farag</h3>
+            <p class="text-sm text-gray-600">KG Principal</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="bg-white rounded shadow-md p-6 text-center">
+            <img src="assets/images/team/amal.jpg" alt="Academic 4" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-lg font-semibold text-gray-800">Amal Daoud</h3>
+            <p class="text-sm text-gray-600">Assessment Coordinator</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="bg-white rounded shadow-md p-6 text-center">
+        <img src="assets/images/team/dalia.png" alt="Academic 5" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-800">Dalia Elbeah</h3>
+        <p class="text-sm text-gray-600">Secondary AP Academics</p>
+        </div>
+        <!-- Card 6 -->
+        <div class="bg-white rounded shadow-md p-6 text-center">
+        <img src="assets/images/team/sally.jpg" alt="Academic 6" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-800">Sally Anany</h3>
+        <p class="text-sm text-gray-600">Elementary AP Academics</p>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- Admin Leadership -->
+<section class="py-20 bg-gray-50">
+  <div class="mx-auto px-6">
+    <h2 class="text-xl font-bold text-[#000000] mb-12 text-center">Administrative Leadership</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <!-- Card 1 -->
+      <div class="bg-white rounded shadow-md p-6 text-center">
+        <img src="assets/images/team/moosavi.jpeg" alt="Admin 1" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-800">Syed Moosavi</h3>
+        <p class="text-sm text-gray-600">Director of Operations</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white rounded shadow-md p-6 text-center">
+        <img src="assets/images/team/heba.png" alt="Admin 2" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-800">Heba Shewikh</h3>
+        <p class="text-sm text-gray-600">Director of Admissions/Marketing</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white rounded shadow-md p-6 text-center">
+        <img src="assets/images/team/ibrahim.png" alt="Admin 3" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-800">Ibrahim Aldayash</h3>
+        <p class="text-sm text-gray-600">HR Manager</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="bg-white rounded shadow-md p-6 text-center">
+        <img src="assets/images/team/hussain.jpeg" alt="Admin 4" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-800">Muhammad Hussain</h3>
+        <p class="text-sm text-gray-600">Director of IT</p>
+      </div>
+      <!-- Card 5 -->
+      <div class="bg-white rounded shadow-md p-6 text-center">
+        <img src="assets/images/team/rola.jpeg" alt="Admin 5" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-800">Rola Abunamous</h3>
+        <p class="text-sm text-gray-600">Directors Assistant</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="py-20 bg-white text-center">
-  <div class="max-w-7xl mx-auto px-6">
+  <div class="mx-auto px-6">
 
     <!-- Intro -->
-    <div class="mb-16 max-w-3xl mx-auto">
+    <div class="mb-16 max-w-7xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-bold text-[#6089FB] mb-4 animate-fade-in-up">
         Global Partnerships & Academic Standards
       </h2>
@@ -226,7 +328,7 @@
           </p>
         </div>
         <div class="text-center">
-          <img src="assets/images/logo/cognia.png" alt="Cognia" class="mx-auto h-24 hover:scale-105 transition duration-300" />
+          <img src="assets/images/logo/accreditations/Cognia_wbg.png" alt="Cognia" class="mx-auto h-24 hover:scale-105 transition duration-300" />
           <p class="mt-4 text-gray-700 max-w-md mx-auto">
             Cognia accreditation demonstrates our commitment to learner-centric growth, innovation, and excellence in teaching methodologies.
           </p>
