@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admissions Process | Al Maaref Private School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/htmx.org@1.9.6"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/script.js"></script>
 </head>
 
-<body class="bg-white text-gray-900 font-sans">
+<body class="bg-white text-gray-900 font-[Playfair_Display]">
 
 
 <div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
@@ -35,7 +38,7 @@
     <!-- Left Text Content -->
         <div>
             <nav class="text-sm text-gray-600 mb-4">
-                <a href="#" class="text-blue-700 font-semibold">Home</a> /
+                <a href="index.html" class="text-blue-700 font-semibold">Home</a> /
                 <span class="text-gray-500">Admissions Process</span>
             </nav>
         <h2 class="text-3xl md:text-4xl font-extrabold leading-snug mb-6">
@@ -56,8 +59,8 @@
     </div>
 
     <!-- Right Image -->
-        <div class="rounded-xl overflow-hidden shadow-l">
-            <img src="assets/images/academic_process_1.JPG" alt="Student writing in notebook" class="w-96 h-96 object-fill">
+        <div class="overflow-hidden shadow-l">
+            <img src="assets/images/admission_2.webp" alt="Student writing in notebook" class="w-full h-full object-fill">
         </div>
 
     </div>
@@ -89,8 +92,8 @@
             </ol>
             </div>
             <!-- Right Image -->
-            <div class="rounded-xl overflow-hidden shadow-l">
-            <img src="assets/images/academic_proces_2.jpg" alt="Students in uniform" class="w-96 h-96 object-cover">
+            <div class="md:order-first overflow-hidden shadow-l">
+            <img src="assets/images/admission_1.webp" alt="Students in uniform" class="w-full h-full object-cover">
             </div>
         </div>
     </section>
