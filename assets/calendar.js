@@ -31,7 +31,7 @@ function renderCalendar(date) {
     const isEvent = events[fullDate];
 
     calendarGrid.innerHTML += `
-      <div class="relative group border rounded-lg py-6 h-28 flex flex-col justify-center items-center text-sm hover:bg-blue-100 transition ${
+      <div class="relative group border rounded-lg py-6 h-28 flex flex-col justify-center items-center text-base hover:bg-blue-100 transition ${
         isEvent ? 'bg-blue-50 border-[#6089FB]' : ''
       }">
         <span class="text-lg font-semibold">${day}</span>

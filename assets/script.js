@@ -147,3 +147,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  document.addEventListener('DOMContentLoaded', () => {
+      new Swiper('.swiper', {
+        loop: true,
+        speed: 600,
+        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        effect: 'slide',
+      });
+    });

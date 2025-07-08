@@ -45,8 +45,8 @@ const newsletters = [
         cardEl.className = "bg-white shadow rounded-lg p-4 text-center hover:shadow-md transition";
         cardEl.innerHTML = `
             <h3 class="font-semibold text-lg text-[#6089FB] mb-2">${n.title}</h3>
-            <p class="text-sm text-gray-500 mb-4">${n.date}</p>
-            <a href="${n.file}" target="_blank" class="text-white bg-[#6089FB] px-4 py-2 text-sm rounded hover:bg-blue-600">View</a>
+            <p class="text-base text-gray-500 mb-4">${n.date}</p>
+            <a href="${n.file}" target="_blank" class="text-white bg-[#6089FB] px-4 py-2 text-base rounded hover:bg-blue-600">View</a>
         `;
         targetContainer.appendChild(cardEl);
     });
