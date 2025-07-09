@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admissions Enquiry | Maaref American School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon_io/favicon.ico">
+  <!-- Apple devices -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/favicon_io/apple-touch-icon.png">
+  <!-- Modern browsers -->
+  <link rel="icon" sizes="32x32" href="assets/images/logo/favicon_io/favicon-32x32.png" type="image/png">
+  <link rel="icon" sizes="192x192" href="assets/images/logo/favicon_io/android-chrome-192x192.png" type="image/png">
+  
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/script.js"></script>
+</head>
+<body class="bg-white font-[Playfair_Display]">
+  
+  <div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+  <!-- Hero Section -->
+  <section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/contact_us_title_image.webp');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 flex items-center justify-center h-full text-white">
+      <h1 class="text-4xl md:text-5xl font-bold">Admissions Enquiry </h1>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="bg-white py-12 px-6 md:px-16 text-black">
+    <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-4">Admission Enquiry</h2>
+      <p class="mb-8 text-lg">
+      Interested in enrolling your child at our school? Please complete the form below. Our Admissions Team will contact you shortly with the next steps.
+      </p>
+
+      <form id="admissionForm" class="grid md:grid-cols-2 gap-6">
+      <!-- Parent Name -->
+      <div>
+        <label for="parentName" class="block mb-1 font-semibold">Parent Name</label>
+        <input type="text" id="parentName" name="parentName" required class="w-full border px-4 py-2 rounded" />
+      </div>
+
+      <!-- Student Name -->
+      <div>
+        <label for="studentName" class="block mb-1 font-semibold">Student Name</label>
+        <input type="text" id="studentName" name="studentName" required class="w-full border px-4 py-2 rounded" />
+      </div>
+
+      <!-- Student DOB -->
+      <div>
+        <label for="studentDOB" class="block mb-1 font-semibold">Student D.O.B</label>
+        <input type="date" id="studentDOB" name="studentDOB" required class="w-full border px-4 py-2 rounded" />
+      </div>
+
+      <!-- Grade -->
+      <div>
+        <label for="grade" class="block mb-1 font-semibold">Grade</label>
+        <select id="grade" name="grade" required class="w-full border px-4 py-2 rounded">
+          <option value="">Select Grade</option>
+          <option value="Pre-KG">Pre-KG</option>
+          <option value="KG1">KG1</option>
+          <option value="KG2">KG2</option>
+          <option value="Grade 1">Grade 1</option>
+          <option value="Grade 2">Grade 2</option>
+          <option value="Grade 3">Grade 3</option>
+          <option value="Grade 4">Grade 4</option>
+          <option value="Grade 5">Grade 5</option>
+          <option value="Grade 6">Grade 6</option>
+          <option value="Grade 7">Grade 7</option>
+          <option value="Grade 8">Grade 8</option>
+          <option value="Grade 9">Grade 9</option>
+          <option value="Grade 10">Grade 10</option>
+          <option value="Grade 11">Grade 11</option>
+          <option value="Grade 12">Grade 12</option>
+        </select>
+      </div>
+
+      <!-- Last School Attended -->
+      <div>
+        <label for="lastSchool" class="block mb-1 font-semibold">Last School Attended</label>
+        <input type="text" id="lastSchool" name="lastSchool" class="w-full border px-4 py-2 rounded" />
+      </div>
+
+      <!-- Last Grade Attended -->
+      <div>
+        <label for="lastGrade" class="block mb-1 font-semibold">Last Grade Attended</label>
+        <input type="text" id="lastGrade" name="lastGrade" class="w-full border px-4 py-2 rounded" />
+      </div>
+
+      <!-- Parent Contact Number -->
+      <div>
+        <label for="parentPhone" class="block mb-1 font-semibold">Parent Contact Number</label>
+        <input type="tel" id="parentPhone" name="parentPhone" pattern="[0-9]{9,15}" placeholder="971 50 123 4567" required class="w-full border px-4 py-2 rounded" />
+      </div>
+
+      <!-- Parent Email -->
+      <div>
+        <label for="parentEmail" class="block mb-1 font-semibold">Parent Email</label>
+        <input type="email" id="parentEmail" name="parentEmail" required class="w-full border px-4 py-2 rounded" />
+      </div>
+
+      <!-- Academic Year -->
+      <div>
+        <label for="academicYear" class="block mb-1 font-semibold">Academic Year</label>
+        <select id="academicYear" name="academicYear" required class="w-full border px-4 py-2 rounded">
+          <option value="">Select Academic Year</option>
+          <option value="2024-2025">2024-2025</option>
+          <option value="2025-2026">2025-2026</option>
+        </select>
+      </div>
+
+      <!-- How did you hear about us -->
+      <div>
+        <label for="referral" class="block mb-1 font-semibold">How did you know about our school?</label>
+        <input type="text" id="referral" name="referral" class="w-full border px-4 py-2 rounded" />
+      </div>
+
+      <!-- Submit -->
+      <div class="col-span-2 pt-4">
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded">
+          Submit
+        </button>
+      </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer (PARTIAL) -->
+  <div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+
+  <script>
+    document.getElementById("admissionForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_xb0u7m2', 'template_2phglbm', this)
+      .then(() => {
+        alert("Form submitted successfully!");
+        this.reset();
+      }, (error) => {
+        console.error("FAILED...", error);
+        alert("Something went wrong. Please try again.");
+      });
+  });
+  </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+  (function(){
+    emailjs.init("RBdg7KY5v6Ysh-9Ra"); // replace with your actual public key
+  })();
+  </script>
+
+</body>
+</html>
