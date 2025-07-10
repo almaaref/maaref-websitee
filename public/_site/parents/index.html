@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Parents | Al Maaref American School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-900 font-[Playfair_Display]">
+<!-- Top Header (not sticky) -->
+  
+  <div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+  <!-- Hero Section -->
+  <section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/titles_images/calendar.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 flex items-center justify-center h-full text-white">
+      <h1 class="text-4xl md:text-5xl font-bold">For Parents</h1>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <div class="bg-gray-100 py-2 px-6 text-base text-gray-600">
+    <div class="mx-auto">
+      <a href="#" class="hover:underline">Home</a> / <span class="font-semibold">For Parents</span>
+    </div>
+  </div>
+
+<section class="bg-white text-black text-base">
+  <!-- Section 5: Parent Resources -->
+  <div class="h-full">
+    <div class="flex flex-col justify-center p-12 space-y-4">
+      <h2 class="text-2xl font-bold uppercase">Resources For Parents</h2>
+      <div class="w-16 h-0.5"></div>
+
+      <p>Find all the essential information to stay informed and engaged in your child’s learning journey at Maaref American School.</p>
+
+      <div>
+        <p class="font-semibold flex items-center gap-2">
+          School Policies
+        </p>
+        <p class="mb-2">Our policies promote a safe, respectful, and inclusive learning environment.</p>
+        <a href="#" class="inline-block border border-[#6089FB] text-black px-4 py-1 text-base rounded hover:bg-white hover:text-[#6089FB] transition">Download Policies (PDF)</a>
+      </div>
+
+      <div>
+        <p class="font-semibold">School Timings</p>
+        <p>Classes run from Sunday to Thursday. Below are the general timings:</p>
+        <ul class="list-disc list-inside">
+          <li>KG Section: 7:30 AM – 12:30 PM</li>
+          <li>Elementary & Middle School: 7:30 AM – 2:30 PM</li>
+          <li>Fridays and holidays follow a special schedule.</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-semibold">Transportation</p>
+        <p>We provide safe and reliable transportation services across Sharjah and nearby areas. Parents can register their child at the front desk or contact our transport coordinator.</p>
+        <a href="#" class="inline-block border border-[#6089FB] text-black px-4 py-1 text-base rounded hover:bg-white hover:text-[#6089FB] transition">Download Transport Info (PDF)</a>
+      </div>
+
+      <div>
+        <p class="font-semibold">Uniform Guidelines</p>
+        <p>Uniforms promote unity and discipline. Students must follow the dress code strictly. Uniforms are available at our approved supplier outlet.</p>
+        <ul class="list-disc list-inside">
+          <li>KG: Blue polo shirt with navy shorts/skirt</li>
+          <li>Grades 1-5: White shirt with navy pants/skirt</li>
+          <li>PE Days: Sports tracksuit with school logo</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-semibold">Parent Handbook</p>
+        <p>The Parent Handbook contains academic policies, behavioral expectations, school communication details, and everything you need as a parent.</p>
+        <a href="#" class="inline-block border border-[#6089FB] text-black px-4 py-1 text-base rounded hover:bg-white hover:text-[#6089FB] transition">Download Parent Handbook (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <!-- Footer (PARTIAL) -->
+  <div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+</body>
+
+<script src="assets/script.js"></script>
+<script src="assets/news.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script>
+</html>

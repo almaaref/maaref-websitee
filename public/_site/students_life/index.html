@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student's Life | Maaref American School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon_io/favicon.ico">
+  <!-- Apple devices -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/favicon_io/apple-touch-icon.png">
+  <!-- Modern browsers -->
+  <link rel="icon" sizes="32x32" href="assets/images/logo/favicon_io/favicon-32x32.png" type="image/png">
+  <link rel="icon" sizes="192x192" href="assets/images/logo/favicon_io/android-chrome-192x192.png" type="image/png">
+  
+  
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/script.js"></script>
+</head>
+
+<body class="bg-white text-gray-900 font-[Playfair_Display]">
+<!-- Header (reused) -->
+
+
+<div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+<!-- Hero Section -->
+<section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/titles_images/student_life_cover_page.webp');">
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  <h1 class="relative z-10 text-white text-4xl md:text-5xl font-bold">Student's Life</h1>
+</section>
+
+<section class="bg-white text-black">
+  <!-- Section 5: Student Support -->
+  <div class="grid grid-cols-1 md:grid-cols-2 h-full">
+    <div class="flex flex-col justify-center p-12 space-y-6">
+      <div>
+        <h4 class="text-base uppercase tracking-wide font-bold text-white">Student Support</h4>
+        <h2 class="text-2xl font-bold mt-2">Student Care & Well-being</h2>
+        <p class="mt-4">We are dedicated to ensuring the well-being and safety of all our students and staff members.</p>
+        <p>Our internal policies are regularly reviewed to align with best practices in student safeguarding, creating a nurturing space where every child is valued and respected.</p>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <h3 class="font-bold">Health & Safety</h3>
+          <p>Health and safety are a top priority. We ensure a secure environment where students grow and learn confidently. Protocols are regularly reviewed and implemented with care for the well-being of our entire school community.</p>
+        </div>
+        <div>
+          <h3 class="font-bold">School Counseling Services</h3>
+          <ul class="list-disc list-inside">
+            <li>1:1 and group counseling</li>
+            <li>Behavioral and emotional support</li>
+            <li>Staff training and awareness sessions</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold">Safeguarding Policy</h3>
+          <p>AMPS is committed to upholding every child's safety and rights. We enforce a transparent, structured safeguarding policy in line with UAE law. Staff receive regular training and all concerns are documented and addressed swiftly to protect every learner’s well-being.</p>
+        </div>
+      </div>
+    </div>
+    <div class="h-full w-full">
+      <img src="assets/images/student_care.webp" alt="Student Support" class="w-full h-full object-cover">
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+<div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+</body>
+</html>

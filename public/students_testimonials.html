@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Testimonials | Al Maaref American School</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon_io/favicon.ico">
+    <!-- Apple devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/favicon_io/apple-touch-icon.png">
+    <!-- Modern browsers -->
+    <link rel="icon" sizes="32x32" href="assets/images/logo/favicon_io/favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="192x192" href="assets/images/logo/favicon_io/android-chrome-192x192.png" type="image/png">
+</head>
+
+<body class="bg-white text-gray-900 font-[Playfair_Display]">
+<!-- Top Header (not sticky) -->
+  
+  <div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+  <!-- Hero Section -->
+  <section class="relative h-[60vh] bg-cover bg-center" style="background-image: url('assets/images/school_timings.webp');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 flex items-center justify-center h-full text-white">
+      <h1 class="text-4xl md:text-5xl font-bold">Student Testimonials</h1>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <div class="bg-gray-100 py-2 px-6 text-base text-gray-600">
+    <div class="max-w-7xl mx-auto">
+      <a href="#" class="hover:underline">Home</a> / <span class="font-semibold">Student Testimonials</span>
+    </div>
+  </div>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold text-[#6089FB] mb-10 relative inline-block pb-2">
+        What do our students say
+        <span class="block w-16 h-0.5 bg-[#6089FB] mx-auto mt-2"></span>
+      </h2>
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide flex flex-col md:flex-row items-center gap-8 p-8 border border-[#6089FB] rounded-xl">
+            <img src="../assets/images/testimonials/1.jpg" class="w-48 h-48 object-cover rounded shadow-md" alt="User">
+            <div class="text-left max-w-xl">
+              <h3 class="text-lg font-semibold text-[#6089FB]">Student</h3>
+              <p class="text-base text-gray-600 mb-1">Student</p>
+              <hr class="mb-4">
+              <p class="italic text-gray-700 mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consectetur cursus nulla in sagittis. Proin ut? Integer consectetur cursus nulla in sagittis. Proin ut?
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide flex flex-col md:flex-row items-center gap-8 p-8 border border-[#6089FB] rounded-xl">
+            <img src="../assets/images/testimonials/1.jpg" class="w-48 h-48 object-cover rounded shadow-md" alt="User">
+            <div class="text-left max-w-xl">
+              <h3 class="text-lg font-semibold text-[#6089FB]">Student</h3>
+              <p class="text-base text-gray-600 mb-1">Student</p>
+              <hr class="mb-4">
+              <p class="italic text-gray-700 mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consectetur cursus nulla in sagittis. Proin ut? Integer consectetur cursus nulla in sagittis. Proin ut?
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide flex flex-col md:flex-row items-center gap-8 p-8 border border-[#6089FB] rounded-xl">
+            <img src="../assets/images/testimonials/1.jpg" class="w-48 h-48 object-cover rounded shadow-md" alt="User">
+            <div class="text-left max-w-xl">
+              <h3 class="text-lg font-semibold text-[#6089FB]">Student</h3>
+              <p class="text-base text-gray-600 mb-1">Student</p>
+              <hr class="mb-4">
+              <p class="italic text-gray-700 mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consectetur cursus nulla in sagittis. Proin ut? Integer consectetur cursus nulla in sagittis. Proin ut?
+              </p>
+            </div>
+          </div>
+
+
+          <!-- Duplicate more .swiper-slide as needed -->
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination mt-8"></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      new Swiper('.swiper', {
+        loop: true,
+        speed: 600,
+        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        effect: 'slide',
+      });
+    });
+  </script>
+
+
+  <!-- Footer (PARTIAL) -->
+  <div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="assets/script.js"></script>
+</body>
+</html>

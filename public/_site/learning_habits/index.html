@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Habits | Maaref American School</title>
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/script.js"></script>
+</head>
+
+<body class="bg-white text-gray-900 font-[Playfair_Display]">
+    
+    <div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+<!-- Hero Section -->
+<section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/titles_images/learning_habits.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 flex items-center justify-center h-full text-white">
+        <h1 class="text-4xl md:text-5xl font-bold">Learning Habits</h1>
+    </div>
+</section>
+
+<!-- Breadcrumb -->
+<div class="bg-gray-100 py-2 px-6 text-base text-gray-600">
+    <div class="max-w-7xl mx-auto">
+        <a href="#" class="hover:underline">Home</a> / <span class="font-semibold">Learning Habits</span>
+    </div>
+</div>
+
+<!-- Main Content -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 items-start">
+    <!-- Text Left -->
+    <div class="md:col-span-2">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">Nurturing Lifelong Learners</h2>
+        <p class="text-gray-700 mb-4">
+            Central to a life-long love of learning, and interwoven throughout each pupil’s curricular and co-curricular experiences, the AMIS Learning Habits are the characteristic behaviours and attributes which students develop in order to thrive as they progress through school, university and beyond.
+        </p>
+        <p class="text-gray-700 mb-6">
+            Discover the six AMIS Learning Habits below:
+        </p>
+    </div>
+    <!-- Image Right -->
+    <div>
+        <img src="assets/images/learnings_habits_students.JPG" alt="Students" class="rounded-lg shadow-md w-full" />
+    </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 mt-10">
+        <div class="overflow-x-auto">
+            <table class="min-w-full table-auto border-collapse border border-gray-300">
+                <thead>
+                    <tr class="bg-[#3f5065] text-white">
+                        <th class="text-left px-4 py-2 border border-gray-300">Learning Habit</th>
+                        <th class="text-left px-4 py-2 border border-gray-300">Description</th>
+                    </tr>
+                </thead>
+                <tbody class="text-base text-gray-800">
+                    <tr><td class="border px-4 py-2">Organisation</td><td class="border px-4 py-2">I am punctual and well prepared so that I can make the most out of every opportunity. I manage time effectively and meet deadlines. My work is clearly and systematically ordered.</td></tr>
+                    <tr><td class="border px-4 py-2">Engagement</td><td class="border px-4 py-2">I work in partnership with others, listen to their ideas, demonstrate empathy and look towards their wellbeing. I am an active listener who is well engaged in learning; I notice and learn from what others do well. I fulfil my role within a team or group to the best of my ability.</td></tr>
+                    <tr><td class="border px-4 py-2">Imagination</td><td class="border px-4 py-2">I combine my existing knowledge and skills with intellectual curiosity and creativity to successfully plan and achieve things in unfamiliar situations, of which I am proud.</td></tr>
+                    <tr><td class="border px-4 py-2">Perseverance</td><td class="border px-4 py-2">I am tenacious when facing adversity or suffering setbacks. I will understand and learn from both my mistakes and those of others, and resolve to try again.</td></tr>
+                    <tr><td class="border px-4 py-2">Aspiration</td><td class="border px-4 py-2">I aim to go beyond my current successes. I enjoy making the most of the opportunities presented to me, both inside and outside of the classroom, irrespective of the outcome.</td></tr>
+                    <tr><td class="border px-4 py-2">Reflection</td><td class="border px-4 py-2">I recognise and celebrate my achievements and those of others. I look back at the progress I have made and seek feedback so that I can refine and improve targets for my future development. I have a sense of perspective, rationally test claims of truth and take responsibility for my own wellbeing.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Footer (PARTIAL) -->
+<div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+</body>
+</html>

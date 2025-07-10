@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>School Fees | Maaref American School</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon_io/favicon.ico">
+  <!-- Apple devices -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/favicon_io/apple-touch-icon.png">
+  <!-- Modern browsers -->
+  <link rel="icon" sizes="32x32" href="assets/images/logo/favicon_io/favicon-32x32.png" type="image/png">
+  <link rel="icon" sizes="192x192" href="assets/images/logo/favicon_io/android-chrome-192x192.png" type="image/png">
+  
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <script src="assets/script.js"></script>
+</head>
+<body class="bg-white font-[Playfair_Display]">
+  
+  
+  <div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+  <!-- Hero -->
+  <section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/safeguarding.webp');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 flex items-center justify-center h-full text-white">
+      <h1 class="text-4xl md:text-5xl font-bold">School Fees</h1>
+    </div>
+  </section>
+
+  <section class="py-12">
+  <div class="max-w-7xl mx-auto px-6 gap-10 items-center">
+    <div class="text-justify justify-center">
+      <h2 class="text-3xl font-bold text-[#6089FB] mb-6 text-center">Maaref American School Fee Structure </h2>
+      <p class="mb-4 text-center">Our fee structure reflects our commitment to high-quality education while ensuring transparency for all parents and guardians.</p>
+      <p class="mb-4 text-center">Fees cover tuition, books, uniforms, assessments, and other services provided throughout the year. Scroll below for a detailed breakdown by grade and section.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-100 py-16">
+  <div class="max-w-7xl mx-auto px-6 overflow-x-auto">
+    <h2 class="text-2xl font-bold mb-6 text-center">2025–2026 Fee Table</h2>
+    <table class="min-w-full border-collapse border text-center text-base">
+      <thead class="bg-[#6089FB] text-white">
+        <tr>
+          <th class="p-3">Grade</th>
+          <th class="p-3">Section</th>
+          <th class="p-3">KHDA Fee</th>
+          <th class="p-3">Discount</th>
+          <th class="p-3">Books</th>
+          <th class="p-3">Uniform</th>
+          <th class="p-3">Assessments</th>
+          <th class="p-3">LMS</th>
+          <th class="p-3">Clinic</th>
+          <th class="p-3">Total Fee After Discount</th>
+        </tr>
+      </thead>
+      <tbody class="bg-white">
+
+        <tr class="border">
+          <td class="p-2">KG1</td><td>KG</td><td>12,906</td><td>-</td><td>579</td><td>254</td><td>-</td><td>250</td><td>155</td><td>14,144</td>
+        </tr>
+        <tr class="border">
+          <td class="p-2">KG2</td><td>KG</td><td>12,906</td><td>-</td><td>1,024</td><td>254</td><td>-</td><td>275</td><td>155</td><td>14,614</td>
+        </tr>
+        <tr class="border">
+          <td class="p-2">Grade 1</td><td>Elementary</td><td>14,750</td><td>-</td><td>1,984</td><td>349</td><td>150</td><td>275</td><td>155</td><td>17,663</td>
+        </tr>
+        <tr class="border">
+          <td class="p-2">Grade 2</td><td>Elementary</td><td>14,750</td><td>-</td><td>2,146</td><td>349</td><td>150</td><td>275</td><td>155</td><td>17,906</td>
+        </tr>
+        <tr class="border">
+          <td class="p-2">Grade 3</td><td>Elementary</td><td>14,750</td><td>-</td><td>2,465</td><td>349</td><td>425</td><td>275</td><td>155</td><td>18,419</td>
+        </tr>
+        <tr class="border">
+          <td class="p-2">Grade 4</td><td>Elementary</td><td>17,326</td><td>-</td><td>2,465</td><td>349</td><td>325</td><td>350</td><td>155</td><td>20,970</td>
+        </tr>
+        <tr class="border">
+          <td class="p-2">Grade 5</td><td>Elementary</td><td>17,326</td><td>-</td><td>2,622</td><td>349</td><td>425</td><td>275</td><td>155</td><td>21,152</td>
+        </tr>
+        <tr class="border">
+          <td class="p-2">Grade 6</td><td>Elementary</td><td>17,326</td><td>-</td><td>2,622</td><td>349</td><td>325</td><td>350</td><td>155</td><td>21,127</td>
+        </tr>
+        <tr class="border">
+          <td class="p-2">Grade 7</td><td>Middle</td><td>18,345</td><td>-</td><td>3,477</td><td>362</td><td>425</td><td>350</td><td>155</td><td>23,204</td>
+        </tr>
+        <tr class="border">
+          <td class="p-2">Grade 8</td><td>Middle</td><td>20,280</td><td>-</td><td>3,972</td><td>362</td><td>325</td><td>350</td><td>155</td><td>25,444</td>
+        </tr>
+        <tr class="border">
+          <td class="p-2">Grade 9</td><td>High</td><td>22,627</td><td>500</td><td>3,972</td><td>362</td><td>325</td><td>350</td><td>155</td><td>26,691</td>
+        </tr>
+        <tr class="border">
+          <td class="p-2">Grade 10</td><td>High</td><td>25,811</td><td>1,000</td><td>4,136</td><td>362</td><td>325</td><td>350</td><td>155</td><td>29,889</td>
+        </tr>
+        <tr class="border">
+          <td class="p-2">Grade 11</td><td>High</td><td>30,183</td><td>3,000</td><td>4,767</td><td>362</td><td>350</td><td>350</td><td>155</td><td>32,567</td>
+        </tr>
+        <tr class="border">
+          <td class="p-2">Grade 12</td><td>High</td><td>37,134</td><td>4,000</td><td>5,356</td><td>362</td><td>350</td><td>350</td><td>155</td><td>39,007</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<section class="py-20 bg-[#6089FB] text-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-8 border-b border-white pb-2">Fee Policy and Payment Instructions</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Left Column -->
+      <div>
+        <p class="text-base leading-relaxed mb-4">
+          <strong>Admission Fee:</strong> AED 500 (non-refundable) is payable at the time of new registration. AED 250 will be charged on all bounced cheques.
+        </p>
+        <p class="text-base leading-relaxed mb-4">
+          <strong>For New Parents:</strong> A 10% deposit of the annual tuition fee must be paid within 7 days of receiving an offer of a place. This is non-refundable unless withdrawn per our Withdrawal Policy.
+        </p>
+        <p class="text-base leading-relaxed mb-4">
+          <strong>For Current Parents:</strong> A 5% deposit of the annual tuition fee or AED 500 (whichever is higher) is due at re-registration. Non-refundable unless withdrawn as per policy.
+        </p>
+        <p class="text-base leading-relaxed mb-4">
+          <strong>Remaining Payment:</strong> Payment is to be made via cheques – three post-dated cheques must be submitted upon acceptance or re-registration.
+        </p>
+        <ul class="list-disc pl-6 mb-4 text-base">
+          <li>Books, uniform, transport and other fees are to be paid by cash or with the first installment cheque.</li>
+          <li><strong>1st Installment:</strong> 40% by cash/cheque dated 25th August 2024</li>
+          <li><strong>2nd Installment:</strong> 30% by cheque dated 7th December 2024</li>
+          <li><strong>3rd Installment:</strong> 30% by cheque dated 7th March 2025</li>
+        </ul>
+        <p class="text-base text-gray-200">All fees must be paid before the first day of school to ensure access to campus facilities.</p>
+      </div>
+
+      <!-- Right Column -->
+      <div>
+        <h3 class="text-base font-semibold mb-4">Understanding Our Fees and Payment Policies</h3>
+        <p class="mb-4 font-semibold">Tuition Fees and Payment Schedule</p>
+        <p class="mb-4">Fees are payable annually or term-wise (40%-30%-30%). Excludes optional activities or services.</p>
+        <p class="mb-4 font-semibold">Deposit</p>
+        <p class="mb-4">New students must pay a non-refundable 10% deposit of annual tuition.</p>
+        <p class="mb-4 font-semibold">Application Fee</p>
+        <p class="mb-4">AED 500 non-refundable fee per student.</p>
+        <p class="mb-4 font-semibold">Refund Policy</p>
+        <p class="mb-4">Refunds follow KHDA rules. Some conditions apply.</p>
+        <p class="mb-4 font-semibold">Fee Policy Notice</p>
+        <p class="mb-4">All information is subject to change and official confirmation by the school.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- KHDA Fact Sheets -->
+  <section class="bg-gray-100 py-20">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+      <div>
+        <h2 class="text-2xl font-bold mb-4">KHDA School Fees Fact Sheets</h2>
+        <p>The KHDA Fee Fact Sheet details all annual and optional fees, updated annually to help parents make informed decisions.</p>
+      </div>
+      <div class="grid grid-cols-1 gap-6">
+        <div>
+          <h3 class="bg-[#6089FB] text-white px-4 py-2 font-semibold rounded-t">Primary School Fact Sheets</h3>
+          <div class="bg-white shadow p-4 rounded-b">
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">KG 1 Fact Sheet</a></li>
+              <li><a href="#" class="hover:underline">KG 2 Fact Sheet</a></li>
+              <li><a href="#" class="hover:underline">Year 1 Fact Sheet</a></li>
+              <li><a href="#" class="hover:underline">Year 6 Fact Sheet</a></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h3 class="bg-[#6089FB] text-white px-4 py-2 font-semibold rounded-t">Senior School Fact Sheets</h3>
+          <div class="bg-white shadow p-4 rounded-b">
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">Year 7 Fact Sheet</a></li>
+              <li><a href="#" class="hover:underline">Year 13 Fact Sheet</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (partial) -->
+  <div hx-get="partials/footer.html" hx-trigger="load"></div>
+
+</body>
+</html>

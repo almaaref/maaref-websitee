@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Facilities | Maaref American School</title>
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/script.js"></script>
+</head>
+<body class="bg-white text-gray-800 font-[Playfair_Display]">
+
+<!-- Header Partials -->
+
+<div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+<!-- Hero Section -->
+<section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/titles_images/school facilities.JPG');">
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  <h1 class="relative z-10 text-white text-4xl md:text-5xl font-bold">School Facilities</h1>
+</section>
+
+<!-- Facilities Grid -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Facility Card -->
+      <div class="bg-white shadow-lg rounded-xl overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <img src="assets/images/facilities/multipurpose_hall.jpg" alt="Multipurpose Hall" class="w-full h-48 object-cover">
+        <div class="bg-[#1e266d] text-white p-4 h-36">
+          <h3 class="font-semibold text-lg mb-1">Multipurpose Hall</h3>
+          <p class="text-base leading-snug">Covered play area for Early Childhood and separate recreation for senior students.</p>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-xl overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <img src="assets/images/facilities/library.jpg" alt="Library" class="w-full h-48 object-cover">
+        <div class="bg-[#1e266d] text-white p-4 h-36">
+          <h3 class="font-semibold text-lg mb-1">Library</h3>
+          <p class="text-base leading-snug">Three well-resourced libraries for research, references, and reading from an early age.</p>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-xl overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <img src="assets/images/facilities/arts_crafts.jpg" alt="Art & Craft" class="w-full h-48 object-cover">
+        <div class="bg-[#1e266d] text-white p-4 h-36">
+          <h3 class="font-semibold text-lg mb-1">Art & Craft</h3>
+          <p class="text-base leading-snug">Encouraging appreciation and expression through art, drama, music, and more.</p>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-xl overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <img src="assets/images/facilities/transport.jpg" alt="School Transport" class="w-full h-48 object-cover">
+        <div class="bg-[#1e266d] text-white p-4 h-36">
+          <h3 class="font-semibold text-lg mb-1">School Transport</h3>
+          <p class="text-base leading-snug">22 air-conditioned buses connecting students from Dubai, Sharjah, and Ajman.</p>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-xl overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <img src="assets/images/facilities/clinic.jpg" alt="School Clinic" class="w-full h-48 object-cover">
+        <div class="bg-[#1e266d] text-white p-4 h-36">
+          <h3 class="font-semibold text-lg mb-1">School Clinic</h3>
+          <p class="text-base leading-snug">Fully equipped clinic with certified doctors and nurses, coordinated with health authorities.</p>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-xl overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <img src="assets/images/facilities/technology.jpg" alt="Technology" class="w-full h-48 object-cover">
+        <div class="bg-[#1e266d] text-white p-4 h-36">
+          <h3 class="font-semibold text-lg mb-1">Technology</h3>
+          <p class="text-base leading-snug">Labs with internet, multimedia, and AV tools for enriched learning.</p>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-xl overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <img src="assets/images/facilities/labs.jpg" alt="Science Labs" class="w-full h-48 object-cover">
+        <div class="bg-[#1e266d] text-white p-4 h-36">
+          <h3 class="font-semibold text-lg mb-1">Science Laboratories</h3>
+          <p class="text-base leading-snug">Equipped labs for Biology, Chemistry, and Physics for senior students.</p>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-xl overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <img src="assets/images/facilities/robotics.jpg" alt="Robotics Lab" class="w-full h-48 object-cover">
+        <div class="bg-[#1e266d] text-white p-4 h-36">
+          <h3 class="font-semibold text-lg mb-1">Robotics Lab</h3>
+          <p class="text-base leading-snug">Hands-on robotics infrastructure to inspire future innovators.</p>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-xl overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <img src="assets/images/facilities/play_area.jpg" alt="Play Area" class="w-full h-48 object-cover">
+        <div class="bg-[#1e266d] text-white p-4 h-36">
+          <h3 class="font-semibold text-lg mb-1">Early Year's Play Area</h3>
+          <p class="text-base leading-snug">Fun and secure early learning zone for younger children’s development.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+<div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+</body>
+</html>

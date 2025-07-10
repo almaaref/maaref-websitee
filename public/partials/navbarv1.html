@@ -1,0 +1,183 @@
+<!-- navbar.html (HTMX partial) -->
+<header id="mainNavbar" class="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-md text-white transition-all duration-500 ease-in-out">
+  <div class=" mx-auto px-4 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex-shrink-0">
+      <a href="index.html">
+        <img src="../assets/images/logo/logo.png" alt="School Logo" class="h-12 w-auto max-h-16 object-contain">
+      </a>
+    </div>
+
+
+    <!-- Desktop Navigation + Buttons -->
+    <div class="hidden md:flex items-center justify-between w-full max-w-7xl">
+      <nav id="desktop-nav" class="flex items-center space-x-6 text-base font-semibold">
+        <!-- Dropdown Menus -->
+        <div class="relative">
+          <button onclick="toggleDropdown('menu-why')" class="hover:underline underline-offset-4">About Us</button>
+          <div id="menu-why" class="dropdown hidden absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg z-50">
+            <a href="guiding_statement.html" class="block px-4 py-2 hover:bg-gray-100">Guiding Statement</a>
+            <a href="CEO_welcome_message.html" class="block px-4 py-2 hover:bg-gray-100">CEO Message</a>
+            <a href="Principals_welcome_message.html" class="block px-4 py-2 hover:bg-gray-100">Principal's Message</a>
+            <a href="our_team.html" class="block px-4 py-2 hover:bg-gray-100">Our Team</a>
+            <a href="ams_governors.html" class="block px-4 py-2 hover:bg-gray-100">AMS Advisory Board Members</a>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <button onclick="toggleDropdown('menu-academic')" class="hover:underline underline-offset-4">Why MAS?</button>
+          <div id="menu-academic" class="dropdown hidden absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg z-50">
+            <a href="history.html" class="block px-4 py-2 hover:bg-gray-100">Our History</a>
+            <a href="affiliations.html" class="block px-4 py-2 hover:bg-gray-100">Accreditations & Affiliations</a>
+            <a href="students_testimonials.html" class="block px-4 py-2 hover:bg-gray-100">Parents & Students Testimonial</a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <button onclick="toggleDropdown('menu-curriculum')" class="hover:underline underline-offset-4">Admission</button>
+          <div id="menu-curriculum" class="dropdown hidden absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg z-50">
+            <a href="admissions_process.html" class="block px-4 py-2 hover:bg-gray-100">Admission Process</a>
+            <a href="school_fees.html" class="block px-4 py-2 hover:bg-gray-100">School Fees</a>
+            <a href="school_fees.html#KHDA" class="block px-4 py-2 hover:bg-gray-100">KHDA Fact Sheet</a>
+            <a href="admissions_enquiry.html" class="block px-4 py-2 hover:bg-gray-100">Apply Now</a>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <button onclick="toggleDropdown('menu-students')" class="hover:underline underline-offset-4">Learning</button>
+          <div id="menu-students" class="dropdown hidden absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg z-50">
+            <a href="curriculum.html" class="block px-4 py-2 hover:bg-gray-100">Overview</a>
+            <a href="assessment.html" class="block px-4 py-2 hover:bg-gray-100">Assessment and Equalization</a>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <button onclick="toggleDropdown('menu-admissions')" class="hover:underline underline-offset-4">Students Life</button>
+          <div id="menu-admissions" class="dropdown hidden absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg z-50">
+            <a href="students_life.html" class="block px-4 py-2 hover:bg-gray-100">Student's Care & Support</a>
+            <a href="students_council.html" class="block px-4 py-2 hover:bg-gray-100">Student's Council</a>
+            <a href="MAS_activities.html" class="block px-4 py-2 hover:bg-gray-100">MAS events & activities</a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <button onclick="toggleDropdown('menu-parent')" class="hover:underline underline-offset-4">Parent Essentials</button>
+          <div id="menu-parent" class="dropdown hidden absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg z-50">
+            <a href="calendar.html" class="block px-4 py-2 hover:bg-gray-100">Calendar</a>
+            <a href="parents.html" class="block px-4 py-2 hover:bg-gray-100">Parents Handbook</a>
+            <a href="school_policies.html" class="block px-4 py-2 hover:bg-gray-100">Our Policies</a>
+            <a href="newsletters.html" class="block px-4 py-2 hover:bg-gray-100">MAS Newsletter</a>
+            <a href="school_timings.html" class="block px-4 py-2 hover:bg-gray-100">School timings</a>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <button onclick="toggleDropdown('menu-contact')" class="hover:underline underline-offset-4">Contact Us</button>
+          <div id="menu-contact" class="dropdown hidden absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg z-50">
+            <a href="contact.html" class="block px-4 py-2 hover:bg-gray-100">Campus Map</a>
+            <a href="reach.html" class="block px-4 py-2 hover:bg-gray-100">Reach Us</a>
+            <a href="careers.html" class="block px-4 py-2 hover:bg-gray-100">Careers</a>
+          </div>
+        </div>
+        
+        <a href="blog.html" class="hover:underline underline-offset-4">Blog</a>
+      </nav>
+
+      <!-- Right-Aligned Buttons -->
+      <div class="flex items-center space-x-2">
+        <a href="admissions_enquiry.html" class="bg-[#6089FB] text-white px-3 py-1.5 rounded-md text-base font-bold hover:bg-[#5075d8] transition whitespace-nowrap">Admissions Inquiry</a>
+        <a href="https://ampsict.ethdigitalcampus.com/AMPS/" class="bg-[#6089FB] text-white px-3 py-1.5 rounded-md text-base font-bold hover:bg-[#5075d8] transition whitespace-nowrap">Teacher/Parent Login</a>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden focus:outline-none" id="mobileMenuToggle">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu with collapsible dropdowns -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white text-black px-4 py-6">
+    <details class="mb-4"><summary class="font-semibold">About Us</summary>
+      <div class="ml-4 mt-2 space-y-1">
+        <a href="guiding_statement.html" class="block">Guiding Statement</a>
+        <a href="CEO_Principal.html" class="block">AMS Leadership</a>
+        <a href="our_team.html" class="block">Our Team</a>
+        <a href="amps_governors.html" class="block">AMS Advisory Board Members</a>
+      </div>
+    </details>
+    <details class="mb-4"><summary class="font-semibold">Academic Excellence</summary>
+      <div class="ml-4 mt-2 space-y-1">
+        <a href="our_history.html" class="block">Our History</a>
+        <a href="learning_habits.html" class="block">Learning Habits</a>
+        <a href="inspection.html" class="block">Inspection Reports</a>
+        <a href="affiliations.html" class="block">Affiliations</a>
+      </div>
+    </details>
+    <details class="mb-4"><summary class="font-semibold">Curriculum</summary>
+      <div class="ml-4 mt-2 space-y-1">
+        <a href="curriculum.html" class="block">Overview</a>
+        <a href="assessment.html" class="block">Assessment & Equalization</a>
+      </div>
+    </details>
+    <details class="mb-4"><summary class="font-semibold">Students Life</summary>
+      <div class="ml-4 mt-2 space-y-1">
+        <a href="students_life.html" class="block">Care & Support</a>
+        <a href="students_council.html" class="block">Student Council</a>
+      </div>
+    </details>
+    <details class="mb-4"><summary class="font-semibold">Admissions & Fees</summary>
+      <div class="ml-4 mt-2 space-y-1">
+        <a href="admissions_process.html" class="block">Admission Process</a>
+        <a href="school_tour.html" class="block">School Tour</a>
+        <a href="school_fees.html" class="block">Fee Structure</a>
+        <a href="#" class="block">KHDA Fact Sheet</a>
+      </div>
+    </details>
+    <details class="mb-4"><summary class="font-semibold">Parent Essentials</summary>
+      <div class="ml-4 mt-2 space-y-1">
+        <a href="term_dates.html" class="block">Term Dates</a>
+        <a href="#" class="block">Parents Handbook</a>
+        <a href="#" class="block">Policies & Procedures</a>
+        <a href="#" class="block">School Timings</a>
+        <a href="#" class="block">Transport</a>
+        <a href="#" class="block">Uniform</a>
+        <a href="calendar.html" class="block">Academic Calendar</a>
+        <a href="newsletters.html" class="block">Weekly Newsletter</a>
+      </div>
+    </details>
+    <details class="mb-4"><summary class="font-semibold">Contact Us</summary>
+      <div class="ml-4 mt-2 space-y-1">
+        <a href="contact.html" class="block font-semibold">Campus Map</a>
+        <a href="contact.html" class="block font-semibold">Reach Us</a>
+        <a href="contact.html" class="block font-semibold">Careers</a>
+      </div>
+      <a href="contact.html" class="hover:underline underline-offset-4">Contact Us</a>
+    <div class="mt-4 space-y-2">
+      <a href="admissions_inquiry.html" class="block w-full text-center bg-[#6089FB] text-white px-4 py-2 rounded-md font-semibold">Admissions Inquiry</a>
+      <a href="login.html" class="block w-full text-center bg-gray-200 text-[#6089FB] px-4 py-2 rounded-md font-semibold">Teacher/Parent Login</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Transparency on scroll with smooth transition
+  document.addEventListener("scroll", () => {
+    const navbar = document.getElementById("mainNavbar");
+    if (window.scrollY > 10) {
+      navbar.classList.remove("bg-transparent");
+      navbar.classList.add("bg-[#6089FB]", "shadow-md");
+    } else {
+      navbar.classList.remove("bg-[#6089FB]", "shadow-md");
+      navbar.classList.add("bg-transparent");
+    }
+  });
+
+  // Mobile menu toggle
+  document.getElementById("mobileMenuToggle").addEventListener("click", () => {
+    const menu = document.getElementById("mobile-menu");
+    menu.classList.toggle("hidden");
+  });
+</script>

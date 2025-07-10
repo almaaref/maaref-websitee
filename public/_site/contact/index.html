@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Maaref American School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon_io/favicon.ico">
+  <!-- Apple devices -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/favicon_io/apple-touch-icon.png">
+  <!-- Modern browsers -->
+  <link rel="icon" sizes="32x32" href="assets/images/logo/favicon_io/favicon-32x32.png" type="image/png">
+  <link rel="icon" sizes="192x192" href="assets/images/logo/favicon_io/android-chrome-192x192.png" type="image/png">
+  
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/script.js"></script>
+</head>
+<body class="bg-white text-gray-900 font-[Playfair_Display]">
+  
+  <div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+  <!-- Hero Section -->
+  <section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/contact_us_title_image.webp');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 flex items-center justify-center h-full text-white">
+      <h1 class="text-4xl md:text-5xl font-bold">Contact Us</h1>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <div class="bg-gray-100 py-2 px-6 text-base text-gray-600">
+    <div class="mx-auto">
+      <a href="index.html" class="hover:underline">Home</a> / <span class="font-semibold">Contact Us</span>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
+      <div>
+        <h2 class="text-3xl font-bold mb-6">We'd love to hear from you</h2>
+        <p class="mb-4 text-gray-700">
+          Thank you for your interest in Maaref American School Dubai. Whether you are enquiring about joining our school, exploring our admissions process, or booking a school tour, our dedicated team is here to assist you.
+        </p>
+        <h3 class="text-xl font-semibold mt-6 mb-2">Admissions</h3>
+        <p><strong>Phone:</strong> <a href="tel:+97144146433" class="text-blue-600 hover:underline"> +971-4-298-8881</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@almaaref.ae" class="text-blue-600 hover:underline">info@almaaref.ae</a></p>
+        <h3 class="text-xl font-semibold mt-6 mb-2">Address</h3>
+        <p> Baghdad Street - Al Qusais - Al Qusais 1 - Dubai, United Arab Emirates</p>
+        <a href="https://www.google.com/maps" target="_blank" class="inline-block mt-4 bg-[#6089FB] text-white px-4 py-2 rounded hover:bg-[#0e3d2d]">Get Directions</a>
+      </div>
+      <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28860.0847083245!2d55.366602!3d25.287044!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5c6658bf812b%3A0x7371bd90087544df!2sAl%20Maaref%20Private%20School!5e0!3m2!1sen!2sae!4v1746959327892!5m2!1sen!2sae" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded shadow"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (PARTIAL) -->
+  <div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+</body>
+</html>

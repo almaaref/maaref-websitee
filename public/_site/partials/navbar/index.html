@@ -1,0 +1,129 @@
+<header class="bg-[#6089FB] text-white sticky top-0 z-30">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+      <a href="index.html">
+        <img src="../assets/images/logo/MIS transparant.png" alt="School Logo" class="h-10">
+      </a>
+
+    </div>
+
+    <button class="md:hidden focus:outline-none" onclick="toggleMobileMenu()">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center space-x-8 text-base font-semibold relative" id="desktop-nav">
+
+      <div class="relative">
+        <button onclick="toggleDropdown('menu-why')" class="hover:underline underline-offset-4">Why Choose Us?</button>
+        <div id="menu-why" class="dropdown hidden absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg z-50">
+          <a href="CEO_Principal.html" class="block px-4 py-2 hover:bg-gray-100">AMIS Leadership</a>
+          <a href="guiding_statement.html" class="block px-4 py-2 hover:bg-gray-100">Guiding Statement</a>
+          <a href="our_history.html" class="block px-4 py-2 hover:bg-gray-100">Our History</a>
+          <a href="our_team.html" class="block px-4 py-2 hover:bg-gray-100">Our team</a>
+          <a href="amps_governors.html" class="block px-4 py-2 hover:bg-gray-100">AMPS Board of Governors</a>
+          <a href="amps_alumni.html" class="block px-4 py-2 hover:bg-gray-100">AMPS Alumni</a>
+          <a href="facilities.html" class="block px-4 py-2 hover:bg-gray-100">Facilities</a>
+        </div>
+      </div>
+
+      <div class="relative">
+        <button onclick="toggleDropdown('menu-academic')" class="hover:underline underline-offset-4">Academic Excellence</button>
+        <div id="menu-academic" class="dropdown hidden absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg z-50">
+          <a href="learning_habits.html" class="block px-4 py-2 hover:bg-gray-100">Learning Habits</a>
+          <a href="inspection.html" class="block px-4 py-2 hover:bg-gray-100">Inspection Reports</a>
+          <a href="affiliations.html" class="block px-4 py-2 hover:bg-gray-100">Affiliations</a>
+        </div>
+      </div>
+
+      <div class="relative">
+        <button onclick="toggleDropdown('menu-curriculum')" class="hover:underline underline-offset-4">Curriculum</button>
+        <div id="menu-curriculum" class="dropdown hidden absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg z-50">
+          <a href="curriculum.html" class="block px-4 py-2 hover:bg-gray-100">Overview</a>
+          <a href="assessment.html" class="block px-4 py-2 hover:bg-gray-100">Assessment and Equalization</a>
+        </div>
+      </div>
+
+      <div class="relative">
+        <button onclick="toggleDropdown('menu-students')" class="hover:underline underline-offset-4"> Students Life</button>
+        <div id="menu-students" class="dropdown hidden absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg z-50">
+          <a href="students_life.html" class="block px-4 py-2 hover:bg-gray-100">Student's Care & Support</a>
+          <a href="students_council.html" class="block px-4 py-2 hover:bg-gray-100">Student's Council</a>
+        </div>
+      </div>
+
+      <div class="relative">
+        <button onclick="toggleDropdown('menu-admissions')" class="hover:underline underline-offset-4">Admissions & Fees</button>
+        <div id="menu-admissions" class="dropdown hidden absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg z-50">
+          <a href="admissions_process.html" class="block px-4 py-2 hover:bg-gray-100">Admission Process</a>
+          <a href="school_tour.html" class="block px-4 py-2 hover:bg-gray-100">School Tour</a>
+          <a href="school_fees.html" class="block px-4 py-2 hover:bg-gray-100">Fee Structure</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">KHDA Fact Sheet</a>
+        </div>
+      </div>
+
+      <div class="relative">
+        <button onclick="toggleDropdown('menu-parent')" class="hover:underline underline-offset-4">Parent Essentials</button>
+        <div id="menu-parent" class="dropdown hidden absolute left-0 mt-2 w-64 bg-white text-black rounded shadow-lg z-50">
+          <a href="term_dates.html" class="block px-4 py-2 hover:bg-gray-100">Term Dates</a>
+          <a href="" class="block ps-4 py-2 hover:bg-gray-100">Parents Handbook</a>
+          <a href="" class="block ps-4 py-2 hover:bg-gray-100">School Policies & Procedures</a>
+          <a href="" class="block ps-4 py-2 hover:bg-gray-100">School timings</a>
+          <a href="" class="block ps-4 py-2 hover:bg-gray-100">Transport</a>
+          <a href="" class="block ps-4 py-2 hover:bg-gray-100">Uniform</a>
+          <a href="calendar.html" class="block px-4 py-2 hover:bg-gray-100">Academic Calendar</a>
+          <a href="newsletters.html" class="block ps-4 py-2 hover:bg-gray-100">Weekly Newsletter</a>
+          
+        </div>
+      </div>
+
+      <a href="contact.html" class="hover:underline underline-offset-4">Contact Us</a>
+    </nav>
+
+    
+</header>
+
+<script>
+  // Handle dropdown toggle
+  function toggleDropdown(id) {
+    document.querySelectorAll('.dropdown').forEach(el => {
+      if (el.id !== id) el.classList.add('hidden');
+    });
+    document.getElementById(id).classList.toggle('hidden');
+  }
+
+  // Click outside to close
+  document.addEventListener('click', (e) => {
+    const nav = document.getElementById('desktop-nav');
+    if (!nav.contains(e.target)) {
+      document.querySelectorAll('.dropdown').forEach(el => el.classList.add('hidden'));
+    }
+  });
+</script>
+
+<script>
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  }
+
+  function toggleDropdown(id) {
+    document.querySelectorAll('.dropdown').forEach(el => {
+      if (el.id !== id) el.classList.add('hidden');
+    });
+    const target = document.getElementById(id);
+    if (target) target.classList.toggle('hidden');
+  }
+
+  // Close dropdowns on outside click
+  document.addEventListener('click', (e) => {
+    const nav = document.getElementById('desktop-nav');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (!nav?.contains(e.target) && !mobileMenu?.contains(e.target)) {
+      document.querySelectorAll('.dropdown').forEach(el => el.classList.add('hidden'));
+    }
+  });
+</script>
+
+
