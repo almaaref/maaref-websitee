@@ -1,0 +1,9 @@
+---
+layout: layout.njk
+---
+
+<article class="prose max-w-3xl mx-auto">
+  <h1 class="text-[#6089FB]">{{ title }}</h1>
+  <p class="text-sm text-gray-500">{{ date | date("MMMM D, YYYY") }}</p>
+  {{ content | safe }}
+</article>
