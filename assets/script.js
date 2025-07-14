@@ -163,34 +163,3 @@ document.addEventListener("DOMContentLoaded", function () {
         effect: 'slide',
       });
     });
-
-
-const facilitiesSwiper = new Swiper('.facilities-swiper', {
-  slidesPerView: 1,
-  loop: true,
-  spaceBetween: 0,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-
-  const swiper = new Swiper(".mySwiper", {
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
