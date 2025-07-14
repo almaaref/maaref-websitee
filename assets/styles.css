@@ -1,3 +1,35 @@
+@font-face {
+  font-family: 'Aptos Narrow';
+  src: url('/assets/fonts/Aptos-Narrow.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aptos Narrow';
+  src: url('/assets/fonts/Aptos-Narrow-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aptos Narrow';
+  src: url('/assets/fonts/Aptos-Narrow-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aptos Narrow';
+  src: url('/assets/fonts/Aptos-Narrow-Italic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 @keyframes scrollHorizontal {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
