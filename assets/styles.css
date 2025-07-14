@@ -30,6 +30,10 @@
   font-display: swap;
 }
 
+  body {
+    font-family: "Aptos Narrow", sans-serif !important;
+  }
+
 @keyframes scrollHorizontal {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -46,11 +50,6 @@
 }
 .scrollbar-hide::-webkit-scrollbar {
   display: none;             /* Chrome, Safari */
-}
-
-body {
-  font-family: 'Playfair Display', serif;
-  font-size: 2vh;
 }
 
 @keyframes fade-in {
