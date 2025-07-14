@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Governors Board | Al Maaref American School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon_io/favicon.ico">
+  <!-- Apple devices -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/favicon_io/apple-touch-icon.png">
+  <!-- Modern browsers -->
+  <link rel="icon" sizes="32x32" href="assets/images/logo/favicon_io/favicon-32x32.png" type="image/png">
+  <link rel="icon" sizes="192x192" href="assets/images/logo/favicon_io/android-chrome-192x192.png" type="image/png">
+</head>
+<body class="bg-white text-gray-800 font-[Playfair_Display]">
+
+<!-- Header Partials -->
+
+<div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+<!-- Hero Section -->
+<section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/school.JPG');">
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  <h1 class="relative z-10 text-white text-4xl md:text-5xl font-bold">School Advisory Board</h1>
+</section>
+
+<!-- Governors Board Content -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6">
+    
+    <div class="text-left mb-12 animate-fade-in-up text-center">
+      <h2 class="text-3xl font-bold text-[#6089FB] ">Meet Our Advisory Board</h2>
+      <p class="text-xl mt-4 text-center">
+        The objective of the School Advisory Board (SAB) is to uphold the school vision and mission for the present and the future, work cooperatively and effectively with the AMPS administration for the improvement of the school.
+      </p>
+    </div>
+
+    <div class="animate-fade-in-up delay-150">
+      <h2 class="text-3xl font-semibold text-[#6089FB] mb-2 text-center">The Role of School Advisory Board</h2>
+      <p class="text-xl mt-4 leading-relaxed">
+        The SAB provides strategic guidance and support on the school’s overall progress, advocates for all students, and is actively involved in school improvement and accreditation. The SAB demonstrates diversity in discussion and unity in action. Responsibilities include:
+      </p>
+      <ul class="list-disc list-inside text-xl mt-4 space-y-1">
+        <li>Steering the school and setting its strategic direction</li>
+        <li>Monitoring the school’s and principal’s performance</li>
+        <li>Managing the discretionary budget</li>
+        <li>Planning and approving policies</li>
+        <li>Overseeing the implementation of policies</li>
+        <li>Self-evaluation and improvement</li>
+        <li>Succession planning</li>
+      </ul>
+    </div>
+
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Swiper Container -->
+        <div class="swiper advisory-swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide bg-white rounded-xl shadow-md overflow-hidden p-6 text-center transition-transform hover:scale-105 duration-300">
+              <img src="assets/images/portratis/ceo.png" alt="Governor 1" class="w-60 h-60 mx-auto mb-4 object-cover">
+              <h3 class="text-xl font-semibold text-[#6089FB]">Mr. Mohamed Motawea</h3>
+              <p class="text-base text-gray-600">Chief Executive Officer</p>
+            </div>
+          
+            <div class="swiper-slide bg-white rounded-xl shadow-md overflow-hidden p-6 text-center transition-transform hover:scale-105 duration-300">
+              <img src="assets/images/portratis/principal.png" alt="Governor 2" class="w-60 h-60 mx-auto mb-4 object-cover">
+              <h3 class="text-xl font-semibold text-[#6089FB]">Ms. Daneille Pinkerton</h3>
+              <p class="text-base text-gray-600">School Principal</p>
+            </div>
+          
+            <div class="swiper-slide bg-white rounded-xl shadow-md overflow-hidden p-6 text-center transition-transform hover:scale-105 duration-300">
+              <img src="assets/images/team/rola.jpeg" alt="Governor 3" class="w-60 h-60 mx-auto mb-4 object-cover">
+              <h3 class="text-xl font-semibold text-[#6089FB]">Ms. Rola Ibraheem</h3>
+              <p class="text-base text-gray-600">Directors Assistant</p>
+            </div>
+          
+            <div class="swiper-slide bg-white rounded-xl shadow-md overflow-hidden p-6 text-center transition-transform hover:scale-105 duration-300">
+              <img src="assets/images/governors/gov3.jpg" alt="Governor 3" class="w-60 h-60 mx-auto mb-4 object-cover">
+              <h3 class="text-xl font-semibold text-[#6089FB]">Ms.Shamsa Al Falasi</h3>
+              <p class="text-base text-gray-600">Chairperson</p>
+            </div>
+          
+            <div class="swiper-slide bg-white rounded-xl shadow-md overflow-hidden p-6 text-center transition-transform hover:scale-105 duration-300">
+              <img src="assets/images/governors/gov3.jpg" alt="Governor 3" class="w-60 h-60 mx-auto mb-4 object-cover">
+              <h3 class="text-xl font-semibold text-[#6089FB]">Mr Firas Al Tabbaa</h3>
+              <p class="text-base text-gray-600">Member</p>
+            </div>
+          
+            <div class="swiper-slide bg-white rounded-xl shadow-md overflow-hidden p-6 text-center transition-transform hover:scale-105 duration-300">
+              <img src="assets/images/governors/gov3.jpg" alt="Governor 3" class="w-60 h-60 mx-auto mb-4 object-cover">
+              <h3 class="text-xl font-semibold text-[#6089FB]">Mr. Belal Shneikat</h3>
+              <p class="text-base text-gray-600">Member</p>
+            </div>
+          
+            <div class="swiper-slide bg-white rounded-xl shadow-md overflow-hidden p-6 text-center transition-transform hover:scale-105 duration-300">
+              <img src="assets/images/governors/gov3.jpg" alt="Governor 3" class="w-60 h-60 mx-auto mb-4 object-cover">
+              <h3 class="text-xl font-semibold text-[#6089FB]">Mr. Nader Akaila</h3>
+              <p class="text-base text-gray-600">Member</p>
+            </div>
+          
+            <div class="swiper-slide bg-white rounded-xl shadow-md overflow-hidden p-6 text-center transition-transform hover:scale-105 duration-300">
+              <img src="assets/images/governors/gov3.jpg" alt="Governor 3" class="w-60 h-60 mx-auto mb-4 object-cover">
+              <h3 class="text-xl font-semibold text-[#6089FB]">Ms. Samah Abouf</h3>
+              <p class="text-base text-gray-600">Member</p>
+            </div>
+          
+            <div class="swiper-slide bg-white rounded-xl shadow-md overflow-hidden p-6 text-center transition-transform hover:scale-105 duration-300">
+              <img src="assets/images/team/amal.jpg" alt="Governor 3" class="w-60 h-60 mx-auto mb-4 object-cover">
+              <h3 class="text-xl font-semibold text-[#6089FB]">Ms. Amal Daoud</h3>
+              <p class="text-base text-gray-600">Assessment Director</p>
+            </div>
+          
+            <div class="swiper-slide bg-white rounded-xl shadow-md overflow-hidden p-6 text-center transition-transform hover:scale-105 duration-300">
+              <img src="assets/images/governors/gov3.jpg" alt="Governor 3" class="w-60 h-60 mx-auto mb-4 object-cover">
+              <h3 class="text-xl font-semibold text-[#6089FB]">Mr. Marwan Hamad</h3>
+              <p class="text-base text-gray-600">Career Counselor</p>
+            </div>
+          
+            <div class="swiper-slide bg-white rounded-xl shadow-md overflow-hidden p-6 text-center transition-transform hover:scale-105 duration-300">
+              <img src="assets/images/governors/gov3.jpg" alt="Governor 3" class="w-60 h-60 mx-auto mb-4 object-cover">
+              <h3 class="text-xl font-semibold text-[#6089FB]">Ms. Rana Wasfy</h3>
+              <p class="text-base text-gray-600">Member</p>
+            </div>
+          
+            <div class="swiper-slide bg-white rounded-xl shadow-md overflow-hidden p-6 text-center transition-transform hover:scale-105 duration-300">
+              <img src="assets/images/governors/gov3.jpg" alt="Governor 3" class="w-60 h-60 mx-auto mb-4 object-cover">
+              <h3 class="text-xl font-semibold text-[#6089FB]">Ms. Suhaila Mohamed</h3>
+              <p class="text-base text-gray-600">Member</p>
+            </div>
+          
+            <div class="swiper-slide bg-white rounded-xl shadow-md overflow-hidden p-6 text-center transition-transform hover:scale-105 duration-300">
+              <img src="assets/images/governors/gov3.jpg" alt="Governor 3" class="w-60 h-60 mx-auto mb-4 object-cover">
+              <h3 class="text-xl font-semibold text-[#6089FB]">Yerkanat Azylkhan</h3>
+              <p class="text-base text-gray-600">Vice Chair - Grade 11</p>
+            </div>
+          
+            <div class="swiper-slide bg-white rounded-xl shadow-md overflow-hidden p-6 text-center transition-transform hover:scale-105 duration-300">
+              <img src="assets/images/governors/gov3.jpg" alt="Governor 3" class="w-60 h-60 mx-auto mb-4 object-cover">
+              <h3 class="text-xl font-semibold text-[#6089FB]">Laya Kanafani</h3>
+              <p class="text-base text-gray-600">Grade 12</p>
+            </div>
+
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+<div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+
+<script>
+  const swiper = new Swiper('.advisory-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      }
+    }
+  });
+</script>
+
+</body>
+</html>

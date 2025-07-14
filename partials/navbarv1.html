@@ -4,10 +4,9 @@
     <!-- Logo -->
     <div class="flex-shrink-0">
       <a href="/index.html">
-        <img src="../assets/images/logo/logo.png" alt="School Logo" class="h-16 w-auto object-contain">
+        <img id="navbar-logo" src="../assets/images/logo/logo_white.png" alt="School Logo" class="h-16 w-auto object-contain transition duration-300">
       </a>
     </div>
-
 
     <!-- Desktop Navigation + Buttons -->
     <div class="hidden md:flex items-center justify-between w-full max-w-7xl">
@@ -20,7 +19,7 @@
             <a href="/CEO_welcome_message.html" class="block px-4 py-2 hover:bg-gray-100">CEO Message</a>
             <a href="/Principals_welcome_message.html" class="block px-4 py-2 hover:bg-gray-100">Principal's Message</a>
             <a href="/our_team.html" class="block px-4 py-2 hover:bg-gray-100">Our Team</a>
-            <a href="/ams_governors.html" class="block px-4 py-2 hover:bg-gray-100">MAS Advisory Board Members</a>
+            <a href="/mas_governors.html" class="block px-4 py-2 hover:bg-gray-100">MAS Advisory Board Members</a>
           </div>
         </div>
         
@@ -163,15 +162,18 @@
 </header>
 
 <script>
-  // Transparency on scroll with smooth transition
   document.addEventListener("scroll", () => {
     const navbar = document.getElementById("mainNavbar");
+    const logo = document.getElementById("navbar-logo");
+
     if (window.scrollY > 10) {
       navbar.classList.remove("bg-transparent");
-      navbar.classList.add("bg-[#6089FB]", "shadow-md");
+      navbar.classList.add("bg-[rgba(0,0,0,0.5)]", "shadow-md");
+      logo.src = "../assets/images/logo/logo_white.png";
     } else {
-      navbar.classList.remove("bg-[#6089FB]", "shadow-md");
+      navbar.classList.remove("bg-[rgba(0,0,0,0.5)]", "shadow-md");
       navbar.classList.add("bg-transparent");
+      logo.src = "../assets/images/logo/logo_white.png";
     }
   });
 
@@ -181,3 +183,4 @@
     menu.classList.toggle("hidden");
   });
 </script>
+

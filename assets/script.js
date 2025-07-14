@@ -163,3 +163,19 @@ document.addEventListener("DOMContentLoaded", function () {
         effect: 'slide',
       });
     });
+
+
+const facilitiesSwiper = new Swiper('.facilities-swiper', {
+  slidesPerView: 1,
+  loop: true,
+  spaceBetween: 0,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
