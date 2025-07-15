@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Articles CMS | Al Maaref American School </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon_io/favicon.ico">
+    <!-- Apple devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/favicon_io/apple-touch-icon.png">
+    <!-- Modern browsers -->
+    <link rel="icon" sizes="32x32" href="assets/images/logo/favicon_io/favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="192x192" href="assets/images/logo/favicon_io/android-chrome-192x192.png" type="image/png">   
+</head>
+
+<body>
+
+    <!-- Section: Articles -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-3xl font-bold mb-8 text-center text-[#012C6D]">Latest Articles</h1>
+            <div id="blogPosts" class="space-y-12"></div>
+        </div>
+    </section>
+
+    <!-- Include Marked.js and your rendering script -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/assets/renderArticles.js"></script>
+
+</body>
+</html>
