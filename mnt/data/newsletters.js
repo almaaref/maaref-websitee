@@ -26,14 +26,14 @@ const newsletters = [
             "week": 8,
             "title": "World Food Day & TEDx Announcement",
             "date": "Oct 18 – Oct 25, 2024",
-            "content": "Students explored sustainability & charity on World Food Day.\nUpcoming Events:\n- Oct. 18: Breast Cancer Day\n- Oct. 23 – 25: AMPS TEDx, E-platform Workshop, Senior Day\nImportant Info: Wellbeing Award pursuit, Parent Workshop (in-person/virtual)\nStudent Events: Food donations packed by Student Council"
+            "content": "Students explored sustainability & charity on World Food Day.\nUpcoming Events:\n- Oct. 18: Breast Cancer Day\n- Oct. 23 – 25: MAS TEDx, E-platform Workshop, Senior Day\nImportant Info: Wellbeing Award pursuit, Parent Workshop (in-person/virtual)\nStudent Events: Food donations packed by Student Council"
         },
         {
             "id": "week9",
             "week": 9,
-            "title": "TEDx AMPS & Wellbeing Survey",
+            "title": "TEDx MAS & Wellbeing Survey",
             "date": "Oct 24 – Oct 30, 2024",
-            "content": "Students showcased their talent at TEDx AMPS for KHDA visitors.\nUpcoming Events:\n- Oct. 24 – 30: Parent Workshop, Senior Jacket Day, Fall Break\nImportant Info: Wellbeing Survey (closes Oct. 27), Parking safety reminder"
+            "content": "Students showcased their talent at TEDx MAS for KHDA visitors.\nUpcoming Events:\n- Oct. 24 – 30: Parent Workshop, Senior Jacket Day, Fall Break\nImportant Info: Wellbeing Survey (closes Oct. 27), Parking safety reminder"
         },
         {
             "id": "issue1",

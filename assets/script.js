@@ -62,17 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let startX;
   let scrollLeft;
 
-  // Auto scroll
-  // setInterval(() => {
-  //   if (!isHovering && !isDragging) {
-  //     testcontainer.scrollLeft += 1;
-  //     if (testcontainer.scrollLeft >= testcontainer.scrollWidth - testcontainer.clientWidth) {
-  //       testcontainer.scrollLeft = 0;
-  //     }
-  //   }
-  // }, 30);
-
-  // Pause on hover
   testcontainer.addEventListener('mouseenter', () => isHovering = true);
   testcontainer.addEventListener('mouseleave', () => isHovering = false);
 
@@ -93,9 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const walk = (x - startX) * 2;
     testcontainer.scrollLeft = scrollLeft - walk;
   });
-
-
-  // Success Message javascript
 
 
   document.getElementById("tourForm").addEventListener("submit", function (e) {
@@ -163,3 +149,26 @@ document.addEventListener("DOMContentLoaded", function () {
         effect: 'slide',
       });
     });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Make sure Swiper exists before calling it
+  if (typeof Swiper !== "undefined") {
+    new Swiper(".university-affiliations-swiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
+      breakpoints: {
+        640: { slidesPerView: 3 },
+        768: { slidesPerView: 4 },
+        1024: { slidesPerView: 5 }
+      }
+    });
+  } else {
+    console.error("Swiper is not defined. Check script order.");
+  }
+});
