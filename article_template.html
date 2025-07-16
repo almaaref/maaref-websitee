@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article | Al Maaref American School</title>  
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <!-- Markdown parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>   
+    <!-- Contentful SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <section class="py-12">
+        <div class="max-w-3xl mx-auto px-4">
+
+            <!-- 🔙 Back to Articles -->
+            <div class="mb-8">
+                <a href="/articles.html" class="inline-block text-[#6089FB] text-sm font-medium hover:underline">
+                    Back to Articles
+                </a>
+            </div>
+
+            <!-- 📝 Article Container -->
+            <div id="articleContainer" class="space-y-6"></div>
+
+        </div>
+    </section>
+
+    <script>
+        const client = contentful.createClient({
+            space: 'mno626421khr',
+            accessToken: 'nlqiAu5bBrtylm9CfgRv9IHbfYFMXgrLZvAa_G8xQxo'
+        });
+
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get('slug');
+
+    if (!slug) {
+        document.getElementById('articleContainer').innerHTML = '<p class="text-red-600 text-center">No article specified.</p>';
+    } else {
+        client.getEntries({
+            content_type: 'blogPost',
+            'fields.slug': slug
+        })
+        .then(response => {
+            const post = response.items[0]?.fields;
+
+        if (!post) {
+            document.getElementById('articleContainer').innerHTML = '<p class="text-red-600 text-center">Article not found.</p>';
+            return;
+        }
+
+        const imageUrl = post.image?.fields?.file?.url
+            ? 'https:' + post.image.fields.file.url
+            : null;
+
+        const date = new Date(post.date).toLocaleDateString(undefined, {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        const container = document.getElementById('articleContainer');
+
+        container.innerHTML = `
+            ${imageUrl ? `<img src="${imageUrl}" alt="${post.title}" class="w-full h-auto mb-6 rounded-lg shadow">` : ''}
+            <h1 class="text-3xl font-bold mb-2">${post.title}</h1>
+            <p class="text-sm text-gray-500 mb-6">${date}</p>
+            <div class="prose max-w-none">${marked.parse(post.body || '')}</div>
+        `;
+        })
+        .catch(err => {
+            console.error(err);
+            document.getElementById('articleContainer').innerHTML = '<p class="text-red-600 text-center">Failed to load article.</p>';
+        });
+    }
+</script>
+
+</body>
+</html>
