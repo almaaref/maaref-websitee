@@ -4,64 +4,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Articles | Al Maaref American School</title> 
-    <!-- Tailwind CDN -->
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon_io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/favicon_io/apple-touch-icon.png">
+    <link rel="icon" sizes="32x32" href="assets/images/logo/favicon_io/favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="192x192" href="assets/images/logo/favicon_io/android-chrome-192x192.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script> 
-    <!-- Markdown parser -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>   
-    <!-- Contentful SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>   
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-900 font-sans">
 
+    <!-- 🌐 Navbar -->
+    <div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] bg-cover bg-center" style="background-image: url('assets/images/school_timings.webp');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative z-10 flex items-center justify-center h-full text-white">
+            <h1 class="text-4xl md:text-5xl font-bold">Blog</h1>
+        </div>
+    </section>  
+    <!-- Blog Grid -->
     <section class="py-12">
         <div class="max-w-7xl mx-auto px-4">
-            <h1 class="text-3xl font-bold mb-8 text-center text-[#012C6D]">Latest Articles</h1>
+            <h1 class="text-3xl font-bold mb-8 text-left text-[#012C6D]">Latest Articles</h1>
             <div id="blogPosts" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"></div>
         </div>
     </section>
+
+<!-- 🔻 Footer -->
+<div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
 
 <script>
     const client = contentful.createClient({
         space: 'mno626421khr',
         accessToken: 'nlqiAu5bBrtylm9CfgRv9IHbfYFMXgrLZvAa_G8xQxo'
     });
+        client.getEntries({
+            content_type: 'blogPost',
+            order: '-fields.date'
+        })
 
-    client.getEntries({ content_type: 'blogPost' })
         .then(response => {
-            const container = document.getElementById('blogPosts');
-
+        const container = document.getElementById('blogPosts');
         response.items.forEach(item => {
             const post = item.fields;
-
             const slug = post.slug || 'untitled';
             const imageUrl = post.image?.fields?.file?.url
-            ? 'https:' + post.image.fields.file.url
-            : 'https://via.placeholder.com/400x250';
-
+                ? 'https:' + post.image.fields.file.url
+                : 'https://via.placeholder.com/400x250';
             const date = new Date(post.date).toLocaleDateString(undefined, {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-            });
-
-            const article = document.createElement('div');
-                article.innerHTML = `
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+        });
+        const article = document.createElement('div');
+        article.innerHTML = `
                 <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
                     <a href="/article_template.html?slug=${slug}">
                         <img src="${imageUrl}" alt="${post.title}" class="w-full h-48 object-cover">
                     </a>
-                    <div class="p-4">
-                        <p class="text-sm text-gray-500 mb-1">${date}</p>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">
-                            <a href="/article_template.html?slug=${slug}" class="hover:underline">${post.title}</a>
-                        </h3>
-                        <a href="/article_template.html?slug=${slug}" class="text-sm text-[#6089FB] hover:underline">Read more →</a>
-                    </div>
+                <div class="p-4">
+                    <p class="text-sm text-gray-500 mb-1">${date}</p>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="/article_template.html?slug=${slug}" class="hover:underline">${post.title}</a>
+                    </h3>
+                    <a href="/article_template.html?slug=${slug}" class="text-sm text-[#6089FB] hover:underline">Read more →</a>
                 </div>
+            </div>
             `;
-
-    container.appendChild(article);
+            container.appendChild(article);
         });
     })
     .catch(err => {

@@ -3,38 +3,52 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Article | Al Maaref American School</title>  
-    <!-- Tailwind CSS -->
+    <title>Blog | Al Maaref American School</title> 
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon_io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/favicon_io/apple-touch-icon.png">
+    <link rel="icon" sizes="32x32" href="assets/images/logo/favicon_io/favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="192x192" href="assets/images/logo/favicon_io/android-chrome-192x192.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script> 
-    <!-- Markdown parser -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>   
-    <!-- Contentful SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>   
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-900 font-sans">
 
-    <section class="py-12">
+<!-- 🌐 Navbar Partial -->
+<div hx-get="/partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+<!-- Hero Section -->
+<section class="relative h-[60vh] bg-cover bg-center" style="background-image: url('assets/images/school_timings.webp');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 flex items-center justify-center h-full text-white">
+        <h1 class="text-4xl md:text-5xl font-bold">Blog</h1>
+    </div>
+</section>
+
+    <!-- Article Section -->
+    <main class="py-12">
         <div class="max-w-3xl mx-auto px-4">
-
+            <!-- 📝 Article Content -->
+            <div id="articleContainer" class="space-y-6 mb-12"></div>
             <!-- 🔙 Back to Articles -->
-            <div class="mb-8">
-                <a href="/articles.html" class="inline-block text-[#6089FB] text-sm font-medium hover:underline">
-                    Back to Articles
-                </a>
-            </div>
-
-            <!-- 📝 Article Container -->
-            <div id="articleContainer" class="space-y-6"></div>
-
+                <div class="mb-8">
+                    <a href="/articles.html" class="inline-block text-[#6089FB] text-sm font-medium hover:underline">
+                        ← Back to Articles
+                    </a>
+                </div>  
         </div>
-    </section>
+    </main> 
+    <!-- 🔻 Footer Partial -->
+    <div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
 
-    <script>
-        const client = contentful.createClient({
-            space: 'mno626421khr',
-            accessToken: 'nlqiAu5bBrtylm9CfgRv9IHbfYFMXgrLZvAa_G8xQxo'
-        });
+<script>
+    const client = contentful.createClient({
+        space: 'mno626421khr',
+        accessToken: 'nlqiAu5bBrtylm9CfgRv9IHbfYFMXgrLZvAa_G8xQxo'
+    });
 
     const params = new URLSearchParams(window.location.search);
     const slug = params.get('slug');
@@ -47,7 +61,7 @@
             'fields.slug': slug
         })
         .then(response => {
-            const post = response.items[0]?.fields;
+        const post = response.items[0]?.fields;
 
         if (!post) {
             document.getElementById('articleContainer').innerHTML = '<p class="text-red-600 text-center">Article not found.</p>';
