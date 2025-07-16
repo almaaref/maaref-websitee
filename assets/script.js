@@ -172,3 +172,23 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("Swiper is not defined. Check script order.");
   }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  new Swiper('.masFacilitiesSwiper', {
+    loop: true,
+    speed: 800,
+    effect: 'slide',
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+});
