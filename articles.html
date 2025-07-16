@@ -48,15 +48,15 @@
             const article = document.createElement('div');
                 article.innerHTML = `
                 <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
-                    <a href="/article-template.html?slug=${slug}">
+                    <a href="/article_template.html?slug=${slug}">
                         <img src="${imageUrl}" alt="${post.title}" class="w-full h-48 object-cover">
                     </a>
                     <div class="p-4">
                         <p class="text-sm text-gray-500 mb-1">${date}</p>
                         <h3 class="text-lg font-semibold text-gray-900 mb-2">
-                            <a href="/article-template.html?slug=${slug}" class="hover:underline">${post.title}</a>
+                            <a href="/article_template.html?slug=${slug}" class="hover:underline">${post.title}</a>
                         </h3>
-                        <a href="/article-template.html?slug=${slug}" class="text-sm text-[#6089FB] hover:underline">Read more →</a>
+                        <a href="/article_template.html?slug=${slug}" class="text-sm text-[#6089FB] hover:underline">Read more →</a>
                     </div>
                 </div>
             `;
