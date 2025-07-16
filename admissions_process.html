@@ -20,7 +20,7 @@
     <link rel="icon" sizes="192x192" href="assets/images/logo/favicon_io/android-chrome-192x192.png" type="image/png">
 </head>
 
-<body class="bg-white text-gray-900 font-[Playfair_Display]">
+<body class="bg-white">
 
 
 <div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
@@ -37,9 +37,8 @@
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-3xl font-bold mb-8 border-b border-black pb-2">Take the first step towards enrolling your child at MAS</h2>
             <div class="grid md:grid-cols-2 gap-8">
-            
-            <!-- Left Column -->
-            <div>
+                <!-- Left Column -->
+                <div>
                 <p class="text-xl leading-relaxed mb-6">
                     Applications for admission are accepted at all times during the school year, although there are cut-off dates during the year, which are designated by the UAE Ministry of Education.
                     <br><br>
@@ -47,96 +46,126 @@
                     <br><br>
                     When a place becomes available, the school will contact the first eligible applicant and invite them to attend an assessment.
                 </p>
+                </div>
+                <!-- Right Column -->
+                <div>
+                    <p class="text-xl mb-4">
+                        The admissions process is a simple journey from initial enquiry to first day at school:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-xl">
+                        <li>Make an enquiry and have a discussion with our friendly Admissions Team.</li>
+                        <li>Visit us to get a feel for our school and meet our exceptional School Leadership Team.</li>
+                        <li>Apply for a place by completing the online application form.</li>
+                        <li>We will arrange for an assessment. The assessment will help staff ensure they understand the individual learning needs of each pupil.</li>
+                        <li>We look forward to welcoming our new pupils into the MAS family.</li>
+                    </ul>
+                </div>
             </div>
-        
-            <!-- Right Column -->
-            <div>
-        <p class="text-xl mb-4">
-            The admissions process is a simple journey from initial enquiry to first day at school:
-        </p>
-        <ul class="list-disc list-inside space-y-2 text-xl">
-            <li>Make an enquiry and have a discussion with our friendly Admissions Team.</li>
-            <li>Visit us to get a feel for our school and meet our exceptional School Leadership Team.</li>
-            <li>Apply for a place by completing the online application form.</li>
-            <li>We will arrange for an assessment. The assessment will help staff ensure they understand the individual learning needs of each pupil.</li>
-            <li>We look forward to welcoming our new pupils into the MAS family.</li>
-        </ul>
-            </div>
-
-            </div>
-            </div>
+        </div>
     </section>
 
-    <section class="py-20 bg-white text-gray-800">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
-    
-            <!-- Left Text Content -->
-        <div>
-                <h2 class="text-2xl font-bold mb-4">Documents Required</h2>
-                <div class="mt-8">
-                    <div class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-3 gap-4">
-                    <!-- Document Card -->
-                    <div class="bg-white shadow-md rounded-md p-4 text-center">
-                        <img src="assets/images/icons/photos.svg" alt="Photo" class="mx-auto h-10 mb-2">
-                        <p class="text-base text-[#1e266d]">4 Photos (Passport size)</p>
-                    </div>
-                    <div class="bg-white shadow-md rounded-md p-4 text-center">
-                        <img src="assets/images/icons/id-card.svg" alt="Passport" class="mx-auto h-10 mb-2">
-                        <p class="text-base text-[#1e266d]">Passport, visa, and Emirates ID Copy<br>(Parents & Students)</p>
-                    </div>
-                    <div class="bg-white shadow-md rounded-md p-4 text-center">
-                        <img src="assets/images/icons/vaccination.svg" alt="Vaccination" class="mx-auto h-10 mb-2">
-                        <p class="text-base text-[#1e266d]">Vaccination card</p>
-                    </div>
-                    <div class="bg-white shadow-md rounded-md p-4 text-center">
-                        <img src="assets/images/icons/birth_certificate.svg" alt="Birth Certificate" class="mx-auto h-10 mb-2">
-                        <p class="text-base text-[#1e266d]">Birth certificate</p>
-                    </div>
-                    <div class="bg-white shadow-md rounded-md p-4 text-center">
-                        <img src="assets/images/icons/results.svg" alt="Report Card" class="mx-auto h-10 mb-2">
-                        <p class="text-base text-[#1e266d]">Last report card<br>(Grade 2–12)</p>
-                    </div>
-                    <div class="bg-white shadow-md rounded-md p-4 text-center">
-                        <img src="assets/images/icons/certificate-icon.svg" alt="Transfer Certificate" class="mx-auto h-10 mb-2">
-                        <p class="text-base text-[#1e266d]">Transfer certificate</p>
-                    </div>
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <!-- Section Heading -->
+        <h2 class="text-3xl font-bold text-[#6089FB] mb-10">Documents Required</h2>
+
+        <!-- Documents + Age Table Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+
+            <!-- Left Column: Documents + Admission Process -->
+            <div class="flex flex-col gap-10">
+                <!-- Documents Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                <div class="bg-white shadow-md rounded-lg p-4 text-center">
+                    <img src="assets/images/icons/photos.svg" alt="Photos" class="w-10 h-10 mx-auto mb-2">
+                    <p class="text-md font-medium">4 Photos (Passport size)</p>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-4 text-center">
+                    <img src="assets/images/icons/id-card.svg" alt="ID" class="w-10 h-10 mx-auto mb-2">
+                    <p class="text-md font-medium">Passport, visa, and Emirates ID Copy<br>(Parents & Students)</p>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-4 text-center">
+                    <img src="assets/images/icons/vaccination.svg" alt="Vaccination" class="w-10 h-10 mx-auto mb-2">
+                    <p class="text-md font-medium">Vaccination card</p>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-4 text-center">
+                    <img src="assets/images/icons/birth_certificate.svg" alt="Birth Certificate" class="w-10 h-10 mx-auto mb-2">
+                    <p class="text-md font-medium">Birth certificate</p>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-4 text-center">
+                    <img src="assets/images/icons/results.svg" alt="Report Card" class="w-10 h-10 mx-auto mb-2">
+                    <p class="text-md font-medium">Last report card (Grade 2 – 12)</p>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-4 text-center">
+                    <img src="assets/images/icons/certificate-icon.svg" alt="Transfer" class="w-10 h-10 mx-auto mb-2">
+                    <p class="text-md font-medium">Transfer certificate</p>
                 </div>
             </div>
 
-        </div>
-        
-            <!-- Right Table -->
-            <div class="overflow-x-auto">
-                <table class="min-w-full border border-gray-300 text-base text-left">
-                    <thead class="bg-[#6089FB] text-white">
-                        <tr>
-                            <th class="px-4 py-2 font-semibold">Grade Level</th>
-                            <th class="px-4 py-2 font-semibold">Cutoff Date</th>
-                            <th class="px-4 py-2 font-semibold">Typical Age</th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-white divide-y divide-gray-200">
-                        <tr><td class="px-4 py-2">Pre-K</td><td class="px-4 py-2">Till 31st August</td><td class="px-4 py-2">3 years</td></tr>
-                        <tr><td class="px-4 py-2">KG 1</td><td class="px-4 py-2">Till 31st August</td><td class="px-4 py-2">4 years</td></tr>
-                        <tr><td class="px-4 py-2">KG 2</td><td class="px-4 py-2">Till 31st August</td><td class="px-4 py-2">5 years</td></tr>
-                        <tr><td class="px-4 py-2">GR 1</td><td class="px-4 py-2">Depends on Last Grade</td><td class="px-4 py-2">6 years</td></tr>
-                        <tr><td class="px-4 py-2">GR 2</td><td class="px-4 py-2">Depends on Last Grade</td><td class="px-4 py-2">7 years</td></tr>
-                        <tr><td class="px-4 py-2">GR 3</td><td class="px-4 py-2">Depends on Last Grade</td><td class="px-4 py-2">8 years</td></tr>
-                        <tr><td class="px-4 py-2">GR 4</td><td class="px-4 py-2">Depends on Last Grade</td><td class="px-4 py-2">9 years</td></tr>
-                        <tr><td class="px-4 py-2">GR 5</td><td class="px-4 py-2">Depends on Last Grade</td><td class="px-4 py-2">10 years</td></tr>
-                        <tr><td class="px-4 py-2">GR 6</td><td class="px-4 py-2">Depends on Last Grade</td><td class="px-4 py-2">11 years</td></tr>
-                        <tr><td class="px-4 py-2">GR 7</td><td class="px-4 py-2">Depends on Last Grade</td><td class="px-4 py-2">12 years</td></tr>
-                        <tr><td class="px-4 py-2">GR 8</td><td class="px-4 py-2">Depends on Last Grade</td><td class="px-4 py-2">13 years</td></tr>
-                        <tr><td class="px-4 py-2">GR 9</td><td class="px-4 py-2">Depends on Last Grade</td><td class="px-4 py-2">14 years</td></tr>
-                        <tr><td class="px-4 py-2">GR 10</td><td class="px-4 py-2">Depends on Last Grade</td><td class="px-4 py-2">15 years</td></tr>
-                        <tr><td class="px-4 py-2">GR 11</td><td class="px-4 py-2">Depends on Last Grade</td><td class="px-4 py-2">16 years</td></tr>
-                        <tr><td class="px-4 py-2">GR 12</td><td class="px-4 py-2">Depends on Last Grade</td><td class="px-4 py-2">17 years</td></tr>
-                    </tbody>
-                </table>
+            <!-- Admission Process -->
+            <div class="text-black rounded-xl p-6 relative z-0 overflow-hidden bg-[#F9FBFF]">
+                <h3 class="text-3xl font-bold text-[#6089FB] mb-10 border-b border-[#6089FB]/30 pb-3">
+                    School Admissions Process
+                </h3>
+            <div class="space-y-8 mt-6">
+                <!-- Pre-Kg to Grade 1 -->
+                <div class="flex items-start space-x-4">
+                    <div class="bg-[#E6F0FF] p-3 rounded-full">
+                        <img src="assets/images/icons/child.svg" alt="Pre-K Icon" class="w-10 h-10" />
+                    </div>
+                <div>
+                    <p class="font-semibold text-lg">Pre-Kg to Grade 1</p>
+                    <p class="text-lg">Interviews are conducted for students from Pre-Kg to Grade 1.</p>
+                </div>
+                </div>
+                <!-- Grade 2–12 -->
+                <div class="flex items-start space-x-4">
+                    <div class="bg-[#E6F0FF] p-3 rounded-full">
+                        <img src="assets/images/icons/student.svg" alt="MAP Icon" class="w-10 h-10" />
+                    </div>
+                <div>
+                    <p class="font-semibold text-lg">Grade 2 – 12</p>
+                    <p class="text-lg">English MAP entrance assessments are conducted for Grade 2–12.</p>
+                    </div>
+                </div>
             </div>
-
+          </div>
         </div>
-    </section>
+
+        <!-- Right Column: Grade Table -->
+        <div class="w-full">
+          <table class="w-full text-left border border-gray-200 rounded-lg overflow-hidden">
+            <thead class="bg-[#6089FB] text-white text-xl uppercase">
+              <tr>
+                <th class="px-4 py-3">Grade Level</th>
+                <th class="px-4 py-3">Cutoff Date</th>
+                <th class="px-4 py-3">Typical Age</th>
+              </tr>
+            </thead>
+            <tbody class="text-lg">
+              <tr class="border-b"><td class="px-4 py-3">Pre-K</td><td class="px-4 py-3">Till 31st August</td><td class="px-4 py-3">3 years</td></tr>
+              <tr class="border-b"><td class="px-4 py-3">KG 1</td><td class="px-4 py-3">Till 31st August</td><td class="px-4 py-3">4 years</td></tr>
+              <tr class="border-b"><td class="px-4 py-3">KG 2</td><td class="px-4 py-3">Till 31st August</td><td class="px-4 py-3">5 years</td></tr>
+              <tr class="border-b"><td class="px-4 py-3">GR 1</td><td class="px-4 py-3">Depends on Last Grade</td><td class="px-4 py-3">6 years</td></tr>
+              <tr class="border-b"><td class="px-4 py-3">GR 2</td><td class="px-4 py-3">Depends on Last Grade</td><td class="px-4 py-3">7 years</td></tr>
+              <tr class="border-b"><td class="px-4 py-3">GR 3</td><td class="px-4 py-3">Depends on Last Grade</td><td class="px-4 py-3">8 years</td></tr>
+              <tr class="border-b"><td class="px-4 py-3">GR 4</td><td class="px-4 py-3">Depends on Last Grade</td><td class="px-4 py-3">9 years</td></tr>
+              <tr class="border-b"><td class="px-4 py-3">GR 5</td><td class="px-4 py-3">Depends on Last Grade</td><td class="px-4 py-3">10 years</td></tr>
+              <tr class="border-b"><td class="px-4 py-3">GR 6</td><td class="px-4 py-3">Depends on Last Grade</td><td class="px-4 py-3">11 years</td></tr>
+              <tr class="border-b"><td class="px-4 py-3">GR 7</td><td class="px-4 py-3">Depends on Last Grade</td><td class="px-4 py-3">12 years</td></tr>
+              <tr class="border-b"><td class="px-4 py-3">GR 8</td><td class="px-4 py-3">Depends on Last Grade</td><td class="px-4 py-3">13 years</td></tr>
+              <tr class="border-b"><td class="px-4 py-3">GR 9</td><td class="px-4 py-3">Depends on Last Grade</td><td class="px-4 py-3">14 years</td></tr>
+              <tr class="border-b"><td class="px-4 py-3">GR 10</td><td class="px-4 py-3">Depends on Last Grade</td><td class="px-4 py-3">15 years</td></tr>
+              <tr class="border-b"><td class="px-4 py-3">GR 11</td><td class="px-4 py-3">Depends on Last Grade</td><td class="px-4 py-3">16 years</td></tr>
+              <tr><td class="px-4 py-3">GR 12</td><td class="px-4 py-3">Depends on Last Grade</td><td class="px-4 py-3">17 years</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</section>
+
+
 
 <!-- Footer (PARTIAL) -->
 <div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>

@@ -7,7 +7,7 @@ public_folder: "/uploads/images"
 
 collections:
   - name: "articles"
-    label: "articles"
+    label: "Articles"
     folder: "articles"
     create: true
     slug: "{{slug}}"
