@@ -3,22 +3,50 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Articles CMS | Al Maaref American School </title> 
+    <title>Articles CMS | Al Maaref American School</title>     
+    <!-- Tailwind CDN for styling (optional) -->
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <!-- Marked.js for Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>   
+    <!-- Contentful SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
 </head>
 
-<body>
+<body class="bg-gray-50 text-gray-900 font-sans">
 
     <!-- Section: Articles -->
-    <section class="py-12 bg-gray-50">
+    <section class="py-12">
         <div class="max-w-4xl mx-auto px-4">
             <h1 class="text-3xl font-bold mb-8 text-center text-[#012C6D]">Latest Articles</h1>
             <div id="blogPosts" class="space-y-12"></div>
         </div>
-    </section>
-
-    <!-- Include Marked.js and your rendering script -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="/assets/renderArticles.js"></script>
+    </section>  
+    <script>
+      // 🔐 Replace with your own Contentful space ID and access token
+        const client = contentful.createClient({
+        space: 'mno626421khr',
+        accessToken: 'nlqiAu5bBrtylm9CfgRv9IHbfYFMXgrLZvAa_G8xQxo'
+        });   
+        client.getEntries({ content_type: 'blogPost' }).then(response => {
+            const container = document.getElementById('blogPosts'); 
+            response.items.forEach(item => {
+                const post = item.fields; 
+                const article = document.createElement('article');
+                article.className = 'bg-white p-6 rounded-lg shadow'; 
+                // Format date
+            const date = new Date(post.date).toLocaleDateString();    
+            article.innerHTML = `
+            <h2 class="text-2xl font-semibold mb-2">${post.title}</h2>
+            <p class="text-sm text-gray-500 mb-4">${date}</p>
+            <div class="prose max-w-none">${marked.parse(post.body || '')}</div>
+        `;    
+        container.appendChild(article);
+        });
+        }).catch(err => {
+            console.error('Error fetching articles from Contentful:', err);
+            document.getElementById('blogPosts').innerHTML = '<p class="text-red-600 text-center">Failed to load articles.</p>';
+        });
+    </script>
 
 </body>
 </html>
