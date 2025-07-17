@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guiding Statement | Maaref American School</title>
+  <title>Guiding Statement | Al Maaref American School</title>
 
-  
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon_io/favicon.ico">
   <!-- Apple devices -->
@@ -13,6 +12,7 @@
   <!-- Modern browsers -->
   <link rel="icon" sizes="32x32" href="assets/images/logo/favicon_io/favicon-32x32.png" type="image/png">
   <link rel="icon" sizes="192x192" href="assets/images/logo/favicon_io/android-chrome-192x192.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   
   <script src="https://unpkg.com/htmx.org@1.9.6"></script>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -25,7 +25,7 @@
 <div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
 
 <!-- Hero Section -->
-<section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/school.JPG');">
+<section class="relative h-[75vh] -mt-[50px] bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/school.JPG');">
   <div class="absolute inset-0 bg-black bg-opacity-50"></div>
   <h1 class="relative z-10 text-white text-4xl md:text-5xl font-bold">Guiding Statement</h1>
 </section>
@@ -33,17 +33,14 @@
 <!-- Vision & Mission -->
 <section class="bg-white py-16 px-6 text-center">
   <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-[#6089FB] mb-12">Vision & Mission</h2>
+    <h2 class="text-3xl font-bold text-[#6089FB] mb-12">Vision &amp; Mission</h2>
 
     <div class="grid md:grid-cols-2 gap-8 text-left">
       <!-- Vision -->
       <div class="bg-gray-100 p-8 rounded shadow">
         <div class="flex items-center mb-4">
-          <div class="bg-[#6089FB] text-white p-3 rounded-full">
-            <!-- Vision Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3-1.343 3-3S13.657 2 12 2 9 3.343 9 5s1.343 3 3 3zM12 14v7m-6 0h12" />
-            </svg>
+          <div class="bg-white text-black inline-flex items-center justify-center w-12 h-12 rounded-full">
+            <i class="fa-solid fa-eye text-xl"></i>
           </div>
           <h3 class="ml-4 text-2xl font-semibold text-[#333]">Our Vision</h3>
         </div>
@@ -55,11 +52,8 @@
       <!-- Mission -->
       <div class="bg-gray-100 p-8 rounded shadow">
         <div class="flex items-center mb-4">
-          <div class="bg-[#6089FB] text-white p-3 rounded-full">
-            <!-- Mission Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m-5 6h.01M21 12c0-4.97-4.03-9-9-9S3 7.03 3 12s4.03 9 9 9 9-4.03 9-9z" />
-            </svg>
+          <div class="bg-white text-black inline-flex items-center justify-center w-12 h-12 rounded-full">
+            <i class="fa-solid fa-check-circle text-xl"></i>
           </div>
           <h3 class="ml-4 text-2xl font-semibold text-[#333]">Our Mission</h3>
         </div>
@@ -67,6 +61,7 @@
           Our mission is to provide a caring respectful diverse environment that encourages the learners to take risks, be autonomous, and creative. MAS will strive to equip students with the knowledge, skills and dispositions to be life-long learners who are proud of their cultural identity.
         </p>
       </div>
+
     </div>
   </div>
 </section>
@@ -77,20 +72,36 @@
   <div class="max-w-6xl mx-auto px-6 text-center">
     <h2 class="text-3xl font-bold text-[#6089FB] mb-12">Our Core Values</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <!-- Respect -->
       <div>
-        <div class="mx-auto h-16 w-16 rounded-full bg-white border border-[#6089FB] text-white flex items-center justify-center text-xl font-bold">🤝</div>
+        <div
+          class="mx-auto h-16 w-16 rounded-full bg-white border border flex items-center justify-center text-black text-2xl">
+          <i class="fa-solid fa-handshake"></i>
+        </div>
         <p class="mt-4 font-semibold text-2xl">Respect</p>
       </div>
+      <!-- Cooperation -->
       <div>
-        <div class="mx-auto h-16 w-16 rounded-full bg-white border border-[#6089FB] text-white flex items-center justify-center text-xl font-bold">🤖</div>
+        <div
+          class="mx-auto h-16 w-16 rounded-full bg-white border border flex items-center justify-center text-black text-2xl">
+          <i class="fa-solid fa-users"></i>
+        </div>
         <p class="mt-4 font-semibold text-2xl">Cooperation</p>
       </div>
+      <!-- Responsibility -->
       <div>
-        <div class="mx-auto h-16 w-16 rounded-full bg-white border border-[#6089FB] text-white flex items-center justify-center text-xl font-bold">🧠</div>
+        <div
+          class="mx-auto h-16 w-16 rounded-full bg-white border border flex items-center justify-center text-black text-2xl">
+          <i class="fa-solid fa-hands-holding-child"></i>
+        </div>
         <p class="mt-4 font-semibold text-2xl">Responsibility</p>
       </div>
+      <!-- Tolerance -->
       <div>
-        <div class="mx-auto h-16 w-16 rounded-full bg-white border border-[#6089FB] text-white flex items-center justify-center text-xl font-bold">🌍</div>
+        <div
+          class="mx-auto h-16 w-16 rounded-full bg-white border border flex items-center justify-center text-black text-2xl">
+          <i class="fa-solid fa-globe"></i>
+        </div>
         <p class="mt-4 font-semibold text-2xl">Tolerance</p>
       </div>
     </div>
