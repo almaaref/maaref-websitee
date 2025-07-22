@@ -37,14 +37,13 @@
             x-transition:leave="transition ease-in duration-200"
             x-transition:leave-start="opacity-100 scale-100 max-h-[500px]"
             x-transition:leave-end="opacity-0 scale-95 max-h-0"
-            class="absolute top-full mt-2 bg-white text-black rounded shadow-xl w-[700px] p-6 z-50 overflow-hidden"
+            class="absolute top-full mt-2 bg-white text-black rounded shadow-xl w-[300px] p-6 z-50 overflow-hidden"
             :class="($el.getBoundingClientRect().left + 700 > window.innerWidth) ? 'right-0' : 'left-0'"
             role="menu"
             aria-label="About Us submenu"
           >
-        <div class="grid grid-cols-3 gap-6">
+        <div class="grid gap-6">
           <div>
-            <h4 class="font-bold mb-2 text-xl">Leadership</h4>
             <ul class="space-y-1 text-lg">
               <li><a href="/guiding_statement.html">Guiding Statement</a></li>
               <li><a href="/CEO_welcome_message.html">Director's Message</a></li>
@@ -52,14 +51,12 @@
             </ul>
           </div>
           <div>
-            <h4 class="font-bold mb-2 text-xl">Team & Governance</h4>
             <ul class="space-y-1 text-lg">
-              <li><a href="/our_team.html">Our Team</a></li>
+              <li><a href="/our_team.html">Leadership</a></li>
               <li><a href="/mas_governors.html">Advisory Board</a></li>
             </ul>
           </div>
           <div>
-            <h4 class="font-bold mb-2 text-xl">Why MAS?</h4>
             <ul class="space-y-1 text-lg">
               <li><a href="/history.html">Our History</a></li>
               <li><a href="/affiliations.html">Accreditations & Affiliations</a></li>

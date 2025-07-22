@@ -70,17 +70,17 @@
 
     <!-- Community of Excellence Section -->
     <section class="bg-gray-100 pt-16">
-  <div class="mx-auto px-6 text-center mb-12 max-w-7xl">
-    <h2 class="text-4xl font-bold mb-4">A Community of Excellence and Inclusion</h2>
-    <p class="text-xl">
-      Al Maaref American School is a kind, inclusive, tolerant community where diverse opportunity,
-      personal development, high achievement and collaborative partnership define who we are,
-      and where our values underpin all we do.
-    </p>
-  </div>
+      <div class="mx-auto px-6 text-center mb-12 max-w-7xl">
+        <h2 class="text-4xl font-bold mb-4">A Community of Excellence and Inclusion</h2>
+        <p class="text-xl">
+          Al Maaref American School is a kind, inclusive, tolerant community where diverse opportunity,
+          personal development, high achievement and collaborative partnership define who we are,
+          and where our values underpin all we do.
+        </p>
+      </div>
 
-  <div class="swiper mySwiper w-full h-[80vh]">
-    <div class="swiper-wrapper">
+      <div class="swiper mySwiper w-full h-[80vh]">
+        <div class="swiper-wrapper">
 
       <!-- Slide 1: Respect -->
       <div class="swiper-slide relative bg-cover bg-center" style="background-image: url('assets/images/respect.JPG');">
@@ -91,7 +91,7 @@
       </div>
 
       <!-- Slide 2: Scholarship -->
-      <div class="swiper-slide relative bg-cover bg-center" style="background-image: url('assets/images/scholarship.JPG');">
+      <div class="swiper-slide relative bg-cover bg-center" style="background-image: url('assets/images/scholarship.webp');">
         <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-center p-6">
           <h3 class="text-4xl md:text-5xl font-bold mb-4">Scholarship</h3>
           <p class="text-xl max-w-3xl">We encourage the growth of intellectual curiosity, independence and innovation within a scholarly environment supported by specialists who inspire lifelong learning.</p>
@@ -99,7 +99,7 @@
       </div>
 
       <!-- Slide 3: Inclusivity -->
-      <div class="swiper-slide relative bg-cover bg-center" style="background-image: url('assets/images/inclusivity.JPG');">
+      <div class="swiper-slide relative bg-cover bg-center" style="background-image: url('assets/images/inclusivity.webp');">
         <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-center p-6">
           <h3 class="text-4xl md:text-5xl font-bold mb-4">Inclusivity</h3>
           <p class="text-xl max-w-3xl">We remain loyal to our founding principles to educate students from all backgrounds, fostering diversity, acceptance, and a deep sense of belonging.</p>
@@ -115,7 +115,7 @@
       </div>
 
       <!-- Slide 5: Courage -->
-      <div class="swiper-slide relative bg-cover bg-center" style="background-image: url('assets/images/courage1.JPG');">
+      <div class="swiper-slide relative bg-cover bg-center" style="background-image: url('assets/images/courage.webp');">
         <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-center p-6">
           <h3 class="text-4xl md:text-5xl font-bold mb-4">Courage</h3>
           <p class="text-xl max-w-3xl">We help students embrace challenges, take risks, and persevere with resilience and confidence.</p>
@@ -130,13 +130,13 @@
         </div>
       </div>
 
-    </div>
-
-    <!-- Navigation + Pagination -->
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
+        </div>
+      
+        <!-- Navigation + Pagination -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
     </section>
 
     <!-- Testimonial Section -->
@@ -299,14 +299,26 @@
 
     <!-- Backdrop and Modal -->
     <div id="popup-backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-40 flex items-center justify-center transition-opacity duration-300 opacity-0 pointer-events-none">
-      <div id="popup-modal" class="bg-white rounded-3xl shadow-2xl max-w-xl w-full p-8 transform -translate-y-full transition-transform duration-500">
-        <div class="text-center">
-      <h2 class="text-2xl font-bold text-[#6089FB] mb-4">📢 Admissions Now Open for 2024-2025!</h2>
-      <p class="text-gray-700 mb-6">Enroll your child at Al Maaref American School and experience excellence in education, values, and growth. Limited seats available—secure your spot now!</p>
-      <button onclick="closePopup()" class="bg-[#6089FB] text-white font-medium px-6 py-2 rounded-full hover:bg-[#4a6ee0] transition">Got It!</button>
+      <div id="popup-modal" class="relative bg-white rounded-3xl shadow-2xl max-w-2xl w-full p-0 overflow-hidden transform -translate-y-full transition-transform duration-500">
+      <!-- Background image for fun/cheerful look -->
+      <div class="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-20 z-0" style="background-image: url('/assets/images/icons/Teacher.svg');"></div>
+      <div class="relative z-10 p-10 text-center">
+        <!-- Icon or badge -->
+        <div class="mb-4">
+          <img src="/assets/bell.svg" alt="School Bell Icon" class="w-16 h-16 mx-auto animate-bounce" />
+        </div>
+          <h2 class="text-3xl font-extrabold text-[#6089FB] mb-3">🎒 Admissions Now Open!</h2>
+          <p class="text-gray-700 text-lg mb-6">
+            Enroll your child at <strong>Al Maaref American School</strong> and unlock a journey of discovery, creativity, and growth. <br />
+            📚 Limited seats for the <strong>2024–2025</strong> academic year!
+          </p>
+            <button onclick="closePopup()" class="bg-[#6089FB] text-white font-semibold px-8 py-3 rounded-full hover:bg-[#4a6ee0] transition-all shadow-lg">
+              Got It! 🎉
+            </button>
         </div>
       </div>
     </div>
+
 
   </body>
 </html>
@@ -327,6 +339,8 @@
 <script src="assets/script.js"></script>
 <script src="assets/news.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -345,4 +359,16 @@
         effect: 'slide',
       });
     });
+  </script>
+  <script>
+    function openPopup() {
+  document.getElementById('popup-backdrop').classList.remove('opacity-0', 'pointer-events-none');
+  
+  // Launch confetti
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6 }
+  });
+}
   </script>
