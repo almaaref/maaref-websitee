@@ -23,7 +23,6 @@
 
     <nav id="desktop-nav" x-data="{ openMenu: null, hoverTimeout: null }" class="hidden md:flex flex justify-center w-full text-md font-semibold relative">
       <div class="flex items-center justify-between max-w-7xl w-full">
-
         <div class="relative group"
           @mouseenter="clearTimeout(hoverTimeout); openMenu = 'about'"
       @mouseleave="hoverTimeout = setTimeout(() => openMenu = null, 300)"
