@@ -185,31 +185,28 @@
     </section>
 
     <!-- Accreditations -->
-    <section class="relative py-20 bg-cover bg-center" style="background-image: url('./assets/images/logo/accreditations/bg.webp');">
-      <!-- Overlay -->
+    <section class="relative py-16 bg-white text-center" style="background-image: url('./assets/images/logo/accreditations/bg.webp');">
       <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-
-      <!-- Content -->
-      <div class="relative max-w-7xl h-96  mx-auto px-6 text-center text-white">
-        <h2 class="text-base font-semibold tracking-widest uppercase mb-2">Accreditations</h2>
-        <h2 class="text-4xl font-bold mb-6">Proudly Recognized By</h2>
-        <div class="w-12 h-0.5 bg-white mx-auto mb-10"></div>
-      
-        <!-- Logo Scroll Carousel -->
-        <div id="accreditation-scroll" class="overflow-x-auto whitespace-nowrap scroll-smooth group relative cursor-grab active:cursor-grabbing scrollbar-hide">
-          <div class="flex gap-8 w-max px-4 items-center justify-center mx-auto">
-            <img src="assets/images/logo/accreditations/AP_wbg.png" alt="KHDA" class="h-36 inline-block rounded shadow-md bg-white p-2" />
-            <img src="assets/images/logo/accreditations/Cognia_wbg.png" alt="Cambridge" class="h-36 inline-block rounded shadow-md bg-white p-2" />
-            <img src="assets/images/logo/accreditations/College_Board_wbg.png" alt="Cognia" class="h-36 inline-block rounded shadow-md bg-white p-2" />
-            <img src="assets/images/logo/accreditations/SAT_wbg.png" alt="BSM" class="h-36 inline-block rounded shadow-md bg-white p-2" />
-            <img src="assets/images/logo/accreditations/WELL_wbg.png" alt="UNESCO" class="h-36 inline-block rounded shadow-md bg-white p-2" />
+        <div class="relative z-10">
+          <h3 class="text-lg font-semibold text-white uppercase tracking-wide">Accreditations</h3>
+          <h2 class="text-3xl font-bold text-white mb-6">Proudly Recognized By</h2>
+          <div class="w-24 h-1 bg-gray-300 mx-auto rounded-full mb-12"></div>
+          <div class="flex flex-wrap justify-center items-center gap-8 px-4 pb-10">
+            <img src="assets/images/logo/neasc.jpg" alt="NEASC" class="h-36 rounded shadow-md bg-white p-2" />
+            <img src="assets/images/logo/accreditations/Cognia_wbg.png" alt="COGNIA" class="h-36 rounded shadow-md bg-white p-2" />
+            <img src="assets/images/logo/accreditations/WELL_wbg.png" alt="WELL" class="h-36 rounded shadow-md bg-white p-2" />
+          <div class="w-full"></div>
+              <!-- Second row (College Board) -->
+            <div class="flex justify-center w-full mt-4">
+              <img src="assets/images/logo/accreditations/College_Board_wbg.png" alt="College Board" class="h-36 rounded shadow-md bg-white p-2" />
+            </div>
           </div>
         </div>
-      </div>
     </section>
 
+
     <!-- Facilities Section -->
-<section class="py-24 bg-white text-center">
+    <section class="py-24 bg-white text-center">
   <div class="mx-auto px-6">
     <!-- Heading -->
     <h2 class="text-4xl font-bold text-[#6098FB] mb-4">Our Facilities</h2>
@@ -291,33 +288,41 @@
       <div class="swiper-pagination !bottom-3"></div>
     </div>
   </div>
-</section>
-
-
+    </section>
 
     <div hx-get="partials/footer.html" hx-trigger="load"></div>
 
     <!-- Backdrop and Modal -->
+    <!-- Modal Container -->
     <div id="popup-backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-40 flex items-center justify-center transition-opacity duration-300 opacity-0 pointer-events-none">
-      <div id="popup-modal" class="relative bg-white rounded-3xl shadow-2xl max-w-2xl w-full p-0 overflow-hidden transform -translate-y-full transition-transform duration-500">
-      <!-- Background image for fun/cheerful look -->
-      <div class="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-20 z-0" style="background-image: url('/assets/images/icons/Teacher.svg');"></div>
-      <div class="relative z-10 p-10 text-center">
-        <!-- Icon or badge -->
-        <div class="mb-4">
-          <img src="/assets/bell.svg" alt="School Bell Icon" class="w-16 h-16 mx-auto animate-bounce" />
+      <div id="popup-modal" class="relative bg-white rounded-3xl shadow-2xl max-w-xl w-full overflow-hidden transform -translate-y-full transition-transform duration-500">
+        <!-- Close Button (top-right corner) -->
+          <button onclick="closePopup()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-2xl font-bold transition-colors z-20" aria-label="Close modal">
+            &times;
+          </button>
+        <!-- Top Image -->
+        <img src="/assets/images/uniform.webp" alt="Al Maaref Students" class="w-full h-auto object-cover" />
+        <!-- Content Row: Heading + Logo -->
+        <div class="flex flex-col sm:flex-row items-center justify-between px-8 py-6 gap-4">
+          <!-- Text Block -->
+          <div class="text-center sm:text-left">
+            <!-- Small Line on Top -->
+            <p class="text-lg text-[#118ACB] mb-1">AY 2025–2026</p>
+            <!-- Main Heading -->
+            <h2 class="text-xl sm:text-2xl font-extrabold text-[#292663]">Admissions Now Open!</h2>
+          </div>
+          <!-- Logo on Right -->
+          <img src="/assets/images/logo/logo_black.png" alt="MAS Logo" class="w-48 h-auto object-contain" />
         </div>
-          <h2 class="text-3xl font-extrabold text-[#6089FB] mb-3">🎒 Admissions Now Open!</h2>
-          <p class="text-gray-700 text-lg mb-6">
-            Enroll your child at <strong>Al Maaref American School</strong> and unlock a journey of discovery, creativity, and growth. <br />
-            📚 Limited seats for the <strong>2024–2025</strong> academic year!
-          </p>
-            <button onclick="closePopup()" class="bg-[#6089FB] text-white font-semibold px-8 py-3 rounded-full hover:bg-[#4a6ee0] transition-all shadow-lg">
-              Got It! 🎉
-            </button>
+        <!-- CTA Bar -->
+        <div class="px-0 pb-0">
+          <a href="#" class="block w-full bg-[#292663] text-white text-center font-semibold text-lg py-4 hover:bg-[#4a6ee0] transition-all">
+            Register Now
+          </a>
         </div>
       </div>
     </div>
+
 
 
   </body>

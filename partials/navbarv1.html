@@ -25,9 +25,8 @@
       <div class="flex items-center justify-between max-w-7xl w-full">
         <div class="relative group"
           @mouseenter="clearTimeout(hoverTimeout); openMenu = 'about'"
-      @mouseleave="hoverTimeout = setTimeout(() => openMenu = null, 300)"
-    >
-      <button class="hover:underline underline-offset-4" aria-haspopup="true" aria-expanded="openMenu === 'about'">About Us</button>
+          @mouseleave="hoverTimeout = setTimeout(() => openMenu = null, 300)">
+        <button class="hover:underline underline-offset-4" aria-haspopup="true" aria-expanded="openMenu === 'about'">About Us</button>
           <div
             x-show="openMenu === 'about'"
             x-transition:enter="transition ease-out duration-300"
@@ -36,21 +35,21 @@
             x-transition:leave="transition ease-in duration-200"
             x-transition:leave-start="opacity-100 scale-100 max-h-[500px]"
             x-transition:leave-end="opacity-0 scale-95 max-h-0"
-            class="absolute top-full mt-2 bg-white text-black rounded shadow-xl w-[300px] p-6 z-50 overflow-hidden"
+            class="absolute top-full mt-2 bg-[#292663] text-white rounded shadow-xl w-[300px] p-6 z-50 overflow-hidden"
             :class="($el.getBoundingClientRect().left + 700 > window.innerWidth) ? 'right-0' : 'left-0'"
             role="menu"
             aria-label="About Us submenu"
           >
         <div class="grid gap-6">
             <ul class="space-y-1 text-lg">
-              <li><a href="/guiding_statement.html">Guiding Statement</a></li>
-              <li><a href="/CEO_welcome_message.html">Director's Message</a></li>
-              <li><a href="/Principals_welcome_message.html">Principal's Message</a></li>
-              <li><a href="/our_team.html">Leadership</a></li>
-              <li><a href="/mas_governors.html">Advisory Board</a></li>
-              <li><a href="/history.html">Our History</a></li>
-              <li><a href="/affiliations.html">Accreditations & Affiliations</a></li>
-              <li><a href="/students_testimonials.html">Testimonials</a></li>
+              <li><a href="/history.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Our History</a></li>
+              <li><a href="/guiding_statement.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Guiding Statement</a></li>
+              <li><a href="/CEO_welcome_message.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Director's Message</a></li>
+              <li><a href="/Principals_welcome_message.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Principal's Message</a></li>
+              <li><a href="/our_team.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Leadership</a></li>
+              <li><a href="/mas_governors.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Advisory Board</a></li>
+              <li><a href="/affiliations.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Accreditations & Affiliations</a></li>
+              <li><a href="/students_testimonials.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Testimonials</a></li>
             </ul>
         </div>
       </div>
@@ -61,7 +60,7 @@
             ['Admission Process', '/admissions_process.html'],
             ['School Fees', '/school_fees.html'],
             ['KHDA Fact Sheet', '/school_fees.html#KHDA'],
-            ['Apply Now', '/admissions_enquiry.html']
+            ['Apply Now', '#']
           ]},
           { id: 'learning', label: 'Learning', img: 'learning.jpg', links: [
             ['Curriculum Overview', '/curriculum.html'],
@@ -89,7 +88,7 @@
             @mouseenter="clearTimeout(hoverTimeout); openMenu = item.id"
             @mouseleave="hoverTimeout = setTimeout(() => openMenu = null, 300)"
           >
-            <button class="hover:underline underline-offset-4" x-text="item.label" :aria-expanded="openMenu === item.id" aria-haspopup="true"></button>
+            <button class="hover:underline underline-offset-4 nowrap" x-text="item.label" :aria-expanded="openMenu === item.id" aria-haspopup="true"></button>
             <div
               x-show="openMenu === item.id"
               x-transition:enter="transition ease-out duration-300"
@@ -98,16 +97,15 @@
               x-transition:leave="transition ease-in duration-200"
               x-transition:leave-start="opacity-100 scale-100 max-h-[500px]"
               x-transition:leave-end="opacity-0 scale-95 max-h-0"
-              class="absolute top-full mt-2 bg-white text-black rounded shadow-xl w-[300px] p-6 z-50 overflow-hidden"
+              class="absolute top-full mt-2 bg-[#292663] text-white rounded shadow-xl w-[300px] p-6 z-50 overflow-hidden"
               :class="($el.getBoundingClientRect().left + 700 > window.innerWidth) ? 'right-0' : 'left-0'"
               role="menu"
-              :aria-label="item.label + ' submenu'"
-            >
-              <div class="grid grid-cols-3 gap-6">
-                <div class="col-span-2">
+              :aria-label="item.label + ' submenu'">
+              <div class="grid gap-6">
+                <div class="grid gap-6">
                   <ul class="space-y-1 text-lg">
                     <template x-for="([text, link]) in item.links" :key="text">
-                      <li><a :href="link" x-text="text"></a></li>
+                      <li><a :href="link" class="block w-full px-2 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200 whitespace-nowrap" x-text="text"></a></li>
                     </template>
                   </ul>
                 </div>
@@ -115,17 +113,15 @@
             </div>
           </div>
         </template>
-      
         <a href="/blog.html" class="hover:underline underline-offset-4">Blog</a>
-        <a href="/articles.html" class="hover:underline underline-offset-4">Articles</a>
 
         <div class="flex items-center gap-4">
-          <a href="/admissions_enquiry.html" 
-            class="px-4 py-1.5 rounded-lg bg-blue-600 text-white text-md font-semibold hover:bg-blue-700 transition duration-300">
+          <a href="#" 
+            class="px-4 py-1.5 rounded-lg bg-[#292663] text-white text-md font-semibold hover:bg-blue-700 transition duration-300">
             Admissions Inquiry
           </a>
           <a href="https://ampsict.ethdigitalcampus.com/AMPS/" 
-            class="px-4 py-1.5 rounded-lg bg-blue-600 text-white text-md font-semibold hover:bg-blue-700 transition duration-300">
+            class="px-4 py-1.5 rounded-lg bg-[#292663] text-white text-md font-semibold hover:bg-blue-700 transition duration-300">
             Login Portal
           </a>
         </div>
@@ -191,20 +187,18 @@
             <a href="admissions_process.html" class="block">Admission Process</a>
             <a href="school_tour.html" class="block">School Tour</a>
             <a href="school_fees.html" class="block">Fee Structure</a>
-            <a href="#" class="block">KHDA Fact Sheet</a>
+            <a href="/school_fees.html#KHDA" class="block">KHDA Fact Sheet</a>
           </div>
         </details>
       
         <details class="mb-4"><summary class="font-semibold">Parent Essentials</summary>
           <div class="ml-4 mt-2 space-y-1">
             <a href="term_dates.html" class="block">Term Dates</a>
-            <a href="#" class="block">Parents Handbook</a>
-            <a href="#" class="block">Policies & Procedures</a>
-            <a href="#" class="block">School Timings</a>
-            <a href="#" class="block">Transport</a>
-            <a href="#" class="block">Uniform</a>
-            <a href="calendar.html" class="block">Academic Calendar</a>
-            <a href="newsletters.html" class="block">Weekly Newsletter</a>
+            <a href="/parents.html" class="block">Parents Handbook</a>
+            <a href="/school_policies.html" class="block">Policies & Procedures</a>
+            <a href="/school_timings.html" class="block">School Timings</a>
+            <a href="/calendar.html" class="block">Academic Calendar</a>
+            <a href="/newsletters.html" class="block">Weekly Newsletter</a>
           </div>
         </details>
       
