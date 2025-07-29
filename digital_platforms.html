@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Platforms | Al Maaref American School</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon_io/favicon.ico">
+    <!-- Apple devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/favicon_io/apple-touch-icon.png">
+    <!-- Modern browsers -->
+    <link rel="icon" sizes="32x32" href="assets/images/logo/favicon_io/favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="192x192" href="assets/images/logo/favicon_io/android-chrome-192x192.png" type="image/png">
+  
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white">
+  
+  <div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+  <!-- Hero Section -->
+  <section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center pt-40" style="background-image: url('assets/images/parents.webp');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 flex items-center justify-center h-full text-white">
+      <h1 class="text-4xl md:text-5xl font-bold">Digital Platforms</h1>
+    </div>
+  </section>
+
+<section class="min-h-screen bg-[#f0f6fc] py-16">
+  <!-- Header -->
+  <div class="text-center mb-12 px-4">
+    <h2 class="text-4xl font-bold text-[#292663] flex justify-center items-center gap-2">
+      <svg class="w-8 h-8 text-[#118ACB]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 20h9" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v16a1 1 0 001 1h3m10-17v5m0 0l-2-2m2 2l2-2" />
+      </svg>
+      Learning Resources Hub
+    </h2>
+    <p class="text-lg mt-4 text-[#292663] font-medium">
+      A central place for parents to access all the learning platforms your child uses.
+      <br />
+      <span class="text-[#118ACB]">Simply click on a platform to open it in a new tab.</span>
+    </p>
+  </div>
+
+  <!-- Grid (full width) -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-10 xl:px-32">
+    <!-- Cards -->
+    <a href="https://www.seesaw.com" target="_blank" class="bg-[#42c1c7] rounded-xl text-white p-8 shadow hover:shadow-xl transition">
+      <img src="assets/images/logo/learning_platforms/seesaw-logo.svg" alt="Seesaw" class="h-28 w-auto mx-auto mb-6 object-contain" />
+      <h3 class="text-3xl font-semibold text-center mb-2">Seesaw</h3>
+      <p class="text-center text-base">Student-driven digital portfolios and learning platform</p>
+    </a>
+
+    <a href="https://www.ixl.com" target="_blank" class="bg-[#118ACB] rounded-xl text-white p-8 shadow hover:shadow-xl transition">
+      <img src="assets/images/logo/learning_platforms/ixl-seeklogo.png" alt="IXL" class="h-28 w-auto mx-auto mb-6 object-contain" />
+      <h3 class="text-3xl font-semibold text-center mb-2">IXL</h3>
+      <p class="text-center text-base">Personalized learning for K–12 subjects</p>
+    </a>
+
+    <a href="http://qubitslearn.me/en/login" target="_blank" class="bg-[#292663] rounded-xl text-white p-8 shadow hover:shadow-xl transition">
+      <img src="assets/images/logo/learning_platforms/qubits.jpeg" alt="Qubits" class="h-28 w-auto mx-auto mb-6 object-contain" />
+      <h3 class="text-3xl font-semibold text-center mb-2">Qubits</h3>
+      <p class="text-center text-base">Future-ready CS curriculum</p>
+    </a>
+
+    <a href="https://www.kidsa-z.com/ng/" target="_blank" class="bg-[#118ACB] rounded-xl text-white p-8 shadow hover:shadow-xl transition">
+      <img src="assets/images/logo/learning_platforms/Razkids.svg" alt="Raz-Kids" class="h-28 w-auto mx-auto mb-6 object-contain" />
+      <h3 class="text-3xl font-semibold text-center mb-2">Raz-Kids</h3>
+      <p class="text-center text-base">Online guided reading program with interactive eBooks</p>
+    </a>
+
+    <a href="https://app.studyisland.com/cfw/login" target="_blank" class="bg-[#42C1C7] rounded-xl text-white p-8 shadow hover:shadow-xl transition">
+      <img src="assets/images/logo/learning_platforms/Study_Island.webp" alt="Study Island" class="h-28 w-auto mx-auto mb-6 object-contain" />
+      <h3 class="text-3xl font-semibold text-center mb-2">Study Island</h3>
+      <p class="text-center text-base">K–12 learning program built from your state standards</p>
+    </a>
+
+    <a href="https://www.alef.com" target="_blank" class="bg-[#42C1C7] rounded-xl text-white p-8 shadow hover:shadow-xl transition">
+      <img src="assets/images/logo/learning_platforms/alef-education.svg" alt="Alef Education" class="h-28 w-auto mx-auto mb-6 object-contain" />
+      <h3 class="text-3xl font-semibold text-center mb-2">Alef Education</h3>
+      <p class="text-center text-base">Digital learning platform for K–12 education</p>
+    </a>
+
+    <a href="https://www.kamkalima.com/login" target="_blank" class="bg-[#42C1C7] rounded-xl text-white p-8 shadow hover:shadow-xl transition">
+      <img src="assets/images/logo/learning_platforms/Kamkalima_idEmU3ckFK_1.svg" alt="Kamkalima" class="h-28 w-auto mx-auto mb-6 object-contain" />
+      <h3 class="text-3xl font-semibold text-center mb-2">Kamkalima</h3>
+      <p class="text-center text-base">Arabic language learning for Middle and High School</p>
+    </a>
+
+    <a href="https://portal.achieve3000.com/index" target="_blank" class="bg-[#118ACB] rounded-xl text-white p-8 shadow hover:shadow-xl transition">
+      <img src="assets/images/logo/learning_platforms/Achieve3000.svg" alt="Achieve3000" class="h-28 w-auto mx-auto mb-6 object-contain" />
+      <h3 class="text-3xl font-semibold text-center mb-2">Achieve3000</h3>
+      <p class="text-center text-base">Literacy solutions that accelerate learning for grades 2–12</p>
+    </a>
+
+    <a href="https://3asafeer.com/login" target="_blank" class="bg-[#292663] rounded-xl text-white p-8 shadow hover:shadow-xl transition">
+      <img src="assets/images/logo/learning_platforms/asafeer.svg" alt="3asafeer" class="h-28 w-auto mx-auto mb-6 object-contain" />
+      <h3 class="text-3xl font-semibold text-center mb-2">3asafeer</h3>
+      <p class="text-center text-base">Interactive Arabic storybooks and literacy for children</p>
+    </a>
+
+    <a href="https://login.bravobravoapp.com/views/login/login.aspx" target="_blank" class="bg-[#118ACB] rounded-xl text-white p-8 shadow hover:shadow-xl transition">
+      <img src="assets/images/logo/learning_platforms/bravobravo.png" alt="BravoBravo" class="h-28 w-auto mx-auto mb-6 object-contain" />
+      <h3 class="text-3xl font-semibold text-center mb-2">BravoBravo</h3>
+      <p class="text-center text-base">Engaging Arabic learning games for children</p>
+    </a>
+  </div>
+</section>
+
+
+
+  <!-- Footer (PARTIAL) -->
+  <div hx-get="partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+</body>
+
+<script src="assets/script.js"></script>
+<script src="assets/news.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script>
+</html>
