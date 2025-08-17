@@ -150,44 +150,26 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Make sure Swiper exists before calling it
-  if (typeof Swiper !== "undefined") {
-    new Swiper(".university-affiliations-swiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true
-      },
-      breakpoints: {
-        640: { slidesPerView: 3 },
-        768: { slidesPerView: 4 },
-        1024: { slidesPerView: 5 }
-      }
-    });
-  } else {
-    console.error("Swiper is not defined. Check script order.");
-  }
-});
-
 document.addEventListener('DOMContentLoaded', function () {
-  new Swiper('.masFacilitiesSwiper', {
+  const container = document.querySelector('.facilitiesHomeSwiper'); // <- match HTML
+  if (!container) return;
+
+  // guard against double init during hot-reload
+  if (container.swiper) container.swiper.destroy(true, true);
+
+  new Swiper(container, {
     loop: true,
     speed: 800,
     effect: 'slide',
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
+    autoplay: { delay: 5000, disableOnInteraction: false },
+
+    // Scope to this container to avoid collisions
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: container.querySelector('.swiper-button-next'),
+      prevEl: container.querySelector('.swiper-button-prev'),
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: container.querySelector('.swiper-pagination'),
       clickable: true,
     },
   });
