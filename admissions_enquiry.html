@@ -33,7 +33,6 @@
   <!-- Contact Section -->
   <section class="bg-white py-12 px-6 md:px-16 text-black">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold mb-4">Admission Enquiry</h2>
       <p class="mb-8 text-lg">
         Interested in enrolling your child at our school? Please complete the form below. Our Admissions Team will contact you shortly with the next steps.
       </p>
@@ -46,33 +45,27 @@
             action="/thank-you.html"
             class="grid md:grid-cols-2 gap-6">
 
-        <!-- Required for Netlify -->
         <input type="hidden" name="form-name" value="admissions-enquiry" />
 
-        <!-- Honeypot field -->
         <p hidden>
           <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
         </p>
 
-        <!-- Parent Name -->
         <div>
           <label for="parentName" class="block mb-1 font-semibold">Parent Name</label>
           <input type="text" id="parentName" name="parentName" required class="w-full border px-4 py-2 rounded" />
         </div>
 
-        <!-- Student Name -->
         <div>
           <label for="studentName" class="block mb-1 font-semibold">Student Name</label>
           <input type="text" id="studentName" name="studentName" required class="w-full border px-4 py-2 rounded" />
         </div>
 
-        <!-- Student DOB -->
         <div>
           <label for="studentDOB" class="block mb-1 font-semibold">Student's Date of Birth</label>
           <input type="date" id="studentDOB" name="studentDOB" required class="w-full border px-4 py-2 rounded" />
         </div>
 
-        <!-- Grade -->
         <div>
           <label for="grade" class="block mb-1 font-semibold">Grade</label>
           <select id="grade" name="grade" required class="w-full border px-4 py-2 rounded">
@@ -95,25 +88,21 @@
           </select>
         </div>
 
-        <!-- Last School Attended -->
         <div>
           <label for="lastSchool" class="block mb-1 font-semibold">Last School Attended</label>
           <input type="text" id="lastSchool" name="lastSchool" class="w-full border px-4 py-2 rounded" />
         </div>
 
-        <!-- Last Grade Attended -->
         <div>
           <label for="lastGrade" class="block mb-1 font-semibold">Last Grade Attended</label>
           <input type="text" id="lastGrade" name="lastGrade" class="w-full border px-4 py-2 rounded" />
         </div>
 
-        <!-- Parent Contact Number -->
         <div>
           <label for="parentPhone" class="block mb-1 font-semibold">Parent Contact Number</label>
           <input type="tel" id="parentPhone" name="parentPhone" pattern="[0-9]{9,15}" placeholder="971 50 123 4567" required class="w-full border px-4 py-2 rounded" />
         </div>
 
-        <!-- Parent Email -->
         <div>
           <label for="parentEmail" class="block mb-1 font-semibold">Parent Email</label>
           <input type="email" id="parentEmail" name="parentEmail" required class="w-full border px-4 py-2 rounded" />
@@ -171,21 +160,21 @@
 
   <!-- Error Modal (fallback) -->
   <div id="submitErrorModal"
-       class="fixed inset-0 z-[100] hidden"
-       aria-hidden="true">
+      class="fixed inset-0 z-[100] hidden"
+      aria-hidden="true">
     <div class="absolute inset-0 bg-black/60"></div>
-    <div role="dialog" aria-modal="true" aria-labelledby="submitErrorTitle"
-         class="relative mx-auto mt-32 w-[92%] max-w-lg rounded-2xl bg-white p-8 text-center shadow-2xl">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
-           class="mx-auto mb-4 h-14 w-14 text-red-600">
-        <path fill="currentColor" d="M128 24a104 104 0 1 0 104 104A104.117 104.117 0 0 0 128 24m0 152a12 12 0 1 1 12-12a12 12 0 0 1-12 12m12-52a12 12 0 0 1-24 0V80a12 12 0 0 1 24 0Z"/>
-      </svg>
+      <div role="dialog" aria-modal="true" aria-labelledby="submitErrorTitle"
+          class="relative mx-auto mt-32 w-[92%] max-w-lg rounded-2xl bg-white p-8 text-center shadow-2xl">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
+            class="mx-auto mb-4 h-14 w-14 text-red-600">
+              <path fill="currentColor" d="M128 24a104 104 0 1 0 104 104A104.117 104.117 0 0 0 128 24m0 152a12 12 0 1 1 12-12a12 12 0 0 1-12 12m12-52a12 12 0 0 1-24 0V80a12 12 0 0 1 24 0Z"/>
+          </svg>
       <h3 id="submitErrorTitle" class="text-2xl font-bold text-gray-900">Submission failed</h3>
       <p class="mt-2 text-gray-600">Please try again. If the problem persists, contact the school.</p>
       <button type="button"
-              id="closeErrorModal"
-              class="mt-6 inline-flex items-center justify-center rounded-lg bg-gray-800 px-6 py-2 font-semibold text-white hover:bg-gray-900">
-        Close
+            id="closeErrorModal"
+            class="mt-6 inline-flex items-center justify-center rounded-lg bg-gray-800 px-6 py-2 font-semibold text-white hover:bg-gray-900">
+            Close
       </button>
     </div>
   </div>
