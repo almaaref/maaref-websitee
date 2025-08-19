@@ -42,11 +42,12 @@
     <div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
 
     <!-- Hero Section -->
-    <section class="relative h-screen">
-      <div class="absolute w-full h-full overflow-hidden">
+    <section class="relative min-h-[60vh] md:min-h-screen">
+      <div class="absolute inset-0 overflow-hidden">
         <video autoplay muted loop playsinline class="w-full h-full object-cover">
-          <source src="assets/videos/website_video.mp4" type="video/webm" />
+          <source src="assets/videos/banner.webm" type="video/webm" />
         </video>
+        <!-- Dark overlay -->
         <div class="absolute inset-0 bg-black/60"></div>
       </div>
     </section>
