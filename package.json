@@ -4,9 +4,21 @@
   "description": "",
   "scripts": {
     "dev": "live-server .",
-    "build": "echo 'No build step required for static site.'"
+    "build": "echo 'No build step required for static site.'",
+    "serve": "http-server -p 8080 -c-1 .",
+      "test:crawl": "playwright test --reporter=line",
+      "test": "start-server-and-test serve http://127.0.0.1:8080 \"npm run test:crawl\"",
+      "test:html": "html-validate \"**/*.html\""
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "main": "tailwind.config.js",
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "html-validate": "^10.0.0",
+    "http-server": "^14.1.1",
+    "start-server-and-test": "^2.0.13"
+  }
 }
+
