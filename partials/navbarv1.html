@@ -135,87 +135,107 @@
     </button>
     
 
-    <div id="mobile-menu" x-show="mobileOpen" x-transition:enter="transition transform duration-300 ease-in-out" x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0" x-transition:leave="transition transform duration-300 ease-in-out" x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full" class="fixed top-0 right-0 w-full h-full bg-black text-white z-50 px-6 py-6 md:hidden shadow-lg">
-        
-          <div class="flex items-center justify-between mb-6 md:hidden">
-            <!-- Mobile logo -->
-            <a href="/index.html">
-              <img src="../assets/images/logo/al_maaref_logo_1024.png" alt="School Logo" class="h-24 w-auto object-contain">
-            </a>
+    <div id="mobile-menu" 
+     x-show="mobileOpen" 
+     x-transition:enter="transition transform duration-300 ease-in-out" 
+     x-transition:enter-start="translate-x-full" 
+     x-transition:enter-end="translate-x-0" 
+     x-transition:leave="transition transform duration-300 ease-in-out" 
+     x-transition:leave-start="translate-x-0" 
+     x-transition:leave-end="translate-x-full" 
+     class="fixed top-0 right-0 w-full h-full bg-black text-white z-50 px-6 py-6 md:hidden shadow-lg">
 
-            <!-- Close button -->
-            <button @click="mobileOpen = false" aria-label="Close menu" class="text-white hover:text-gray-700 focus:outline-none">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-        <details class="mb-4"><summary class="font-semibold">About Us</summary>
-        <div class="ml-4 mt-2 space-y-1">
-            <a href="guiding_statement.html" class="block">Guiding Statement</a>
-            <a href="CEO_Principal.html" class="block">Directors Message</a>
-            <a href="our_team.html" class="block">Principals Message</a>
-            <a href="amps_governors.html" class="block">Our Team</a>
-              </div>
-        </details>
-      
-        <details class="mb-4"><summary class="font-semibold">Academic Excellence</summary>
-          <div class="ml-4 mt-2 space-y-1">
-            <a href="our_history.html" class="block">Our History</a>
-            <a href="learning_habits.html" class="block">Learning Habits</a>
-            <a href="inspection.html" class="block">Inspection Reports</a>
-            <a href="affiliations.html" class="block">Affiliations</a>
-          </div>
-        </details>
-      
-        <details class="mb-4"><summary class="font-semibold">Curriculum</summary>
-          <div class="ml-4 mt-2 space-y-1">
-            <a href="curriculum.html" class="block">Overview</a>
-            <a href="assessment.html" class="block">Assessment & Equalization</a>
-          </div>
-        </details>
-      
-        <details class="mb-4"><summary class="font-semibold">Students Life</summary>
-          <div class="ml-4 mt-2 space-y-1">
-            <a href="students_life.html" class="block">Care & Support</a>
-            <a href="students_council.html" class="block">Student Council</a>
-          </div>
-        </details>
-      
-        <details class="mb-4"><summary class="font-semibold">Admissions & Fees</summary>
-          <div class="ml-4 mt-2 space-y-1">
-            <a href="admissions_process.html" class="block">Admission Process</a>
-            <a href="school_tour.html" class="block">School Tour</a>
-            <a href="school_fees.html" class="block">Fee Structure</a>
-            <a href="/school_fees.html#KHDA" class="block">KHDA Fact Sheet</a>
-          </div>
-        </details>
-      
-        <details class="mb-4"><summary class="font-semibold">Parent Essentials</summary>
-          <div class="ml-4 mt-2 space-y-1">
-            <a href="term_dates.html" class="block">Term Dates</a>
-            <a href="/parents.html" class="block">Parents Handbook</a>
-            <a href="/school_policies.html" class="block">Policies & Procedures</a>
-            <a href="/school_timings.html" class="block">School Timings</a>
-            <a href="/calendar.html" class="block">Academic Calendar</a>
-            <a href="/newsletters.html" class="block">Weekly Newsletter</a>
-          </div>
-        </details>
-      
-        <details class="mb-4"><summary class="font-semibold">Contact Us</summary>
-          <div class="ml-4 mt-2 space-y-1">
-            <a href="contact.html" class="block font-semibold">Campus Map</a>
-            <a href="contact.html" class="block font-semibold">Reach Us</a>
-            <a href="contact.html" class="block font-semibold">Careers</a>
-          </div>
-        </details>
-      
-        <!-- Buttons -->
-        <div class="mt-4 space-y-2">
-          <a href="admissions_inquiry.html" class="block w-full text-center bg-[#6089FB] text-white px-4 py-2 rounded-md font-semibold">Admissions Inquiry</a>
-          <a href="login.html" class="block w-full text-center bg-gray-200 text-[#6089FB] px-4 py-2 rounded-md font-semibold">Teacher/Parent Login</a>
-        </div>
+  <div class="flex items-center justify-between mb-6 md:hidden">
+    <!-- Mobile logo -->
+    <a href="/index.html">
+      <img src="../assets/images/logo/al_maaref_logo_1024.png" alt="School Logo" class="h-24 w-auto object-contain">
+    </a>
+
+    <!-- Close button -->
+    <button @click="mobileOpen = false" aria-label="Close menu" class="text-white hover:text-gray-700 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- About Us -->
+  <details class="mb-4">
+    <summary class="font-semibold">About Us</summary>
+    <div class="ml-4 mt-2 space-y-1">
+      <a href="/history.html" class="block">Our History</a>
+      <a href="/guiding_statement.html" class="block">Guiding Statement</a>
+      <a href="/CEO_welcome_message.html" class="block">Director's Message</a>
+      <a href="/Principals_welcome_message.html" class="block">Principal's Message</a>
+      <a href="/our_team.html" class="block">Leadership</a>
+      <a href="/mas_governors.html" class="block">Advisory Board</a>
+      <a href="/affiliations.html" class="block">Accreditations & Affiliations</a>
     </div>
+  </details>
+
+  <!-- Admission -->
+  <details class="mb-4">
+    <summary class="font-semibold">Admission</summary>
+    <div class="ml-4 mt-2 space-y-1">
+      <a href="/admissions_process.html" class="block">Admission Process</a>
+      <a href="/school_fees.html" class="block">School Fees</a>
+      <a href="/school_fees.html#KHDA" class="block">KHDA Fact Sheet</a>
+      <a href="/admissions_enquiry.html" class="block">Apply Now</a>
+    </div>
+  </details>
+
+  <!-- Learning -->
+  <details class="mb-4">
+    <summary class="font-semibold">Learning</summary>
+    <div class="ml-4 mt-2 space-y-1">
+      <a href="/curriculum.html" class="block">Curriculum Overview</a>
+      <a href="/assessment.html" class="block">Assessment & Equalization</a>
+    </div>
+  </details>
+
+  <!-- Student Life -->
+  <details class="mb-4">
+    <summary class="font-semibold">Student Life</summary>
+    <div class="ml-4 mt-2 space-y-1">
+      <a href="/students_life.html" class="block">Student Support</a>
+      <a href="/students_council.html" class="block">Student Council</a>
+      <a href="/MAS_activities.html" class="block">Events & Activities</a>
+    </div>
+  </details>
+
+  <!-- Parent Essentials -->
+  <details class="mb-4">
+    <summary class="font-semibold">Parent Essentials</summary>
+    <div class="ml-4 mt-2 space-y-1">
+      <a href="/calendar.html" class="block">Calendar</a>
+      <a href="/parents.html" class="block">Parents Handbook</a>
+      <a href="/school_policies.html" class="block">Policies</a>
+      <a href="/newsletters.html" class="block">Newsletter</a>
+      <a href="/school_timings.html" class="block">School Timings</a>
+      <a href="/digital_platforms.html" class="block">Learning Platforms</a>
+    </div>
+  </details>
+
+  <!-- Contact Us -->
+  <details class="mb-4">
+    <summary class="font-semibold">Contact Us</summary>
+    <div class="ml-4 mt-2 space-y-1">
+      <a href="/contact.html" class="block">Campus Map</a>
+      <a href="/reach.html" class="block">Reach Us</a>
+      <a href="/careers.html" class="block">Careers</a>
+    </div>
+  </details>
+
+  <!-- Blog -->
+  <a href="/blog.html" class="block font-semibold mb-4">Blog</a>
+
+  <!-- Buttons -->
+  <div class="mt-4 space-y-2">
+    <a href="/admissions_enquiry.html" class="block w-full text-center bg-[#6089FB] text-white px-4 py-2 rounded-md font-semibold">Admissions Inquiry</a>
+    <a href="https://ampsict.ethdigitalcampus.com/AMPS/" class="block w-full text-center bg-gray-200 text-[#6089FB] px-4 py-2 rounded-md font-semibold">Login Portal</a>
+  </div>
+    </div>
+
 
 
   </div>
