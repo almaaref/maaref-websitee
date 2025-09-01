@@ -3,13 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".dropdown-toggle").forEach(toggle => {
       toggle.addEventListener("click", function (e) {
         e.stopPropagation(); // Prevent document click from firing
-        const menu = this.nextElementSibling;
-  
+        const menu = this.nextElementSibling;  
         // Hide all other dropdowns
         document.querySelectorAll(".dropdown-menu").forEach(m => {
           if (m !== menu) m.classList.add("hidden");
         });
-  
         // Toggle current
         if (menu) {
           menu.classList.toggle("hidden");
@@ -83,14 +81,12 @@ document.addEventListener("DOMContentLoaded", function () {
     testcontainer.scrollLeft = scrollLeft - walk;
   });
 
-
   document.getElementById("tourForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const form = e.target;
   const formData = new FormData(form);
 
-  // Netlify expects a "form-name" field explicitly
   formData.append("form-name", "school-tour");
 
   fetch("/", {
@@ -124,7 +120,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (target) target.classList.toggle('hidden');
   }
 
-  // Close dropdowns on outside click
   document.addEventListener('click', (e) => {
     const nav = document.getElementById('desktop-nav');
     const mobileMenu = document.getElementById('mobile-menu');
