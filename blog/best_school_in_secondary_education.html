@@ -18,17 +18,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
-
-  <!-- HTMX (once) -->
   <script defer src="https://unpkg.com/htmx.org@1.9.12"></script>
-  <!-- Tailwind (once, with typography) -->
   <script defer src="https://cdn.tailwindcss.com?plugins=typography"></script>
-  <!-- Your site script -->
   <script defer src="/assets/script.js"></script>
-
-  <!-- Preload hero to help LCP -->
   <link rel="preload" as="image" href="/assets/images/building_picture.JPG">
-  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="article">
   <meta property="og:title" content="Best School for Secondary Education in UAE">
   <meta property="og:description" content="Practical tips for choosing the right secondary school in the UAE.">
@@ -39,6 +32,7 @@
 
 <body class="bg-white">
   <div hx-get="/partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
+  <div hx-get="/partials/mobilemenu.html" hx-trigger="load" hx-swap="outerHTML"></div>
   
   <section class="relative">
     <img
@@ -52,7 +46,7 @@
     <article class="w-auto mx-auto bg-white rounded-2xl shadow ring-1 ring-slate-200 px-6 md:px-10 py-8 max-w-7xl">
       <header class="space-y-3">
         <div class="flex items-center gap-3 text-sm text-slate-500">
-          <time datetime="2025-07-13">December 06, 2024</time>
+          <time datetime="2024-12-06">December 06, 2024</time>
           <span class="select-none">·</span>
           <span class="ml-auto inline-flex items-center rounded-full bg-indigo-50 text-indigo-700 px-3 py-1 text-xs font-semibold">
             Education

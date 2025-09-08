@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
-  
 
     window.addEventListener('DOMContentLoaded', () => {
     const backdrop = document.getElementById('popup-backdrop');
@@ -146,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 document.addEventListener('DOMContentLoaded', function () {
-  const container = document.querySelector('.facilitiesHomeSwiper'); // <- match HTML
+  const container = document.querySelector('.facilitiesHomeSwiper');
   if (!container) return;
 
   // guard against double init during hot-reload

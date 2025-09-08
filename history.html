@@ -6,24 +6,19 @@
   <title>Our History | Al Maaref American School</title>
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon_io/favicon.ico">
-  <!-- Apple devices -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/favicon_io/apple-touch-icon.png">
-  <!-- Modern browsers -->
   <link rel="icon" sizes="32x32" href="assets/images/logo/favicon_io/favicon-32x32.png" type="image/png">
   <link rel="icon" sizes="192x192" href="assets/images/logo/favicon_io/android-chrome-192x192.png" type="image/png">
-
   <script src="https://unpkg.com/htmx.org@1.9.6"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="assets/script.js"></script>
 </head>
 
 <body class="bg-white text-gray-900">
-<!-- Header -->
 
-<!-- Sticky Navbar with Mega Menu -->
 <div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
+<div hx-get="partials/mobilemenu.html" hx-trigger="load" hx-swap="outerHTML"></div>
 
-  <!-- Hero Section -->
   <section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center pt-40" style="background-image: url('assets/images/building_picture.JPG');">
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
     <h1 class="relative z-10 text-white text-4xl md:text-5xl font-bold">Our History</h1>
@@ -50,36 +45,47 @@
     </div>
 
     <!-- Row 2: Image Left - Text Right -->
-    <div class="flex flex-col lg:flex-row-reverse items-stretch">
-      <!-- Right Text -->
-      <div class="bg-[#6089FB] text-white p-10 flex flex-col justify-center lg:w-1/2 animate-fade-in">
-        <p class="text-xl"><strong>First Education Holding</strong> (FEH) is an education holding company established in 2006 and located in Bahrain.</p>
-        <ul class="list-disc ml-5 mt-2 text-xl space-y-1">
-          <li>FEH’s vision is to become a leading high-quality education company catering to the educational needs of families across the MENA region. Its mission is to grow by acquiring private K–12 schools and education-related businesses throughout the MENA region.</li>
-          <li>FEH provides strategic management support to its schools to optimize their growth and educational quality. At MAS, FEH aims to provide a student-centered environment that encourages inquiry, exploration, critical thinking, and real-world skill transfer.</li>
-        </ul>
-        <a href="https://feh.ae/" class="inline-block mt-4 px-5 py-2 bg-white text-[#6089FB] text-sm font-semibold rounded hover:bg-gray-100">Learn More About FEH</a>
-      </div>
+    <section class="w-full">
+      <div class="mx-auto grid grid-cols-1 lg:grid-cols-2 items-stretch">
+        <!-- Logo/Image side -->
+        <div class="order-1 lg:order-2 bg-white">
+          <div class="h-full flex items-center justify-center px-4 sm:px-6 py-8">
+            <div class="flex items-center gap-3 sm:gap-4">
+              <img
+                src="assets/images/FEH.png"
+                alt="First Education Holding logo"
+                class="shrink-0 max-h-20 sm:max-h-24 md:max-h-28 lg:max-h-40 w-auto object-contain"
+              />
+              <div class="leading-tight">
+                <div class="w-8 sm:w-10 h-1 bg-[#118ACB] mb-2"></div>
+                <p class="text-2xl sm:text-3xl font-extrabold uppercase text-[#1e266d]">First</p>
+                <p class="text-2xl sm:text-3xl font-extrabold uppercase text-[#1e266d]">Education Holding</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <!-- Left Image (Logo or relevant FEH image) -->
-      <div class="lg:w-1/2 flex items-center justify-center bg-white px-6">
-        <div class="flex items-center gap-4">
-          <!-- FEH Logo -->
-          <img src="assets/images/FEH.png" alt="FEH Logo" class="h-40 w-auto object-contain">
-        
-          <!-- FEH Text -->
-          <div class="leading-tight">
-            <!-- Small Line -->
-            <div class="w-10 h-1 bg-[#118ACB] mb-2"></div>
-
-            <!-- Stacked Bold Text -->
-            <p class="text-3xl font-extrabold uppercase text-[#1e266d]">First</p>
-            <p class="text-3xl font-extrabold uppercase text-[#1e266d]">Education Holding</p>
+        <!-- Text side -->
+        <div class="order-2 lg:order-1 bg-[#6089FB] text-white">
+          <div class="h-full flex flex-col justify-center p-6 sm:p-8 lg:p-12 gap-4">
+            <p class="text-base sm:text-lg lg:text-xl">
+              <strong>First Education Holding</strong> (FEH) is an education holding company established in 2006 and located in Bahrain.
+            </p>
+            <ul class="list-disc list-inside space-y-2 text-base sm:text-lg lg:text-xl">
+              <li>FEH’s vision is to become a leading high-quality education company catering to the educational needs of families across the MENA region. Its mission is to grow by acquiring private K–12 schools and education-related businesses throughout the MENA region.</li>
+              <li>FEH provides strategic management support to its schools to optimize their growth and educational quality. At MAS, FEH aims to provide a student-centered environment that encourages inquiry, exploration, critical thinking, and real-world skill transfer.</li>
+            </ul>
+            <div>
+              <a
+                href="https://feh.ae/"
+                class="inline-block mt-2 px-5 py-2 rounded font-semibold text-sm sm:text-base bg-white text-[#6089FB] hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white/50"
+              >Learn More About FEH</a>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-    </div>
 
   </div>
   </section>

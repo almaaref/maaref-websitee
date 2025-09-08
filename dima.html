@@ -14,9 +14,10 @@
     <link rel="icon" type="image/x-icon" href="/assets/images/logo/favicon_io/favicon.ico">
 </head>
 
-<body class="bg-white text-gray-900 font-[Playfair_Display]">
+<body class="bg-white text-gray-900">
     <!-- Navigation -->
     <div hx-get="/partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>  
+    <div hx-get="partials/mobilemenu.html" hx-trigger="load" hx-swap="outerHTML"></div>
     <!-- Hero -->
     <section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center pt-40" style="background-image: url('/assets/images/building_picture.JPG');">
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
