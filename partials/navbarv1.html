@@ -1,32 +1,45 @@
-<!-- navbar.html (HTMX partial) -->
 <header
-  id="mainNavbar" 
-  x-data="{ scrolled: false, mobileOpen: false}" 
-  x-init="() => { window.addEventListener('scroll', () => { scrolled = window.scrollY > 10 });}" 
-  :class="scrolled ? 'bg-black shadow-md' : 'bg-transparent'" 
-  class="fixed top-0 left-0 w-full z-50 text-white transition-all duration-500 ease-in-out">
+  id="mainNavbar"
+  x-data="{
+    scrolled:false,
+    mobileOpen:false,
+    touch: window.matchMedia('(hover: none), (pointer: coarse)').matches,
+    wide: window.innerWidth >= 1024
+  }"
+  x-init="
+    scrolled = window.scrollY > 10;
+    window.addEventListener('scroll', () => { scrolled = window.scrollY > 10 }, { passive:true });
+    window.addEventListener('resize', () => { wide = window.innerWidth >= 1024 });
+    window.matchMedia('(hover: none), (pointer: coarse)').addEventListener('change', e => touch = e.matches);
+  "
+  :class="scrolled ? 'bg-black/90 backdrop-blur shadow-md' : 'bg-transparent'"
+  class="fixed top-0 left-0 w-full z-40 text-white transition-all duration-500 ease-in-out"
+>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
-  <div class=" mx-auto px-4 py-4 flex items-center justify-between">
-
-    <!-- Logo -->
+  <div class="mx-auto px-4 flex items-center justify-between" :class="scrolled ? 'py-2' : 'py-4'">
     <div class="flex-shrink-0">
       <a href="/index.html">
         <img
-          id="navbar-logo"
           src="../assets/images/logo/al_maaref_logo_1024.png"
           alt="School Logo"
-          class="h-16 sm:h-24 md:h-28 lg:h-32 xl:h-36 w-auto object-contain transition duration-300"
+          class="w-auto object-contain transition-all duration-500 ease-in-out"
+          :class="scrolled ? 'h-12 sm:h-14 md:h-16' : 'h-16 sm:h-24 md:h-28 lg:h-32 xl:h-36'"
         >
       </a>
     </div>
 
-    <nav id="desktop-nav" x-data="{ openMenu: null, hoverTimeout: null }" class="hidden md:flex flex justify-center w-full text-md font-semibold relative">
-      <div class="flex items-center justify-between max-w-7xl w-full">
+    <nav
+      id="desktop-nav"
+      x-data="{ openMenu: null, hoverTimeout: null }"
+      x-show="wide && !touch"
+      class="flex justify-center w-full text-md font-semibold relative"
+    >
+      <div class="flex items-center justify-between max-w-7xl w-full md:pl-10 lg:pl-14 xl:pl-20">
         <div class="relative group"
-          @mouseenter="clearTimeout(hoverTimeout); openMenu = 'about'"
-          @mouseleave="hoverTimeout = setTimeout(() => openMenu = null, 300)">
-        <button class="hover:underline underline-offset-4" aria-haspopup="true" aria-expanded="openMenu === 'about'">About Us</button>
+            @mouseenter="clearTimeout(hoverTimeout); openMenu = 'about'"
+            @mouseleave="hoverTimeout = setTimeout(() => openMenu = null, 300)">
+          <button class="hover:underline underline-offset-4" aria-haspopup="true" :aria-expanded="openMenu === 'about'">About Us</button>
           <div
             x-show="openMenu === 'about'"
             x-transition:enter="transition ease-out duration-300"
@@ -40,54 +53,54 @@
             role="menu"
             aria-label="About Us submenu"
           >
-        <div class="grid gap-6">
-            <ul class="space-y-1 text-lg">
-              <li><a href="/history.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Our History</a></li>
-              <li><a href="/guiding_statement.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Guiding Statement</a></li>
-              <li><a href="/CEO_welcome_message.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Director's Message</a></li>
-              <li><a href="/Principals_welcome_message.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Principal's Message</a></li>
-              <li><a href="/our_team.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Leadership</a></li>
-              <li><a href="/mas_governors.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Advisory Board</a></li>
-              <li><a href="/affiliations.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Accreditations & Affiliations</a></li>
-            </ul>
+            <div class="grid gap-6">
+              <ul class="space-y-1 text-lg">
+                <li><a href="/history.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Our History</a></li>
+                <li><a href="/guiding_statement.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Guiding Statements</a></li>
+                <li><a href="/CEO_welcome_message.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Director's Message</a></li>
+                <li><a href="/Principals_welcome_message.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Principal's Message</a></li>
+                <li><a href="/our_team.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Leadership</a></li>
+                <li><a href="/mas_governors.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Advisory Board</a></li>
+                <li><a href="/affiliations.html" class="block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200">Accreditations & Affiliations</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-        </div>
-      
+
         <template x-for="item in [
-          { id: 'admission', label: 'Admission', img: 'admission.jpg', links: [
+          { id: 'admission', label: 'Admission', links: [
             ['Admission Process', '/admissions_process.html'],
             ['School Fees', '/school_fees.html'],
             ['KHDA Fact Sheet', '/school_fees.html#KHDA'],
             ['Apply Now', '/admissions_enquiry.html']
           ]},
-          { id: 'learning', label: 'Learning', img: 'learning.jpg', links: [
+          { id: 'learning', label: 'Learning', links: [
             ['Curriculum Overview', '/curriculum.html'],
+            ['Kindergarten', '/kindergarten-school-dubai.html'],
             ['Assessment & Equalization', '/assessment.html']
           ]},
-          { id: 'life', label: 'Student Life', img: 'life.jpg', links: [
+          { id: 'life', label: 'Student Life', links: [
             ['Student Support', '/students_life.html'],
             ['Student Council', '/students_council.html'],
             ['Events & Activities', '/MAS_activities.html']
           ]},
-          { id: 'parents', label: 'Parent Essentials', img: 'parents.jpg', links: [
+          { id: 'parents', label: 'Parent Essentials', links: [
             ['Calendar', '/calendar.html'],
             ['Parents Handbook', '/parents.html'],
             ['Policies', '/school_policies.html'],
             ['Newsletter', '/newsletters.html'],
             ['School Timings', '/school_timings.html'],
-            ['Learning Platforms', '/digital_platforms.html'] 
+            ['Learning Platforms', '/digital_platforms.html']
           ]},
-          { id: 'contact', label: 'Contact Us', img: 'contact.jpg', links: [
+          { id: 'contact', label: 'Contact Us', links: [
             ['Campus Map', '/contact.html'],
             ['Reach Us', '/reach.html'],
             ['Careers', '/careers.html']
           ]}
         ]" :key="item.id">
           <div class="relative group"
-            @mouseenter="clearTimeout(hoverTimeout); openMenu = item.id"
-            @mouseleave="hoverTimeout = setTimeout(() => openMenu = null, 300)"
-          >
+              @mouseenter="clearTimeout(hoverTimeout); openMenu = item.id"
+              @mouseleave="hoverTimeout = setTimeout(() => openMenu = null, 300)">
             <button class="hover:underline underline-offset-4 nowrap" x-text="item.label" :aria-expanded="openMenu === item.id" aria-haspopup="true"></button>
             <div
               x-show="openMenu === item.id"
@@ -100,168 +113,40 @@
               class="absolute top-full mt-2 bg-[rgba(41,38,99,0.8)] text-white rounded shadow-xl w-[300px] p-6 z-50 overflow-hidden"
               :class="($el.getBoundingClientRect().left + 700 > window.innerWidth) ? 'right-0' : 'left-0'"
               role="menu"
-              :aria-label="item.label + ' submenu'">
+              :aria-label="item.label + ' submenu'"
+            >
               <div class="grid gap-6">
-                <div class="grid gap-6">
-                  <ul class="space-y-1 text-lg">
-                    <template x-for="([text, link]) in item.links" :key="text">
-                      <li><a :href="link" class="block w-full px-2 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200 whitespace-nowrap" x-text="text"></a></li>
-                    </template>
-                  </ul>
-                </div>
+                <ul class="space-y-1 text-lg">
+                  <template x-for="([text, link]) in item.links" :key="text">
+                    <li><a :href="link" class="block w-full px-2 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200 whitespace-nowrap" x-text="text"></a></li>
+                  </template>
+                </ul>
               </div>
             </div>
           </div>
         </template>
+
         <a href="/blog.html" class="hover:underline underline-offset-4">Blog</a>
 
         <div class="flex items-center gap-4">
-          <a href="/admissions_enquiry.html" 
-            class="px-4 py-1.5 rounded-lg bg-[#292663] text-white text-md font-semibold hover:bg-blue-700 transition duration-300">
-            Admissions Inquiry
-          </a>
-          <a href="https://ampsict.ethdigitalcampus.com/AMPS/" 
-            class="px-4 py-1.5 rounded-lg bg-[#292663] text-white text-md font-semibold hover:bg-blue-700 transition duration-300">
-            Login Portal
-          </a>
+          <a href="/admissions_enquiry.html" class="px-4 py-1.5 rounded-lg bg-[#292663] text-white text-md font-semibold hover:bg-blue-700 transition duration-300">Admissions Inquiry</a>
+          <a href="https://ampsict.ethdigitalcampus.com/AMPS/" class="px-4 py-1.5 rounded-lg bg-[#292663] text-white text-md font-semibold hover:bg-blue-700 transition duration-300">Login Portal</a>
         </div>
       </div>
     </nav>
 
-    <button class="md:hidden focus:outline-none" @click="mobileOpen = !mobileOpen">
+    <label
+      for="mobileNavToggle"
+      class="focus:outline-none lg:hidden cursor-pointer"
+      aria-controls="mobile-menu"
+    >
       <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
-    </button>
-    
+      <span class="sr-only">Toggle mobile menu</span>
+    </label>
 
-    <div id="mobile-menu" 
-     x-show="mobileOpen" 
-     x-transition:enter="transition transform duration-300 ease-in-out" 
-     x-transition:enter-start="translate-x-full" 
-     x-transition:enter-end="translate-x-0" 
-     x-transition:leave="transition transform duration-300 ease-in-out" 
-     x-transition:leave-start="translate-x-0" 
-     x-transition:leave-end="translate-x-full" 
-     class="fixed top-0 right-0 w-full h-full bg-black text-white z-50 px-6 py-6 md:hidden shadow-lg">
-
-  <div class="flex items-center justify-between mb-6 md:hidden">
-    <!-- Mobile logo -->
-    <a href="/index.html">
-      <img src="../assets/images/logo/al_maaref_logo_1024.png" alt="School Logo" class="h-24 w-auto object-contain">
-    </a>
-
-    <!-- Close button -->
-    <button @click="mobileOpen = false" aria-label="Close menu" class="text-white hover:text-gray-700 focus:outline-none">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    </button>
+    </div>
   </div>
-
-  <!-- About Us -->
-  <details class="mb-4">
-    <summary class="font-semibold">About Us</summary>
-    <div class="ml-4 mt-2 space-y-1">
-      <a href="/history.html" class="block">Our History</a>
-      <a href="/guiding_statement.html" class="block">Guiding Statement</a>
-      <a href="/CEO_welcome_message.html" class="block">Director's Message</a>
-      <a href="/Principals_welcome_message.html" class="block">Principal's Message</a>
-      <a href="/our_team.html" class="block">Leadership</a>
-      <a href="/mas_governors.html" class="block">Advisory Board</a>
-      <a href="/affiliations.html" class="block">Accreditations & Affiliations</a>
-    </div>
-  </details>
-
-  <!-- Admission -->
-  <details class="mb-4">
-    <summary class="font-semibold">Admission</summary>
-    <div class="ml-4 mt-2 space-y-1">
-      <a href="/admissions_process.html" class="block">Admission Process</a>
-      <a href="/school_fees.html" class="block">School Fees</a>
-      <a href="/school_fees.html#KHDA" class="block">KHDA Fact Sheet</a>
-      <a href="/admissions_enquiry.html" class="block">Apply Now</a>
-    </div>
-  </details>
-
-  <!-- Learning -->
-  <details class="mb-4">
-    <summary class="font-semibold">Learning</summary>
-    <div class="ml-4 mt-2 space-y-1">
-      <a href="/curriculum.html" class="block">Curriculum Overview</a>
-      <a href="/assessment.html" class="block">Assessment & Equalization</a>
-    </div>
-  </details>
-
-  <!-- Student Life -->
-  <details class="mb-4">
-    <summary class="font-semibold">Student Life</summary>
-    <div class="ml-4 mt-2 space-y-1">
-      <a href="/students_life.html" class="block">Student Support</a>
-      <a href="/students_council.html" class="block">Student Council</a>
-      <a href="/MAS_activities.html" class="block">Events & Activities</a>
-    </div>
-  </details>
-
-  <!-- Parent Essentials -->
-  <details class="mb-4">
-    <summary class="font-semibold">Parent Essentials</summary>
-    <div class="ml-4 mt-2 space-y-1">
-      <a href="/calendar.html" class="block">Calendar</a>
-      <a href="/parents.html" class="block">Parents Handbook</a>
-      <a href="/school_policies.html" class="block">Policies</a>
-      <a href="/newsletters.html" class="block">Newsletter</a>
-      <a href="/school_timings.html" class="block">School Timings</a>
-      <a href="/digital_platforms.html" class="block">Learning Platforms</a>
-    </div>
-  </details>
-
-  <!-- Contact Us -->
-  <details class="mb-4">
-    <summary class="font-semibold">Contact Us</summary>
-    <div class="ml-4 mt-2 space-y-1">
-      <a href="/contact.html" class="block">Campus Map</a>
-      <a href="/reach.html" class="block">Reach Us</a>
-      <a href="/careers.html" class="block">Careers</a>
-    </div>
-  </details>
-
-  <!-- Blog -->
-  <a href="/blog.html" class="block font-semibold mb-4">Blog</a>
-
-  <!-- Buttons -->
-  <div class="mt-4 space-y-2">
-    <a href="/admissions_enquiry.html" class="block w-full text-center bg-[#6089FB] text-white px-4 py-2 rounded-md font-semibold">Admissions Inquiry</a>
-    <a href="https://ampsict.ethdigitalcampus.com/AMPS/" class="block w-full text-center bg-gray-200 text-[#6089FB] px-4 py-2 rounded-md font-semibold">Login Portal</a>
-  </div>
-    </div>
-
-
-
-  </div>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const navbar = document.getElementById("mainNavbar");
-
-    const updateNavbarBg = () => {
-      console.log("Scroll detected:", window.scrollY); // Debug
-      if (window.scrollY > 10) {
-        navbar.classList.remove("bg-transparent");
-        navbar.classList.add("bg-black", "shadow-md");
-      } else {
-        navbar.classList.remove("bg-black", "shadow-md");
-        navbar.classList.add("bg-transparent");
-      }
-    };
-
-    window.addEventListener("scroll", updateNavbarBg);
-    updateNavbarBg(); // Run once on load
-  });
-</script>
-
 </header>
-
-
-
-
-

@@ -21,6 +21,7 @@
 
     
     <div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
+    <div hx-get="partials/mobilemenu.html" hx-trigger="load" hx-swap="outerHTML"></div>
 
     <!-- Hero Section -->
     <section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center pt-40" style="background-image: url('assets/images/collab.JPG');">
@@ -40,29 +41,36 @@
       </div>
     </section>
 
-    <!-- MAP Test -->
     <section class="bg-gray-50">
-      <div class="mx-auto grid md:grid-cols-2 gap-10 items-center">
-        <!-- Left: Text with padding -->
-        <div class="px-6">
-          <h3 class="text-3xl font-bold text-[#6089FB] mb-4">
-            International and National Assessments Administered at MAS:
-          </h3>
-          <ul class="list-disc pl-5 text-2xl space-y-2 grid grid-cols-2 gap-x-12">
-            <li>MAP Growth</li>
-            <li>CAT4</li>
-            <li>NGRT</li>
-            <li>PSAT</li>
-            <li>Advanced Placement (AP)</li>
-            <li>PISA</li>
-            <li>TIMSS</li>
-            <li>PIRLS</li>
-          </ul>
-        </div>
+      <div class="mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <!-- Left: Text -->
+          <div class="min-w-0">
+            <h3 class="text-2xl sm:text-3xl font-bold text-[#6089FB] leading-tight mb-4 break-words [overflow-wrap:anywhere]">
+              International and Benchmarking Assessments Administered at MAS:
+            </h3>
 
-        <!-- Right: Image with no padding -->
-        <div class="w-full h-full">
-          <img src="assets/images/map.webp" class="shadow-lg w-full h-full object-cover" alt="MAP Assessment">
+            <!-- 1 col on xs, 2 cols from sm+ -->
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-10 list-disc list-inside text-base sm:text-lg lg:text-xl leading-relaxed">
+              <li>MAP Growth</li><li>SAT</li>
+              <li>NGRT</li><li>PSAT</li>
+              <li>CAT4</li><li>Advanced Placement (AP)</li>
+              <li>PISA</li><li>TIMSS</li><li>PIRLS</li>
+            </ul>
+          </div>
+
+          <!-- Right: Image -->
+          <div class="relative md:h-full">
+            <!-- Aspect on small; at md+ fill row height with a floor so it doesn't collapse -->
+            <div class="relative w-full overflow-hidden rounded-lg shadow-lg
+                        aspect-[4/3] md:aspect-auto md:h-full md:min-h-[420px] lg:min-h-[520px]">
+              <img
+                src="assets/images/map.webp"
+                alt="MAP Assessment"
+                class="absolute inset-0 w-full h-full object-cover object-center"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -71,7 +79,7 @@
     <section class="bg-[#E8F0FE] py-16">
       <div class="max-w-7xl mx-auto px-6">
         <h3 class="text-3xl font-bold text-[#6089FB] mb-4">
-          International and National Assessments Administered at MAS:
+          International and Benchmarking Assessments Administered at MAS:
         </h3>
         <ul class="list-disc pl-5 text-2xl space-y-2">
           <li>Data is analysed regularly to inform instruction, intervention, and enrichment.</li>
@@ -91,7 +99,7 @@
 
     <p class="text-2xl mb-6">
       The MAS high school diploma is recognized for equivalency by the UAE Ministry of Education. 
-      Combined with SAT1 and IELTS completion and, where applicable, AP coursework, our graduates 
+      Combined with SAT and IELTS completion and, where applicable, AP coursework, our graduates 
       are well-prepared for admission to top universities across:
     </p>
 

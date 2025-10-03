@@ -18,10 +18,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="assets/script.js"></script>
 </head>
-<body class="bg-white text-gray-900 font-[Playfair_Display]">
+<body class="bg-white text-gray-900">
   
   <div hx-get="partials/navbarv1.html" hx-trigger="load" hx-swap="outerHTML"></div>
-
+  <div hx-get="partials/mobilemenu.html" hx-trigger="load" hx-swap="outerHTML"></div>
   <!-- Hero Section -->
   <section class="relative h-[70vh] -mt-[160px] bg-cover bg-center flex items-center justify-center pt-40" style="background-image: url('assets/images/contact_us_title_image.webp');">
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -45,51 +45,209 @@
     </div>
 
     <!-- Form Section -->
-    <form action="mailto:umair.shahid@live.ca" method="POST" enctype="multipart/form-data" class="bg-[#f9f9f9] p-8 rounded-lg shadow-lg">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <input type="text" name="name" placeholder="Enter your Full Name" class="border border-gray-300 rounded px-4 py-2 w-full">
-        <input type="email" name="email" placeholder="Enter your Email" class="border border-gray-300 rounded px-4 py-2 w-full">
+<form id="careersForm"
+      name="careers"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      enctype="multipart/form-data"
+      class="bg-[#f9f9f9] p-8 rounded-lg shadow-lg">
 
-        <input type="text" name="phone" placeholder="Enter your Phone" class="border border-gray-300 rounded px-4 py-2 w-full">
-        <input type="text" name="location" placeholder="Enter your City" class="border border-gray-300 rounded px-4 py-2 w-full">
+  <!-- Required by Netlify -->
+  <input type="hidden" name="form-name" value="careers" />
+  <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
 
-        <input type="text" name="dob" placeholder="MM/DD/YYYY" class="border border-gray-300 rounded px-4 py-2 w-full">
-        <div class="flex space-x-4 items-center">
-          <label class="inline-flex items-center">
-            <input type="radio" name="gender" value="Male" class="mr-2"> Male
-          </label>
-          <label class="inline-flex items-center">
-            <input type="radio" name="gender" value="Female" class="mr-2"> Female
-          </label>
-        </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <label class="block">
+      <span class="text-sm font-medium">Full Name</span>
+      <input id="f-name" type="text" name="name" placeholder="e.g., Fatima Al Ali"
+             class="mt-1 border border-gray-300 rounded px-4 py-2 w-full">
+    </label>
 
-        <select name="type" class="border border-gray-300 rounded px-4 py-2 w-full">
-          <option value="">-- Select Type --</option>
-          <option value="Teacher">Teacher</option>
-          <option value="Admin">Admin</option>
-        </select>
-        <select name="experience" class="border border-gray-300 rounded px-4 py-2 w-full">
-          <option value="">-- Select Experience --</option>
-          <option value="0-2 years">0-2 years</option>
-          <option value="2-5 years">2-5 years</option>
-          <option value="5+ years">5+ years</option>
-        </select>
+    <label class="block">
+      <span class="text-sm font-medium">Email</span>
+      <input id="f-email" type="email" name="email" placeholder="you@example.com"
+             class="mt-1 border border-gray-300 rounded px-4 py-2 w-full">
+      <small id="emailHint" class="text-gray-500"></small>
+    </label>
 
-        <label class="block col-span-2">
-          Upload CV:
-          <input type="file" name="cv" class="mt-2 w-full">
-        </label>
+    <label class="block">
+      <span class="text-sm font-medium">Phone</span>
+      <input id="f-phone" type="text" name="phone" placeholder="+971 50 123 4567"
+             class="mt-1 border border-gray-300 rounded px-4 py-2 w-full">
+    </label>
 
-        <label class="block col-span-2">
-          Describe Yourself:
-          <textarea name="description" rows="5" class="mt-2 w-full border border-gray-300 rounded px-4 py-2"></textarea>
-        </label>
+    <label class="block">
+      <span class="text-sm font-medium">City</span>
+      <input id="f-location" type="text" name="location" placeholder="Dubai"
+             class="mt-1 border border-gray-300 rounded px-4 py-2 w-full">
+    </label>
+
+    <label class="block">
+      <span class="text-sm font-medium">Date of Birth</span>
+      <input id="f-dob" type="text" name="dob"
+             placeholder="MM/DD/YYYY"
+             maxlength="10"
+             inputmode="numeric"
+             class="mt-1 border border-gray-300 rounded px-4 py-2 w-full">
+      <small class="text-gray-500">Format: 08/25/1995</small>
+    </label>
+
+    <div class="flex items-center gap-6">
+      <span class="text-sm font-medium">Gender</span>
+      <label class="inline-flex items-center"><input type="radio" name="gender" value="Male" class="mr-2">Male</label>
+      <label class="inline-flex items-center"><input type="radio" name="gender" value="Female" class="mr-2">Female</label>
+      <label class="inline-flex items-center"><input type="radio" name="gender" value="Prefer not to say" class="mr-2">Prefer not to say</label>
+    </div>
+
+    <label class="block">
+      <span class="text-sm font-medium">Application Type</span>
+      <select id="f-type" name="type" class="mt-1 border border-gray-300 rounded px-4 py-2 w-full">
+        <option value="">-- Select Type --</option>
+        <option>Teacher</option>
+        <option>Admin</option>
+      </select>
+    </label>
+
+    <label class="block">
+      <span class="text-sm font-medium">Experience</span>
+      <select id="f-exp" name="experience" class="mt-1 border border-gray-300 rounded px-4 py-2 w-full">
+        <option value="">-- Select Experience --</option>
+        <option>0-2 years</option>
+        <option>2-5 years</option>
+        <option>5+ years</option>
+      </select>
+    </label>
+
+    <label class="block md:col-span-2">
+      <span class="text-sm font-medium">LinkedIn (optional)</span>
+      <input id="f-linkedin" type="url" name="linkedin" placeholder="https://www.linkedin.com/in/username"
+        class="mt-1 border border-gray-300 rounded px-4 py-2 w-full">
+    </label>
+
+    <label class="block md:col-span-2">
+      <span class="text-sm font-medium">Upload CV</span>
+      <input id="f-cv" type="file" name="cv" accept=".pdf,.doc,.docx" class="mt-2 w-full">
+      <small id="cvHint" class="text-gray-500">PDF preferred. Max ~10 MB.</small>
+    </label>
+
+    <label class="block md:col-span-2">
+      <span class="text-sm font-medium">Short Introduction</span>
+      <textarea id="f-desc" name="description" rows="5"
+                class="mt-2 w-full border border-gray-300 rounded px-4 py-2"
+                placeholder="Highlight your most relevant experience in 2–4 sentences."></textarea>
+      <div class="flex items-center justify-between">
+        <small class="text-gray-500">Aim for 60–100 words.</small>
+        <small id="descCount" class="text-gray-500">0 words</small>
       </div>
+    </label>
 
-      <div class="mt-6">
-        <button type="submit" class="bg-[#6089FB] text-white px-6 py-2 rounded hover:bg-[#4c6fd6] transition">Send Message</button>
-      </div>
-    </form>
+    <label class="inline-flex items-start md:col-span-2">
+      <input id="f-consent" type="checkbox" class="mt-1 mr-2">
+      <span class="text-sm text-gray-600">
+        I agree that my details and CV may be stored and reviewed by the HR team.
+      </span>
+    </label>
+  </div>
+
+  <div id="careersMsg" class="mt-4 hidden rounded-lg border px-4 py-3"></div>
+
+  <div class="mt-6 flex items-center gap-3">
+    <button id="submitBtn" type="submit"
+            class="bg-[#6089FB] text-white px-6 py-2 rounded hover:bg-[#4c6fd6] transition">
+      Send Application
+    </button>
+    <small id="submitHint" class="text-gray-500"></small>
+  </div>
+</form>
+
+<script>
+(() => {
+  const form = document.getElementById('careersForm');
+  const msg  = document.getElementById('careersMsg');
+  const btn  = document.getElementById('submitBtn');
+  const hint = document.getElementById('submitHint');
+
+  const dobEl = document.getElementById('f-dob');
+  const descEl = document.getElementById('f-desc');
+  const descCount = document.getElementById('descCount');
+  const emailEl = document.getElementById('f-email');
+  const emailHint = document.getElementById('emailHint');
+  const cvEl = document.getElementById('f-cv');
+  const cvHint = document.getElementById('cvHint');
+
+  let armed = false;
+  let armTimer = null;
+
+  // Auto-format DOB: MM/DD/YYYY
+  dobEl.addEventListener('input', (e) => {
+    let v = e.target.value.replace(/\D/g, "");
+    if (v.length > 8) v = v.slice(0,8);
+    let out = "";
+    if (v.length >= 2) out = v.slice(0,2) + "/";
+    else out = v;
+    if (v.length >= 4) out += v.slice(2,4) + "/";
+    else if (v.length > 2) out += v.slice(2);
+    if (v.length > 4) out += v.slice(4);
+    e.target.value = out;
+  });
+
+  // Word counter for description
+  descEl.addEventListener('input', () => {
+    const words = descEl.value.trim().split(/\s+/).filter(Boolean).length;
+    descCount.textContent = `${words} ${words===1?'word':'words'}`;
+  });
+
+  function warnList(items, tone='yellow') {
+    const styles = {
+      yellow: 'bg-yellow-50 border-yellow-200 text-yellow-800',
+      red: 'bg-red-50 border-red-200 text-red-800',
+      green: 'bg-green-50 border-green-200 text-green-800'
+    }[tone];
+    msg.className = `mt-4 rounded-lg border px-4 py-3 ${styles}`;
+    msg.innerHTML = `<ul class="list-disc pl-5 space-y-1">${items.map(i=>`<li>${i}</li>`).join('')}</ul>`;
+    msg.classList.remove('hidden');
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Example soft validation: only email & CV check here
+    const warns = [];
+    const email = emailEl.value.trim();
+    if (email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) warns.push("Email format looks unusual.");
+    if (cvEl.files[0] && cvEl.files[0].size > 10*1024*1024) warns.push("CV larger than 10 MB may be rejected.");
+
+    if (warns.length && !armed) {
+      warnList(warns, 'yellow');
+      hint.textContent = 'Click “Submit anyway” to proceed.';
+      btn.textContent = 'Submit anyway';
+      armed = true;
+      armTimer = setTimeout(()=>{armed=false; btn.textContent='Send Application'; hint.textContent='';},12000);
+      return;
+    }
+
+    // Submit to Netlify
+    msg.className = "mt-4 rounded-lg border px-4 py-3 bg-yellow-50 border-yellow-200 text-yellow-800";
+    msg.textContent = "Submitting…";
+    msg.classList.remove('hidden');
+
+    try {
+      const res = await fetch("/", { method:"POST", body:new FormData(form) });
+      if (res.ok) {
+        form.reset();
+        armed = false; btn.textContent='Send Application';
+        warnList(["Thanks! Your application was sent. Our HR team will review it and contact you if there is a suitable requirement."], 'green');
+      } else {
+        throw new Error();
+      }
+    } catch {
+      warnList(["Sorry—something went wrong. Please try again later or email hr@mas-edu.ae."], 'red');
+    }
+  });
+})();
+</script>
+
   </div>
   </section>
 

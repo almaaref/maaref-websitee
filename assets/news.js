@@ -1,30 +1,10 @@
-
+ 
 const newsletters = [
-  { id: 1, title: "Newsletter #1", date: "March 6, 2024", file: "newsletters/week_1.pdf"},
-  { id: 2, title: "Newsletter #2", date: "March 13, 2024", file: "newsletters/week_5.pdf"},
-  { id: 3, title: "Newsletter #3", date: "March 20, 2024", file: "newsletters/week_6.pdf"},
-  { id: 4, title: "Newsletter #4", date: "March 27, 2024", file: "newsletters/week_7.pdf"},
-  { id: 5, title: "Newsletter #5", date: "April 3, 2024", file: "newsletters/week_8.pdf"},
-  { id: 6, title: "Newsletter #6", date: "April 10, 2024", file: "newsletters/week_10.pdf"},
-  { id: 7, title: "Newsletter #7", date: "April 17, 2024", file: "newsletters/week_11.pdf"},
-  { id: 8, title: "Newsletter #8", date: "April 24, 2024", file: "newsletters/week_12.pdf"},
-  { id: 9, title: "Newsletter #9", date: "May 1, 2024", file: "newsletters/week_13.pdf"},
-  { id: 10, title: "Newsletter #10", date: "May 8, 2024", file: "newsletters/week_14.pdf"},
-  { id: 11, title: "Newsletter #11", date: "May 15, 2024", file: "newsletters/week_15.pdf"},
-  { id: 12, title: "Newsletter #12", date: "May 22, 2024", file: "newsletters/week_16.pdf"},
-  { id: 13, title: "Newsletter #13", date: "May 29, 2024", file: "newsletters/week_17.pdf"},
-  { id: 14, title: "Newsletter #14", date: "June 5, 2024", file: "newsletters/week_18.pdf"},
-  { id: 15, title: "Newsletter #15", date: "June 12, 2024", file: "newsletters/week_20.pdf"},
-  { id: 16, title: "Newsletter #16", date: "June 19, 2024", file: "newsletters/week_21.pdf"},
-  { id: 17, title: "Newsletter #17", date: "June 26, 2024", file: "newsletters/week_22.pdf"},
-  { id: 18, title: "Newsletter #18", date: "July 3, 2024", file: "newsletters/week_23.pdf"},
-  { id: 19, title: "Newsletter #19", date: "July 10, 2024", file: "/newsletters/week_24.pdf"},
-  { id: 20, title: "Newsletter #20", date: "July 17, 2024", file: "/newsletters/week_25.pdf"},
-  { id: 21, title: "Newsletter #21", date: "July 24, 2024", file: "/newsletters/week_28.pdf"},
-  { id: 22, title: "Newsletter #22", date: "July 31, 2024", file: "/newsletters/week_30.pdf"},
-  { id: 23, title: "Newsletter #23", date: "August 7, 2024", file: "/newsletters/week_31.pdf"},
-  { id: 24, title: "Newsletter #24", date: "August 14, 2024", file: "/newsletters/week_32.pdf"},
-  { id: 25, title: "Newsletter #25", date: "August 21, 2024", file: "/newsletters/week_33.pdf"}
+  
+  { id: 4, title: "Newsletter #04", date: "September 25, 2025", file: "/newsletters/MAS Newsletter4.pdf"},
+  { id: 3, title: "Newsletter #03", date: "September 18, 2025", file: "/newsletters/MAS Newsletter 3.pdf"},
+  { id: 2, title: "Newsletter #02", date: "September 9, 2025", file: "/newsletters/MAS Newsletter2.pdf"},
+  { id: 1, title: "Newsletter #01", date: "September 4, 2025", file: "/newsletters/MAS Newsletter1.pdf"}
 ];
 
 function renderNewsletters(targetId, count = newsletters.length) {
