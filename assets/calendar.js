@@ -12,7 +12,7 @@ const events = [
   { start: "2025-09-04", end: "2025-09-04", name: "Prophet's Birthday" },
   { start: "2025-10-13", end: "2025-10-13", name: "Mid - Term Break" },
   { start: "2025-12-02", end: "2025-12-03", name: "National Day" },
-  { start: "2025-12-15", end: "2026-01-02", name: "Winter Break" },
+  { start: "2025-12-08", end: "2026-01-04", name: "Winter Break" },
   { start: "2026-01-01", end: "2026-01-01", name: "New Year" },
   { start: "2026-02-09", end: "2026-02-10", name: "Mid-Term Break" },
   { start: "2026-03-19", end: "2026-03-20", name: "Eid Ul Fitr" },
