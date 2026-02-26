@@ -1,7 +1,8 @@
  
 const newsletters = [
   
- 
+  { id: 22, title: "Newsletter #23", date: "February 26, 2026", file: "/newsletters/MAS Newsletter 23.pdf"}, 
+  { id: 21, title: "Newsletter #22", date: "February 19, 2026", file: "/newsletters/MAS Newsletter 22.pdf"},
   { id: 20, title: "Newsletter #21", date: "February 13, 2026", file: "/newsletters/MAS Newsletter 21.pdf"},
   { id: 19, title: "Newsletter #20", date: "February 5, 2026", file: "/newsletters/MAS Newsletter 20.pdf"},
   { id: 18, title: "Newsletter #19", date: "January 29, 2026", file: "/newsletters/MAS Newsletter 19.pdf"},
