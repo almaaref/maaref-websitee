@@ -1,11 +1,14 @@
  
 const newsletters = [
   
-  { id: 22, title: "Newsletter #23", date: "February 26, 2026", file: "/newsletters/MAS Newsletter 23.pdf"}, 
-  { id: 21, title: "Newsletter #22", date: "February 19, 2026", file: "/newsletters/MAS Newsletter 22.pdf"},
-  { id: 20, title: "Newsletter #21", date: "February 13, 2026", file: "/newsletters/MAS Newsletter 21.pdf"},
-  { id: 19, title: "Newsletter #20", date: "February 5, 2026", file: "/newsletters/MAS Newsletter 20.pdf"},
-  { id: 18, title: "Newsletter #19", date: "January 29, 2026", file: "/newsletters/MAS Newsletter 19.pdf"},
+ 
+  { id: 25, title: "Newsletter #25", date: "March 26, 2026", file: "/newsletters/MAS Newsletter 25.pdf"}, 
+  { id: 24, title: "Newsletter #24", date: "March 05, 2026", file: "/newsletters/MAS Newsletter 24.pdf"},
+  { id: 23, title: "Newsletter #23", date: "February 26, 2026", file: "/newsletters/MAS Newsletter 23.pdf"}, 
+  { id: 22, title: "Newsletter #22", date: "February 19, 2026", file: "/newsletters/MAS Newsletter 22.pdf"},
+  { id: 21, title: "Newsletter #21", date: "February 13, 2026", file: "/newsletters/MAS Newsletter 21.pdf"},
+  { id: 20, title: "Newsletter #20", date: "February 5, 2026", file: "/newsletters/MAS Newsletter 20.pdf"},
+  { id: 19, title: "Newsletter #19", date: "January 29, 2026", file: "/newsletters/MAS Newsletter 19.pdf"},
   { id: 18, title: "Newsletter #18", date: "January 22, 2026", file: "/newsletters/MAS Newsletter 18.pdf"},
   { id: 17, title: "Newsletter #17", date: "January 15, 2026", file: "/newsletters/MAS Newsletter 17.pdf"},
   { id: 16, title: "Newsletter #16", date: "January 08, 2026", file: "/newsletters/MAS Newsletter16.pdf"},
