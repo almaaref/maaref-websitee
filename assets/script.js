@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('DOMContentLoaded', () => {
     const backdrop = document.getElementById('popup-backdrop');
     const modal = document.getElementById('popup-modal');
+    if (!backdrop || !modal) return; // popup only exists on some pages
     backdrop.classList.remove('opacity-0', 'pointer-events-none');
     modal.classList.remove('-translate-y-full');
   });
@@ -59,28 +60,31 @@ document.addEventListener("DOMContentLoaded", function () {
   let startX;
   let scrollLeft;
 
-  testcontainer.addEventListener('mouseenter', () => isHovering = true);
-  testcontainer.addEventListener('mouseleave', () => isHovering = false);
+  if (testcontainer) { // testimonials strip only exists on some pages
+    testcontainer.addEventListener('mouseenter', () => isHovering = true);
+    testcontainer.addEventListener('mouseleave', () => isHovering = false);
 
-  // Drag to scroll
-  testcontainer.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    startX = e.pageX - testcontainer.offsetLeft;
-    scrollLeft = testcontainer.scrollLeft;
-  });
+    // Drag to scroll
+    testcontainer.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.pageX - testcontainer.offsetLeft;
+      scrollLeft = testcontainer.scrollLeft;
+    });
 
-  testcontainer.addEventListener('mouseup', () => isDragging = false);
-  testcontainer.addEventListener('mouseleave', () => isDragging = false);
+    testcontainer.addEventListener('mouseup', () => isDragging = false);
+    testcontainer.addEventListener('mouseleave', () => isDragging = false);
 
-  testcontainer.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - testcontainer.offsetLeft;
-    const walk = (x - startX) * 2;
-    testcontainer.scrollLeft = scrollLeft - walk;
-  });
+    testcontainer.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const x = e.pageX - testcontainer.offsetLeft;
+      const walk = (x - startX) * 2;
+      testcontainer.scrollLeft = scrollLeft - walk;
+    });
+  }
 
-  document.getElementById("tourForm").addEventListener("submit", function (e) {
+  const tourForm = document.getElementById("tourForm");
+  if (tourForm) tourForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const form = e.target;
