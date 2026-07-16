@@ -1,4 +1,5 @@
-name = "maaref-websitee" 
-compatibility_date = "2025-01-01" 
-[assets] 
-directory = "./public"
+name = "maaref-websitee"
+compatibility_date = "2025-01-01"
+
+[assets]
+directory = "."
