@@ -15,7 +15,3 @@ tailwind.config.js
 
 # Leftover Eleventy / Netlify scaffolding (the live site is served from the repo root)
 public
-
-# Images that exceed Cloudflare's 25 MiB per-file limit — compress and re-add later
-assets/images/facilities/arts_room.JPG
-assets/images/facilities/elementary_library.JPG
