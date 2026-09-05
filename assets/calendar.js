@@ -8,7 +8,7 @@ let currentDate = new Date();
 // ✅ Updated structure: array of ranges
 const events = [
   { start: "2026-08-24", end: "2026-08-24", name: "First Day of Staff" },
-  { start: "2026-08-31", end: "2025-08-31", name: "First Day of Students" },
+  { start: "2026-08-31", end: "2026-08-31", name: "First Day of Students" },
   { start: "2026-10-12", end: "2026-10-14", name: "Mid - Term Break" },
   { start: "2026-12-02", end: "2026-12-04", name: "National Day" },
   { start: "2026-12-14", end: "2027-01-01", name: "Winter Break" },
