@@ -7,19 +7,17 @@ let currentDate = new Date();
 
 // ✅ Updated structure: array of ranges
 const events = [
-  { start: "2025-08-18", end: "2025-08-18", name: "First Day of Staff" },
-  { start: "2025-08-25", end: "2025-08-25", name: "First Day of Students" },
-  { start: "2025-09-04", end: "2025-09-04", name: "Prophet's Birthday" },
-  { start: "2025-10-13", end: "2025-10-13", name: "Mid - Term Break" },
-  { start: "2025-12-02", end: "2025-12-03", name: "National Day" },
-  { start: "2025-12-08", end: "2026-01-04", name: "Winter Break" },
-  { start: "2026-01-01", end: "2026-01-01", name: "New Year" },
-  { start: "2026-02-09", end: "2026-02-10", name: "Mid-Term Break" },
-  { start: "2026-03-19", end: "2026-03-20", name: "Eid Ul Fitr" },
-  { start: "2026-03-23", end: "2026-04-03", name: "Spring Break" },
-  { start: "2026-05-26", end: "2026-05-29", name: "Eid Ul Adha" },
-  { start: "2026-06-16", end: "2026-06-16", name: "New Islamic Year" },
-  { start: "2026-07-03", end: "2026-07-03", name: "Last School Day" }
+  { start: "2026-08-24", end: "2026-08-24", name: "First Day of Staff" },
+  { start: "2026-08-31", end: "2025-08-31", name: "First Day of Students" },
+  { start: "2026-10-12", end: "2026-10-14", name: "Mid - Term Break" },
+  { start: "2026-12-02", end: "2026-12-04", name: "National Day" },
+  { start: "2026-12-14", end: "2027-01-01", name: "Winter Break" },
+  { start: "2027-01-01", end: "2027-01-01", name: "New Year" },
+  { start: "2027-02-08", end: "2027-02-09", name: "Mid-Term Break" },
+  { start: "2027-03-08", end: "2027-03-12", name: "Eid Ul Fitr" },
+  { start: "2027-04-05", end: "2027-04-09", name: "Spring Break" },
+  { start: "2027-05-17", end: "2027-05-18", name: "Eid Ul Adha" },
+  { start: "2027-07-02", end: "2027-07-02", name: "Last School Day" }
 ];
 
 // ✅ Helper to check if fullDate falls inside a range
