@@ -1,42 +1,8 @@
  
 const newsletters = [
 
- { id: 36, title: "Newsletter #36", date: "July 02, 2026", file: "/newsletters/MAS Newsletter 36.pdf"},
- { id: 35, title: "Newsletter #35", date: "June 11, 2026", file: "/newsletters/MAS Newsletter 35.pdf"},
- { id: 34, title: "Newsletter #34", date: "June 04, 2026", file: "/newsletters/MAS Newsletter 34.pdf"},
- { id: 33, title: "Newsletter #33", date: "May 21, 2026", file: "/newsletters/MAS Newsletter 33.pdf"},
- { id: 32, title: "Newsletter #32", date: "May 14, 2026", file: "/newsletters/MAS Newsletter 32.pdf"},
- { id: 31, title: "Newsletter #31", date: "May 05, 2026", file: "/newsletters/MAS Newsletter 31.pdf"}, 
-  { id: 30, title: "Newsletter #30", date: "April 30, 2026", file: "/newsletters/MAS Newsletter 30.pdf"},
-  { id: 29, title: "Newsletter #29", date: "April 23, 2026", file: "/newsletters/MAS Newsletter 29.pdf"}, 
-  { id: 28, title: "Newsletter #28", date: "April 16, 2026", file: "/newsletters/MAS Newsletter 28.pdf"},
-  { id: 27, title: "Newsletter #27", date: "April 09, 2026", file: "/newsletters/MAS Newsletter 27.pdf"},
-  { id: 26, title: "Newsletter #26", date: "April 2, 2026", file: "/newsletters/MAS Newsletter 26.pdf"},
-  { id: 25, title: "Newsletter #25", date: "March 26, 2026", file: "/newsletters/MAS Newsletter 25.pdf"}, 
-  { id: 24, title: "Newsletter #24", date: "March 05, 2026", file: "/newsletters/MAS Newsletter 24.pdf"},
-  { id: 23, title: "Newsletter #23", date: "February 26, 2026", file: "/newsletters/MAS Newsletter 23.pdf"}, 
-  { id: 22, title: "Newsletter #22", date: "February 19, 2026", file: "/newsletters/MAS Newsletter 22.pdf"},
-  { id: 21, title: "Newsletter #21", date: "February 13, 2026", file: "/newsletters/MAS Newsletter 21.pdf"},
-  { id: 20, title: "Newsletter #20", date: "February 5, 2026", file: "/newsletters/MAS Newsletter 20.pdf"},
-  { id: 19, title: "Newsletter #19", date: "January 29, 2026", file: "/newsletters/MAS Newsletter 19.pdf"},
-  { id: 18, title: "Newsletter #18", date: "January 22, 2026", file: "/newsletters/MAS Newsletter 18.pdf"},
-  { id: 17, title: "Newsletter #17", date: "January 15, 2026", file: "/newsletters/MAS Newsletter 17.pdf"},
-  { id: 16, title: "Newsletter #16", date: "January 08, 2026", file: "/newsletters/MAS Newsletter16.pdf"},
-  { id: 15, title: "Newsletter #15", date: "January 01, 2026", file: "/newsletters/MAS Newsletter 15.pdf"},
-  { id: 14, title: "Newsletter #14", date: "December 04, 2025", file: "/newsletters/MAS Newsletter 14.pdf"},
-  { id: 13, title: "Newsletter #13", date: "November 27, 2025", file: "/newsletters/MAS Newsletter 13.pdf"},
-  { id: 12, title: "Newsletter #12", date: "November 20, 2025", file: "/newsletters/MAS Newsletter 12.pdf"},
-  { id: 11, title: "Newsletter #11", date: "November 13, 2025", file: "/newsletters/MAS Newsletter11.pdf"}, 
-  { id: 10, title: "Newsletter #10", date: "November 06, 2025", file: "/newsletters/MAS Newsletter10.pdf"},
-  { id: 9, title: "Newsletter #09", date: "October 30, 2025", file: "/newsletters/MAS Newsletter 9.pdf"},
-  { id: 8, title: "Newsletter #08", date: "October 24, 2025", file: "/newsletters/MAS Newsletter 8.pdf"},
-  { id: 7, title: "Newsletter #07", date: "October 16, 2025", file: "/newsletters/MAS Newsletter 7.pdf"}, 
-  { id: 6, title: "Newsletter #06", date: "October 9, 2025", file: "/newsletters/MAS Newsletter 6.pdf"}, 
-  { id: 5, title: "Newsletter #05", date: "October 3, 2025", file: "/newsletters/MAS Newsletter 5.pdf"},
-  { id: 4, title: "Newsletter #04", date: "September 25, 2025", file: "/newsletters/MAS Newsletter4.pdf"},
-  { id: 3, title: "Newsletter #03", date: "September 18, 2025", file: "/newsletters/MAS Newsletter 3.pdf"},
-  { id: 2, title: "Newsletter #02", date: "September 9, 2025", file: "/newsletters/MAS Newsletter2.pdf"},
-  { id: 1, title: "Newsletter #01", date: "September 4, 2025", file: "/newsletters/MAS Newsletter1.pdf"}
+ 
+  { id: 1, title: "Newsletter #01", date: "September 24, 2026", file: "/newsletters/newsletters/MAS_Newsletter_1.pdf"}
 ];
 
 function renderNewsletters(targetId, count = newsletters.length) {
