@@ -2,7 +2,7 @@
 const newsletters = [
 
  
-  { id: 1, title: "Newsletter #01", date: "September 24, 2026", file: "/newsletters/newsletters/MAS_Newsletter_1.pdf"}
+  { id: 1, title: "Newsletter #01", date: "September 24, 2026", file: "newsletters/2026_01.pdf"}
 ];
 
 function renderNewsletters(targetId, count = newsletters.length) {
