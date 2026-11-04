@@ -4,7 +4,7 @@
 const monthlyNewsletters = [
 
   
-  { id: 1, title: "Monthly Newsletter - October 2026", month: "2026-09", file: "newsletters/October.pdf" }
+  { id: 1, title: "Monthly Newsletter - October 2026", month: "2026-10", file: "newsletters/October.pdf" }
 
 ];
 
