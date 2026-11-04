@@ -3,8 +3,8 @@
 // "month" format is YYYY-MM (e.g. "2026-11" for November 2026).
 const monthlyNewsletters = [
 
-  { id: 2, title: "Monthly Newsletter - October 2026", month: "2026-10", file: "newsletters/monthly/2026_10.pdf" },
-  { id: 1, title: "Monthly Newsletter - September 2026", month: "2026-09", file: "newsletters/monthly/2026_09.pdf" }
+  
+  { id: 1, title: "Monthly Newsletter - October 2026", month: "2026-09", file: "newsletters/October.pdf" }
 
 ];
 
